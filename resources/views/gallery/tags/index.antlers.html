@@ -1,0 +1,16 @@
+<section class="section-full">
+    <header class="my-12 md:my-16 lg:my-24 text-center">
+        <h1 class="text-6xl md:text-7xl lg:text-7xl text-white font-bold">{{ title }}</h1>
+    </header>
+    
+    <div class="max-w-4xl mx-auto flex-col space-y-4 pt-6 text-white">
+        {{ tags }}
+        {{ if no_results }}
+        <h1 class="text-center">no results</h1>
+        {{ /if }}
+        <div class="py-4">
+            <a class="inline-block text-white text-3xl font-bold hover:text-colored" href="{{ url }}">{{ title }}</a>
+        </div>
+        {{ /tags }}
+    </div>
+</section>

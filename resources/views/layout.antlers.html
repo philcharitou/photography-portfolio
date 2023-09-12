@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title ?? site:name }}</title>
+        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        <link href="/css/app.css" rel="stylesheet">
+
+         <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!-- GSAP -->
+        {{ vite src="resources/js/gsap.min.js" }}
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/a37dd41aa0.js" crossorigin="anonymous"></script>
+        <!-- Font Connections -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Karla:wght@200;300;400;500;600;700;800&family=Pacifico&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Model Viewer -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+        <script>
+            $(window).scroll(function () {
+                $('#navigation-bar').toggleClass('scrolled', $(this).scrollTop() > 50);
+            });
+        </script>
+
+
+        <script type="module">
+            document.addEventListener("mousemove", parallax);
+            function parallax(event) {
+                this.querySelectorAll(".parallax-wrap span").forEach((shift) => {
+                    const position = shift.getAttribute("value");
+                    const x = (window.innerWidth - event.pageX * position) / 90;
+                    const y = (window.innerHeight - event.pageY * position) / 90;
+
+                    shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+                });
+            }
+        </script>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+
+        <script src="https://unpkg.com/alpinejs" defer></script>
+    </head>
+    <body class="relative" x-data="{ openMenu : false, showSearch: false, searchQuery: '', searchResults: false, showImage: false, imageUrl: '' }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">       
+        <header class="max-w-7xl">
+            {{ partial:nav }}
+        </header>
+
+        {{ template_content }}
+        {{ partial:footer }}
+
+        <!-- Search Modal -->
+        <div class="fixed p-[12vh] inset-0 backdrop-blur-sm flex flex-col overflow-auto bg-black bg-opacity-50" style="z-index: 15"
+            x-cloak
+            x-transition.opacity
+            x-show="showSearch"
+            x-trap.noscroll="showSearch"
+        >
+                <div class="mx-auto text-left bg-gray-200 w-full rounded max-w-3xl" click.away="showSearch = false" x-transition @click.outside="showSearch = false; searchQuery = ''">
+                    <form action="search" class="p-2 flex items-center px-6">
+                        <svg class="mr-4" xmlns="http://www.w3.org/2000/svg" height="21" width="21" viewBox="0 0 16 16"><path d="M15.587 14.413l-4.354-4.353A6.1 6.1 0 0012.5 6.333a6.18 6.18 0 10-2.44 4.907l4.353 4.353a.84.84 0 001.174 0 .833.833 0 000-1.18zM1.833 6.333a4.5 4.5 0 114.5 4.5 4.507 4.507 0 01-4.5-4.5z" fill="currentColor"/></svg>
+                        <input name="q" type="text" ref="searchInput" x-model="searchQuery" class="bg-transparent block w-full inline-block py-2 focus:outline-none focus-border focus-border-white" placeholder="Search for anything...">
+                        <button class="text-2xs tracking-wider bg-gray-300 px-1 py-px rounded hover:text-white" @click="showSearch = false">ESC</button>
+                    </form>
+                </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="fixed p-[12vh] inset-0 backdrop-blur-sm flex justify-center items-center overflow-auto bg-black bg-opacity-50" style="z-index: 3"
+            x-cloak
+            x-transition.opacity
+            x-show="showImage"
+            x-trap.noscroll="showImage"
+        >
+                <img :src="imageUrl" alt="Lightbox Image">
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-navigation" class="fixed top-0 right-0 bottom-0 left-0 flex z-30"
+        :class="openMenu ? 'visible' : 'invisible' " x-cloak>
+
+            <div class="relative w-full h-100 flex-1 transition-all" :class="openMenu ? 'translate-x-0' : 'translate-x-full'" style="background-image: url('assets/background_1.jpg')">
+                <!-- UL Links -->
+                <ul class="relative ms-auto h-100 w-10/12 py-12 px-6 bg-white drop-shadow-2xl z-10">
+                    {{ nav from="pages" include_home="false" }}
+                    <li class="border-b border-inherit">
+                        <a href="{{ url }}" class="block py-4">{{ title }}</a>
+                    </li>
+                    {{ /nav  }}
+                    <li class="flex py-10 gap-6">
+                        <a class="border-white hover:text-white transition" href="">{{ partial:instagram size="32" color="#000000" }}</a>
+                        <a class="border-white hover:text-white transition" href="">{{ partial:facebook size="32" color="#000000" }}</a>
+                        <a class="border-white hover:text-white transition" href="">{{ partial:linkedin size="32" color="#000000" }}</a>
+                        <a class="border-white hover:text-white transition" href="">{{ partial:tiktok size="32" color="#000000" }}</a>
+                    </li>
+                    <li>
+                    <a class="block w-full text-small border-light text-center p-4">
+                            Test Text
+                    </a>
+                    </li>
+                </ul>
+
+                <!-- Close Button -->
+                <button class="absolute top-0 right-0 bottom-0 left-0" @click="openMenu = !openMenu" :aria-expanded="openMenu"
+                aria-controls="mobile-navigation" aria-label="Close Navigation Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-2 left-2" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                </button>
+            </div>
+
+            
+        </nav>
+
+        <div class="absolute z-40 w-full inset-0 opacity-75 pointer-events-none" style="background: url('/assets/film-overlay.png') top center; background-size: 1400px"></div>
+
+        {{ vite src="resources/js/app.js" }}
+
+        {{ vite src="resources/client/client.ts" }}
+
+        <script>
+            function randomizeHero()
+            {
+                $("#cover").addClass("blacked-out");
+
+                let sections = $('.hero')
+                
+                let max = sections.length;
+                let active = true;
+
+                setTimeout(function() {
+                    sections.each(function(index, element) {
+                        if(!$(this).hasClass("hidden")) {
+                            active = index;
+                        }
+                        $(this).addClass("hidden");
+                    });
+                    
+                    random = recursiveRandom(active, randomNumber(0, max), max);
+                    
+                    sections.get(random).classList.remove("hidden");
+
+                    setTimeout(function() {
+                        $("#cover").removeClass("blacked-out");
+                    }, 300);
+                }, 300);
+            }
+
+            function recursiveRandom(active, random, max) {
+                if (active !== random) {
+                    return random;
+                } else {
+                    return recursiveRandom(active, randomNumber(0, max), max);
+                }
+            }
+
+            function randomNumber(min, max) {
+                return Math.floor(Math.random() * (max - min) + min);            
+            }
+
+            $(function() {
+                $('.gallery-item, .gallery-content').waypoint(function() {
+                    $(this.element).addClass('pop-in');
+                }, { 
+                    offset: '100%'
+                });
+            });
+        </script>
+
+        <script>
+            gap.to(".box", { x: 200 })
+        </script>
+    </body>
+</html>

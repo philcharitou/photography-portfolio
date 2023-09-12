@@ -1,0 +1,160 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: role
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Role
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: client
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Client
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: contents
+            field:
+              collapse: false
+              previews: true
+              fullscreen: true
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  instructions: null
+                  icon: null
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: null
+                      icon: null
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            min_files: 1
+                            mode: list
+                            container: assets
+                            restrict: false
+                            allow_uploads: true
+                            show_filename: true
+                            show_set_alt: true
+                            type: assets
+                            display: Image
+                            icon: assets
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: caption
+                          field:
+                            input_type: text
+                            antlers: false
+                            type: text
+                            display: Caption
+                            icon: text
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+                        -
+                          handle: metadata
+                          field:
+                            restrict: false
+                            buttons:
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - quote
+                              - link
+                              - image
+                              - table
+                            automatic_line_breaks: true
+                            automatic_links: false
+                            escape_markup: false
+                            heading_anchors: false
+                            smartypants: false
+                            table_of_contents: false
+                            antlers: false
+                            type: markdown
+                            display: Metadata
+                            icon: markdown
+                            listable: hidden
+                            instructions_position: above
+                            visibility: visible
+                            hide_display: false
+              type: replicator
+              display: Contents
+              icon: replicator
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+title: Gallery

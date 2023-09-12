@@ -1,0 +1,32 @@
+<section class="hero" style="background-image: url('{{ featured_image }}')">
+</section>
+
+<section class="gallery-info p-12">
+    <div class="flex max-w-6xl mx-auto">
+        <div class="flex-1">
+            <h3 class="font-bold">Title</h2>
+            <h2 class="my-6">{{ title }}</h2>
+            <h3 class="font-bold">Role</h2>
+            <h2 class="my-6">{{ role }}</h2>
+            <h3 class="font-bold">Client</h2>
+            <h2 class="my-6">{{ client }}</h2>
+        </div>
+        <div class="flex-1">
+            {{ content }}
+        </div>
+    </div>
+</section>
+
+<section class="p-12">
+    <div id="gallery-contents" class="flex flex-col max-w-6xl mx-auto relative pb-9">
+        {{ contents }}
+        <div class="gallery-content">
+            <img class="gallery-image" src="{{ image }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = this.src; $focus.next()">
+            <div class="flex-1">
+                <h3 class="font-bold">{{ caption }}</h2>
+                <h6 class="font-bold">{{ metadata }}</h6>
+            </div>
+        </div>
+        {{ /contents }}
+    </div>
+</section>

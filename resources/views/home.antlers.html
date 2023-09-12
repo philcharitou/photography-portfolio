@@ -1,0 +1,138 @@
+<!-- Hero -->
+<div id="cover" class=""></div>
+
+<!-- <section class="hero" style="background-image: url('{{ background }}')"></section> -->
+
+{{ heros }}
+<section class="hero {{ visible ? 'parallax-wrap' : 'hidden' }} relative" style="background-image: url('{{ background }}')">
+    {{ if layout === "text_layer" }}
+    <div class="w-full relative overflow-hidden">
+        <img class="h-100 foreground" src="{{ foreground }}">
+        <h1 class="foreground-text text-shadow">{{ heading }}</h1>
+        <div class="foreground-subtext text-shadow flex justify-center items-center gap-2">
+            <hr width="24">
+            <h2 class="">{{ subheading }}</h2>
+            <hr width="24">
+        </div>
+    </div>
+
+    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-xl prose">
+        <div class="p-8">
+            <h6>{{ teaser }}</h6>
+            <h2>{{ title }}</h2>
+            {{ subtitle }}
+        </div>
+    </article>
+    {{ elseif layout === "mirrored" }}
+    <div class="w-full relative overflow-hidden relative">
+        <img class="h-100 foreground mirrored" src="{{ foreground }}">
+    </div>
+
+    <h1 class="foreground-text mirrored text-shadow">{{ heading }}</h1>
+    <div class="foreground-subtext mirrored text-shadow flex justify-center items-center gap-2">
+        <hr width="24">
+        <h2 class="">{{ subheading }}</h2>
+        <hr width="24">
+    </div>
+
+    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-xl prose">
+        <div class="p-8">
+            <h6>{{ teaser }}</h6>
+            <h2>{{ title }}</h2>
+            {{ subtitle }}
+        </div>
+    </article>
+    {{ elseif layout === "aligned_left" }}
+    <div class="w-full flex justify-center items-center relative overflow-hidden">
+        {{ if foreground }}
+            <img class="h-100 foreground" src="{{ foreground }}"> 
+        {{ /if }}
+    </div>
+
+    <div class="foreground-text aligned-left text-shadow md:spaced-left">
+        <h1>{{ heading }}</h1>
+        <h2 class="foreground-subtext aligned-left text-shadow md:spaced-left md:mw-500 items-center gap-2">
+            {{ subheading }}
+        </h2>
+    </div>
+
+    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-xl prose">
+        <div class="p-8">
+            <h6>{{ teaser }}</h6>
+            <h2>{{ title }}</h2>
+            {{ subtitle }}
+        </div>
+    </article>
+    {{ /if }}
+
+    <div class="hidden unselectable md:flex bottom-left-action justify-between items-center gap-6 text-sideways">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>        <hr width="24">
+        <h5 class="font-bold">Share</h5>
+    </div>
+
+    <div class="hidden unselectable md:flex bottom-right-action justify-between items-end gap-6" onclick="randomizeHero()">
+        <h5 class="font-bold">Refresh</h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"/></svg>
+    </div>
+</section>
+{{ /heros }}
+
+<!-- Text Section -->
+{{ information_section }}
+<section class="section vh-60 justify-center items-center md:flex p-6">
+    <div class="split flex flex-wrap max-w-4xl">
+        <div class="flex-1 min-width-full md:min-width-unset p-6 gap-y-4 dark:text-white">
+            <h6>{{ teaser }}</h6>
+            <h4 class="mt-6 mb-9">{{ heading }}</h4>
+            <a href="{{ link }}" class="underline-link">{{ link_text }}</a>
+        </div>
+        <div class="flex-1 p-6 text-muted">
+            {{ content }}
+        </div>
+    </div>
+</section>
+{{ /information_section }}
+
+<!-- Gallery -->
+<section class="section relative">
+    <div class="w-full p-6 max-w-6xl flex flex-col justify-center items-center relative">
+        <div class="works-text md:absolute md:works-desktop dark:text-white works-title">
+            <h2 class="p-3">Some projects</h2>
+        </div>
+
+        <div class="gallery">
+            {{ gallery_images }}
+            <a class="gallery-item" href="{{ link }}">
+                <figure class="background-cover" style="background-image: url('{{ cover_image }}')">
+                    <div class="gallery-heading">{{ caption }}</div>
+                </figure>
+            </a>
+            {{ /gallery_images }}
+        </div>
+
+        <a class="works-text md:absolute md:works-desktop dark:text-white works-cta" href="/galleries">
+            <h2 class="p-3">CTA Button</h2>
+        </a>
+    </div>
+</section>
+<!-- End of Gallery -->
+
+<!-- About Section -->
+<section class="flex-wrap relative p-6 max-w-3xl mx-auto">
+    <div class="flex-1 flex p-6 justify-center items-center flex-wrap md:flex-no-wrap relative">
+        <div class="profile-images md:w-50">
+            <div style="background-image: url('/assets/image_2.jpg');"></div>
+            <div style="background-image: url('/assets/image_1.jpg');"></div>
+            <div style="background-image: url('/assets/image_3.jpg');"></div>
+        </div>
+    </div>
+    <div class="flex-1 flex p-6 flex-col justify-center md:items-end">
+        <h6>Subtitle Caption?</h6>
+        <h2>Example Name</h2>
+        <p>Here are some real details</p>
+        <a class="mt-6" href="#">Read more</a>
+    </div>
+</section>
+
+{{ partial:call-to-action }}
+

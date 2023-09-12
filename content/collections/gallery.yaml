@@ -1,0 +1,17 @@
+title: Gallery
+template: gallery/show
+layout: layout
+taxonomies:
+  - tags
+revisions: false
+route: '/gallery/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

@@ -1,0 +1,5 @@
+title: 'Main Nav'
+collections:
+  - pages
+  - gallery
+root: true

@@ -1,0 +1,23 @@
+<section class="section-full mh-100vh bg-black">
+    <header class="my-12 md:my-16 lg:my-24 text-center">
+        <p class="text-green font-bold text-lg antialiased mb-4">Search Results For</p>
+        <h1 class="text-6xl md:text-7xl lg:text-7xl text-white font-bold">{{ get:q }}</h1>
+    </header>
+    
+    <div class="max-w-4xl mx-auto flex-col space-y-4 pt-6 text-white">
+        {{ search:results }}
+        {{ if no_results }}
+        <h1 class="text-center">no results</h1>
+        {{ /if }}
+        <div class="py-4">
+            <div class="flex items-center justify-between">
+                <h2><a class="inline-block text-yellow hover:underline text-3xl font-bold" href="{{ url }}">{{ title }}</a></h2>
+                <div class="px-3 py-1 text-gray-100 font-bold bg-blue rounded-full text-sm">{{ collection }}</div>
+            </div>
+            <div class="mt-2 font-regular">
+                {{ (title ?? content ?? caption ?? client) | safe_truncate(140) }}...
+            </div>
+        </div>
+        {{ /search:results }}
+    </div>
+</section>

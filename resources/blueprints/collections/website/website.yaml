@@ -1,0 +1,133 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: role
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Role
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: client
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Client
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: stack
+            field:
+              restrict: false
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - quote
+                - link
+                - image
+                - table
+              automatic_line_breaks: true
+              automatic_links: false
+              escape_markup: false
+              heading_anchors: false
+              smartypants: false
+              table_of_contents: false
+              antlers: false
+              type: markdown
+              display: Stack
+              icon: markdown
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: url
+            field:
+              type: link
+              display: URL
+              icon: link
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured Image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: images
+            field:
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Images
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - website
+              max_items: 1
+              listable: false
+              localizable: true
+title: Website
