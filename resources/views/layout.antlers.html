@@ -5,8 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title ?? site:name }}</title>
-        @vite(['resources/css/site.css'])
-        <link href="/css/app.css" rel="stylesheet">
+        {{ vite src="resources/css/site.css" }}
 
          <!-- JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -175,10 +174,6 @@
                     offset: '100%'
                 });
             });
-        </script>
-
-        <script>
-            gap.to(".box", { x: 200 })
         </script>
     </body>
 </html>
