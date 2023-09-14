@@ -1,23 +1,47 @@
 // This is all you.
-
 function randomizeHero()
 {
-    let sections = $('.hero')
-    
-    let max = sections.length;
-    
-    sections.each(function() {
-        $(this).addClass("hidden");
-    });
-    
-    let random = randomNumber(0, max);
-    
-    console.log(sections);
-    console.log(sections.get(random));
+    $("#cover").addClass("blacked-out");
 
-    sections.get(random).classList.remove("hidden");
+    let sections = $('.hero')
+
+    let max = sections.length;
+    let active = true;
+
+    setTimeout(function() {
+        sections.each(function(index, element) {
+            if(!$(this).hasClass("hidden")) {
+                active = index;
+            }
+            $(this).addClass("hidden");
+        });
+
+        random = recursiveRandom(active, randomNumber(0, max), max);
+
+        sections.get(random).classList.remove("hidden");
+
+        setTimeout(function() {
+            $("#cover").removeClass("blacked-out");
+        }, 300);
+    }, 300);
+}
+
+function recursiveRandom(active, random, max) {
+    if (active !== random) {
+        return random;
+    } else {
+        return recursiveRandom(active, randomNumber(0, max), max);
+    }
 }
 
 function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);            
+    return Math.floor(Math.random() * (max - min) + min);
 }
+
+$(function() {
+    $('.gallery-item, .gallery-content').waypoint(function() {
+        $(this.element).addClass('pop-in');
+    }, {
+        offset: '100%'
+    });
+});
