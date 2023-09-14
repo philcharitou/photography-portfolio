@@ -2,4 +2,4 @@
 
 let mix = require('laravel-mix');
 
-mix.js('src/app.js', 'dist').setPublicPath('dist');
+mix.css('resources/css/site.css', 'css').js('resources/js/site.js');
