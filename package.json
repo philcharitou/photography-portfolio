@@ -1,8 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
@@ -26,8 +31,8 @@
     "gsap": "^3.12.2",
     "waypoints": "^4.0.1"
   },
-  "name": "new-project",
-  "description": "<p align=\"center\"><img src=\"https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg\" width=\"400\" alt=\"Statamic Logo\" /></p>",
+  "name": "portfolio",
+  "description": "",
   "version": "1.0.0",
   "main": "postcss.config.js",
   "directories": {
