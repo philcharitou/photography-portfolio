@@ -45,7 +45,7 @@
     {{ elseif layout === "aligned_left" }}
     <div class="w-full flex justify-center items-center relative overflow-hidden">
         {{ if foreground }}
-            <img class="h-100 foreground" src="{{ foreground }}"> 
+            <img class="h-100 foreground" src="{{ foreground }}">
         {{ /if }}
     </div>
 
@@ -93,6 +93,10 @@
 </section>
 {{ /information_section }}
 
+<section class="banner-section" style="background-image: url('/assets/background_1.jpg')">
+    <h2>An example of some words</h2>
+</section>
+
 <!-- Gallery -->
 <section class="section relative">
     <div class="w-full p-6 max-w-6xl flex flex-col justify-center items-center relative">
@@ -117,21 +121,8 @@
 </section>
 <!-- End of Gallery -->
 
-<!-- About Section -->
-<section class="flex-wrap relative p-6 max-w-3xl mx-auto">
-    <div class="flex-1 flex p-6 justify-center items-center flex-wrap md:flex-no-wrap relative">
-        <div class="profile-images md:w-50">
-            <div style="background-image: url('/assets/image_2.jpg');"></div>
-            <div style="background-image: url('/assets/image_1.jpg');"></div>
-            <div style="background-image: url('/assets/image_3.jpg');"></div>
-        </div>
-    </div>
-    <div class="flex-1 flex p-6 flex-col justify-center md:items-end">
-        <h6>Subtitle Caption?</h6>
-        <h2>Example Name</h2>
-        <p>Here are some real details</p>
-        <a class="mt-6" href="#">Read more</a>
-    </div>
+<section class="banner-section" style="background-image: url('/assets/background_1.jpg')">
+    <h2>An example of some words</h2>
 </section>
 
 {{ partial:call-to-action }}

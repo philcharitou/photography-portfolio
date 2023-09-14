@@ -19,7 +19,7 @@ a {
         --nav-color: rgb(51, 51, 51);
         --teaser-color: rgb(140, 203, 255);
     }
-    
+
     .text-shadow {
         text-shadow: 1px 1px 2px black;
     }
@@ -168,7 +168,7 @@ body {
     background-size: cover;
 
     transition: all 1s ease;
-    
+
     h6, h5, h2 {
         margin: 0;
     }
@@ -225,7 +225,7 @@ canvas {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     h6, h5, h2 {
         margin: 0;
     }
@@ -275,6 +275,19 @@ canvas {
         font-size: 1.2rem;
         text-align: center;
     }
+}
+
+.banner-section {
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10vh 0;
+
+    background: black;
 }
 
 .w-50 {
@@ -575,7 +588,7 @@ h6 {
 }
 
 .bottom-right-action:hover {
-    
+
 }
 
 .bottom-left-action {
@@ -594,7 +607,7 @@ h6 {
 }
 
 .bottom-left-action:hover {
-    
+
 }
 
 .bottom-middle-action {
@@ -616,7 +629,7 @@ h6 {
 }
 
 .bottom-middle-action:hover {
-    
+
 }
 
 .scroll_box:after {
@@ -628,7 +641,7 @@ h6 {
     left: 24px;
     background: rgba(255, 255, 255, 0.5);
 }
- 
+
 .center-line {
     height:100%;
     width: 50%;
@@ -703,8 +716,8 @@ h6 {
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-end; 
-    
+        align-items: flex-end;
+
         position: relative;
         cursor: pointer;
 
@@ -718,18 +731,18 @@ h6 {
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
     }
-    
+
     .gallery-item .gallery-heading {
         opacity: 0;
         color: white;
         font-size: 1vw;
         font-weight: 500;
-    
+
         transition: all 0.2s ease;
     }
-    
+
     .gallery-item:hover .gallery-heading {
         opacity: 100%;
     }
@@ -739,62 +752,62 @@ h6 {
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 3;
-    
+
         /** Alternative Syntax **/
         /* grid-column: 1 / span 2;  */
         /* grid-row: 1 / span 2; */
     }
-    
+
     .gallery-item:nth-child(2) {
         grid-column-start: 3;
         grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 3;
-    
+
         /** Alternative Syntax **/
         /* grid-column: 3 / span 2;  */
         /* grid-row: 1 / span 2; */
     }
-    
+
     .gallery-item:nth-child(3) {
         grid-column-start: 5;
         grid-column-end: 9;
         grid-row-start: 1;
         grid-row-end: 6;
-    
+
         /** Alternative Syntax **/
         /* grid-column: 5 / span 4;
         grid-row: 1 / span 5; */
     }
-    
+
     .gallery-item:nth-child(4) {
         grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 3;
         grid-row-end: 6;
-    
+
         /** Alternative Syntax **/
         /* grid-column: 1 / span 4;  */
         /* grid-row: 3 / span 3; */
     }
-    
+
     .gallery-item:nth-child(5) {
         grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 6;
         grid-row-end: 9;
-    
+
         /** Alternative Syntax **/
         /* grid-column: 1 / span 4; */
         /* grid-row: 6 / span 3; */
     }
-    
+
     .gallery-item:nth-child(6) {
         grid-column-start: 5;
         grid-column-end: 9;
         grid-row-start: 6;
         grid-row-end: 9;
-    
+
         /** Alternative Syntax **/
         /* grid-column: 5 / span 4; */
         /* grid-row: 6 / span 3; */
@@ -818,7 +831,7 @@ h6 {
 
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 
     position: relative;
     cursor: pointer;
@@ -851,32 +864,32 @@ h6 {
         opacity: 0;
         transition: all 0.5s ease;;
     }
-    
+
     .gallery-content:nth-child(odd) {
         width: 100%;
         max-width: 55%;
     }
-    
+
     .gallery-content:nth-child(even) {
         margin-left: auto;
     }
-    
+
     .gallery-content:nth-child(2n+4):not(:nth-child(4)) {
         margin-left: auto;
         margin-top: -15rem;
     }
-    
+
     .gallery-content:nth-child(1) {
         width: 100%;
         max-width: 55%;
         margin-top: unset;
     }
-    
+
     .gallery-content:nth-child(2) {
         margin-left: auto;
         margin-top: -15rem;
     }
-    
+
     .gallery-content:nth-child(3) {
         position: absolute;
         right: 0;
@@ -963,7 +976,7 @@ h4 {
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 700;
-}  
+}
 
 @keyframes spin {
     from { transform: rotate(0); }
