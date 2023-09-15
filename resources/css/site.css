@@ -398,6 +398,12 @@ h6 {
     color: rgb(136, 136, 136);
 }
 
+#contact-callout {
+    p {
+        @apply max-w-xl text-white text-center;
+    }
+}
+
 .underline-link {
     padding: 0 1rem 0.5rem 0;
     border-bottom: solid 1px var(--teaser-color);

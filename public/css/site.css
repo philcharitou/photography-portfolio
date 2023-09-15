@@ -1955,6 +1955,12 @@ p {
 h6 {
     color: rgb(136, 136, 136);
 }
+#contact-callout p {
+  max-width: 36rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 .underline-link {
     padding: 0 1rem 0.5rem 0;
     border-bottom: solid 1px var(--teaser-color);
@@ -3071,14 +3077,14 @@ h4 {
     padding-right: 0px;
   }
 
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:ps-12 {

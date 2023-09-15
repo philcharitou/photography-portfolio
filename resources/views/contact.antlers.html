@@ -1,21 +1,16 @@
 <!-- About Section -->
-<section class="section-full flex no-padding items-center flex-wrap justify-between md:justify-center mh-100vh px-10 relative" style="background-image: url('assets/background_3.jpg')">
+<section class="section-full flex no-padding items-center flex-wrap justify-between md:justify-center mh-100vh px-10 relative" style="background-image: url('{{ background }}')">
     <div class="w-full section-padding-top py-6 md:w-50 flex-center px-4">
-        <div class="max-w-xl text-white text-center">
-            <h2 class="mb-12">GET IN TOUCH</h2>
-            <p class="mb-12 px-12 md:px-0 md:w-50 mx-auto">
-                For more info on availability and pricing guides send us a note. Or simply say hello! We can’t wait to hear from you!
-                <br><br>
-                <strong>Bookings:</strong><br>
-                contact@philcharitou.com<br>
-                tel 289.500.2666<br>
-                Toronto + GTA | Hamilton | Destinations
-            </p>
-            <h2 class="mb-12">FOLLOW US</h2>
+        <div id="contact-callout">
+            <h2 class="mb-12">{{ header }}</h2>
+            {{ callout }}
+            <h2 class="mb-12">{{ subheader }}</h2>
+            {{ if social_media_icons }}
             <div class="flex justify-center gap-6 text-white">
                 <a class="hover:text-white transition" href="">{{ partial:instagram size="32" color="#ffffff" }}</a>
                 <a class="hover:text-white transition" href="">{{ partial:facebook size="32" color="#ffffff" }}</a>
             </div>
+            {{ /if }}
         </div>
     </div>
     <div class="w-full md:section-padding-top pt-12 md:w-50 px-4">
