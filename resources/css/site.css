@@ -617,6 +617,37 @@ h6 {
     user-select: none;
 }
 
+.link-color {
+    color: #0dcaf0;
+}
+
+.legal-card-head {
+    position: absolute;
+
+    padding: 2rem;
+    bottom: 0;
+
+    width: 50%;
+    height: 60%;
+    left: 25%;
+
+    background: white;
+    border-radius: 1rem 1rem 0 0;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+
+.legal-card {
+    color: black;
+    width: 75%;
+    margin: auto;
+}
+
 .diglet-card {
     position: absolute;
     width: 90vw;

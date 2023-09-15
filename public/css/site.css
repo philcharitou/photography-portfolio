@@ -912,6 +912,9 @@ video {
 .top-2 {
   top: 0.5rem;
 }
+.isolate {
+  isolation: isolate;
+}
 .z-10 {
   z-index: 10;
 }
@@ -947,6 +950,10 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
 }
 .-mr-2 {
   margin-right: -0.5rem;
@@ -1026,6 +1033,9 @@ video {
 .inline-flex {
   display: inline-flex;
 }
+.table {
+  display: table;
+}
 .contents {
   display: contents;
 }
@@ -1097,6 +1107,9 @@ video {
 }
 .shrink-0 {
   flex-shrink: 0;
+}
+.table-auto {
+  table-layout: auto;
 }
 .origin-top {
   transform-origin: top;
@@ -2146,6 +2159,33 @@ h6 {
     -moz-user-select: none;
     user-select: none;
 }
+.link-color {
+    color: #0dcaf0;
+}
+.legal-card-head {
+    position: absolute;
+
+    padding: 2rem;
+    bottom: 0;
+
+    width: 50%;
+    height: 60%;
+    left: 25%;
+
+    background: white;
+    border-radius: 1rem 1rem 0 0;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+.legal-card {
+    color: black;
+    width: 75%;
+    margin: auto;
+}
 .diglet-card {
     position: absolute;
     width: 90vw;
@@ -2299,6 +2339,8 @@ h6 {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        transition: all 0.5s ease;
     }
 .gallery .gallery-item .gallery-heading {
         opacity: 0;
