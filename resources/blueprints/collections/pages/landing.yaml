@@ -288,68 +288,16 @@ tabs:
               visibility: visible
               hide_display: false
           -
-            handle: gallery_images
+            handle: featured_works
             field:
-              collapse: false
-              previews: true
-              fullscreen: true
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  instructions: null
-                  icon: null
-                  sets:
-                    new_set:
-                      display: 'New Set'
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: cover_image
-                          field:
-                            max_files: 1
-                            min_files: 1
-                            mode: list
-                            container: assets
-                            restrict: false
-                            allow_uploads: true
-                            show_filename: true
-                            show_set_alt: true
-                            type: assets
-                            display: 'Cover Image'
-                            icon: assets
-                            instructions: 'This is a cover image for a gallery photo'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: caption
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Caption
-                            icon: text
-                            instructions: 'This is the caption (hover text) of a gallery image'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: link
-                          field:
-                            type: link
-                            display: Link
-                            icon: link
-                            instructions: 'This is a link to the highlighted gallery'
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-              type: replicator
-              display: 'Gallery Images'
-              icon: replicator
+              max_items: 6
+              mode: default
+              create: true
+              collections:
+                - gallery
+              type: entries
+              display: 'Featured Works'
+              icon: entries
               listable: hidden
               instructions_position: above
               visibility: visible
