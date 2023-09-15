@@ -7,7 +7,7 @@ teaser: 'Still Photography'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1694725314
+updated_at: 1694794339
 featured_image: hero.jpg
 gallery_images:
   -
@@ -93,13 +93,30 @@ heros:
     visible: false
     type: new_set
     enabled: true
+information_section:
   -
-    id: lm0zq06b
-    teaser: 'Life is busy, allow me to capture those individual moments which'
+    id: lmkshfdx
+    teaser: "Life is busy, I'm here to help you keep all the moments which"
     heading: 'Rush Past'
-    link_text: 'Get in touch'
-    link: 'entry::be45ad08-e6ab-4d38-9420-9df822630f3a'
-    content: 'Welcome to my collection of work, where stills come to life and stories are etched in every frame. Discover the power of expression, the beauty of individuality, and the art of storytelling through my lens. Are you ready to embark on a journey through the eyes of my subjects? Click below to explore more'
+    link_text: 'About me'
+    link: 'entry::b34377cb-2afe-4ed3-92c6-9b765b0d17fa'
+    content: |-
+      Welcome to my collection of photos, where I try to make still moments come to life and etch stories in every frame. Through the expression via composition, the beauty of individuals, their willingness to share their life, and the beautiful technology that allows us to capture it all. 
+      <br>
+      Curious why I do it or interested in the results? Keep on reading.
+    type: new_set
+    enabled: true
+banners:
+  -
+    id: lmkshl0w
+    banner_image: hero.jpg
+    banner_text: 'Quote 1'
+    type: new_set
+    enabled: true
+  -
+    id: lmkshqfd
+    banner_image: image_3.jpg
+    banner_text: 'Quote 2'
     type: new_set
     enabled: true
 ---
