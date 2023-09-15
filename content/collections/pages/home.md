@@ -7,7 +7,7 @@ teaser: 'Still Photography'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1694794339
+updated_at: 1694794768
 featured_image: hero.jpg
 gallery_images:
   -
@@ -119,4 +119,8 @@ banners:
     banner_text: 'Quote 2'
     type: new_set
     enabled: true
+featured_works:
+  - 02b1d555-3049-46f0-abc1-497d344e2734
+  - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
+  - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
 ---
