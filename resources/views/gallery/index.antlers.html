@@ -1,6 +1,6 @@
 <section class="hero relative" style="background-image: url('assets/background_3.jpg')">
-    <h1 class="foreground-text mirrored text-shadow">{{ heading ?? "GALLERIES" }}</h1>
-    <div class="foreground-subtext mirrored text-shadow flex justify-center items-center gap-2">
+    <h1 class="foreground-text muted text-shadow">{{ heading ?? "GALLERIES" }}</h1>
+    <div class="foreground-subtext muted text-shadow flex justify-center items-center gap-2">
         <hr width="24">
         <h2 class="px-8">{{ subheading ?? "Sorted by Subject" }}</h2>
         <hr width="24">
@@ -38,7 +38,7 @@
 <section class="galleries">
     <div class="w-full flex flex-col flex-wrap">
         {{ collection:gallery }}
-            <a href="{{ url }}" class="gallery-object py-6 px-12 parallax" style="background-image: url('{{ featured_image }}');">
+            <a href="{{ url }}" class="gallery-object py-6 px-6 md:px-12 parallax" style="background-image: url('{{ featured_image }}');">
                 <div class="gallery-details">
                     <h1>{{ title }}</h1>
                 </div>
@@ -48,18 +48,18 @@
 </section>
 
 <!-- Text Section -->
-<section class="w-full flex flex-wrap md:flex-no-wrap center-heading md:center-heading-reorder vh-80 justify-center items-center mx-auto my-10 py-6">
-    <div class="w-50 md:w-25 h-full flex items-end">
+<section class="w-full flex flex-wrap md:flex-no-wrap center-heading md:center-heading-reorder md:vh-80 justify-center items-center mx-auto my-10 py-6">
+    <div class="w-50 mb-12 md:mb-0 md:w-25 h-full flex items-end">
         <img class="w-full" src="assets/background_3.jpg">
     </div>
-    <div class="w-50 md:w-25 h-full flex items-start">
+    <div class="w-50 mb-12 md:mb-0 md:w-25 h-full flex items-start">
         <img class="w-full" src="assets/background_3.jpg">
     </div>
     <div class="max-50 mx-auto z-10">
         <div class="px-12 gap-y-12 flex flex-col">
             <div class=text-center>
                 <i class="fa-2x fa-solid fa-quote-left"></i>
-                <h1 class="my-4">In the tapestry of time, ephemeral moments may wane, yet through the lense, memories forever remain.</h1>
+                <h6 class="quote my-4">In the tapestry of time, ephemeral moments may wane, yet through the lense, memories forever remain.</h6>
                 <i class="fa-2x fa-solid fa-quote-right"></i>
             </div>
             <h2>CONSIDER ME YOUR EYES AND ADVOCATE.</h2>

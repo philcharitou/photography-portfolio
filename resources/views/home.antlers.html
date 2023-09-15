@@ -16,7 +16,7 @@
         </div>
     </div>
 
-    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-xl prose">
+    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-unset prose">
         <div class="p-8">
             <h6>{{ teaser }}</h6>
             <h2>{{ title }}</h2>
@@ -29,13 +29,15 @@
     </div>
 
     <h1 class="foreground-text mirrored text-shadow">{{ heading }}</h1>
+    {{ if subheading }}
     <div class="foreground-subtext mirrored text-shadow flex justify-center items-center gap-2">
         <hr width="24">
         <h2 class="">{{ subheading }}</h2>
         <hr width="24">
     </div>
+    {{ /if }}
 
-    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-xl prose">
+    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-unset prose">
         <div class="p-8">
             <h6>{{ teaser }}</h6>
             <h2>{{ title }}</h2>
@@ -56,7 +58,7 @@
         </h2>
     </div>
 
-    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-xl prose">
+    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-unset prose">
         <div class="p-8">
             <h6>{{ teaser }}</h6>
             <h2>{{ title }}</h2>
@@ -79,7 +81,7 @@
 
 <!-- Text Section -->
 {{ information_section }}
-<section class="section vh-60 justify-center items-center md:flex p-6">
+<section class="section section-padding-top md:py-0 vh-60 justify-center items-center md:flex p-6">
     <div class="split flex flex-wrap max-w-4xl">
         <div class="flex-1 min-width-full md:min-width-unset p-6 gap-y-4 dark:text-white">
             <h6>{{ teaser }}</h6>
@@ -93,15 +95,15 @@
 </section>
 {{ /information_section }}
 
-<section class="banner-section" style="background-image: url('/assets/background_1.jpg')">
-    <h2>An example of some words</h2>
+<section class="banner-section md:mt-0" style="background-image: url('/assets/background_1.jpg')">
+    <h2>{{ first_banner_text }}</h2>
 </section>
 
 <!-- Gallery -->
 <section class="section relative">
     <div class="w-full p-6 max-w-6xl flex flex-col justify-center items-center relative">
         <div class="works-text md:absolute md:works-desktop dark:text-white works-title">
-            <h2 class="p-3">Some projects</h2>
+            <h2 class="my-8 p-2 md:p-3 md:m-0 text-medium">Featured Works</h2>
         </div>
 
         <div class="gallery">
@@ -115,14 +117,18 @@
         </div>
 
         <a class="works-text md:absolute md:works-desktop dark:text-white works-cta" href="/galleries">
-            <h2 class="p-3">CTA Button</h2>
+            <h2 class="my-8 p-2 md:p-3 md:m-0 text-medium flex items-center justify-center">
+                <span class="me-3">
+                    See Galleries
+                </span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5"/><path d="M13.8 12H3m9 10a10 10 0 1 0 0-20"/></svg></h2>
         </a>
     </div>
 </section>
 <!-- End of Gallery -->
 
 <section class="banner-section" style="background-image: url('/assets/background_1.jpg')">
-    <h2>An example of some words</h2>
+    <h2>{{ second_banner_text }}</h2>
 </section>
 
 {{ partial:call-to-action }}
