@@ -1,13 +1,13 @@
 ---
 id: home
 blueprint: landing
-title: "It's in the name"
+title: 'Phil Charitou'
 template: home
 teaser: 'Still Photography'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1694794768
+updated_at: 1694798552
 featured_image: hero.jpg
 gallery_images:
   -
@@ -101,7 +101,7 @@ information_section:
     link_text: 'About me'
     link: 'entry::b34377cb-2afe-4ed3-92c6-9b765b0d17fa'
     content: |-
-      Welcome to my collection of photos, where I try to make still moments come to life and etch stories in every frame. Through the expression via composition, the beauty of individuals, their willingness to share their life, and the beautiful technology that allows us to capture it all. 
+      Welcome to my collection of work, where I try to make still moments come to life and etch stories in every frame. Through the expression via composition, the beauty of individuals, their willingness to share their life, and the beautiful technology that allows us to capture it all. 
       <br>
       Curious why I do it or interested in the results? Keep on reading.
     type: new_set
@@ -123,4 +123,5 @@ featured_works:
   - 02b1d555-3049-46f0-abc1-497d344e2734
   - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
   - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
+main_title: "It's in the name"
 ---
