@@ -1,13 +1,13 @@
 ---
 id: home
 blueprint: landing
-title: 'Example Application'
+title: 'Welcome to my portfolio'
 template: home
 teaser: "I know why you're here, and you've come to the right place"
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1693597885
+updated_at: 1694725314
 featured_image: hero.jpg
 gallery_images:
   -
@@ -64,8 +64,8 @@ replicator_field:
 heros:
   -
     id: llzi2uui
-    heading: 'Example 1'
-    subheading: 'An example of a subheading'
+    heading: Scotland
+    subheading: 'But mostly Island of Skye'
     layout: text_layer
     background: background_1.png
     foreground: foreground_1.png
@@ -74,8 +74,8 @@ heros:
     enabled: true
   -
     id: llzi74wa
-    heading: 'Example 2'
-    subheading: 'An example of a DIFFERENT subheading'
+    heading: Landscapes
+    subheading: 'And fun compositions'
     layout: mirrored
     background: background_2.png
     foreground: foreground_2.png
