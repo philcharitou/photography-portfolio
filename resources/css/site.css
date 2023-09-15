@@ -780,6 +780,26 @@ h6 {
         transition: all 0.5s ease;;
     }
 
+    .gallery-item {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        position: relative;
+        cursor: pointer;
+
+        transform: scale(0.0.5);
+        opacity: 0;
+        transition: all 0.5s ease;;
+    }
+
+    .gallery-item:hover figure {
+        filter: brightness(50%);
+        filter: saturate(0%);
+    }
+
     figure {
         width: 100%;
         height: 100%;
