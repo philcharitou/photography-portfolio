@@ -1,21 +1,13 @@
 ---
 id: home
 blueprint: landing
-<<<<<<< HEAD
-title: 'Welcome to my portfolio'
-=======
 title: "It's in the name"
->>>>>>> d38290b6ccda9660645cdada4453d33615e119ee
 template: home
 teaser: 'Still Photography'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-<<<<<<< HEAD
 updated_at: 1694725314
-=======
-updated_at: 1694782271
->>>>>>> d38290b6ccda9660645cdada4453d33615e119ee
 featured_image: hero.jpg
 gallery_images:
   -
@@ -72,13 +64,8 @@ replicator_field:
 heros:
   -
     id: llzi2uui
-<<<<<<< HEAD
-    heading: Scotland
-    subheading: 'But mostly Island of Skye'
-=======
     heading: SCOTLAND
     subheading: 'More specifically, the Isle of Skye'
->>>>>>> d38290b6ccda9660645cdada4453d33615e119ee
     layout: text_layer
     background: background_1.png
     foreground: foreground_1.png
@@ -87,13 +74,10 @@ heros:
     enabled: true
   -
     id: llzi74wa
-<<<<<<< HEAD
     heading: Landscapes
     subheading: 'And fun compositions'
-=======
     heading: LANDSCAPES
     subheading: 'And some fun compositions'
->>>>>>> d38290b6ccda9660645cdada4453d33615e119ee
     layout: mirrored
     background: background_2.png
     foreground: foreground_2.png
@@ -111,7 +95,6 @@ heros:
     visible: false
     type: new_set
     enabled: true
-information_section:
   -
     id: lm0zq06b
     teaser: 'Life is busy, allow me to capture those individual moments which'
