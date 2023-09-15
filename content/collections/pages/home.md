@@ -76,8 +76,6 @@ heros:
     id: llzi74wa
     heading: Landscapes
     subheading: 'And fun compositions'
-    heading: LANDSCAPES
-    subheading: 'And some fun compositions'
     layout: mirrored
     background: background_2.png
     foreground: foreground_2.png
