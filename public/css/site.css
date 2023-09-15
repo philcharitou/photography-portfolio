@@ -2291,8 +2291,7 @@ h6 {
         transition: all 0.5s ease;;
     }
 .gallery .gallery-item:hover figure {
-        filter: brightness(50%);
-        filter: saturate(0%);
+        filter: saturate(0%) brightness(50%);
     }
 .gallery figure {
         width: 100%;

@@ -792,12 +792,11 @@ h6 {
 
         transform: scale(0.0.5);
         opacity: 0;
-        transition: all 0.5s ease;;
+        transition: all 0.5s ease;
     }
 
     .gallery-item:hover figure {
-        filter: brightness(50%);
-        filter: saturate(0%);
+        filter: saturate(0%) brightness(50%);
     }
 
     figure {
@@ -806,6 +805,8 @@ h6 {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        transition: all 0.5s ease;
     }
 
     .gallery-item .gallery-heading {
