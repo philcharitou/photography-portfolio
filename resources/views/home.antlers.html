@@ -95,8 +95,8 @@
 </section>
 {{ /information_section }}
 
-<section class="banner-section md:mt-0" style="background-image: url('{{ banners[0] }}')">
-    <h2>{{ first_banner_text }}</h2>
+<section class="banner-section md:mt-0" style="background-image: url('{{ banners[0][banner_image] }}')">
+    <h2>{{ banners[0][banner_text] }}</h2>
 </section>
 
 <!-- Gallery -->
@@ -127,8 +127,8 @@
 </section>
 <!-- End of Gallery -->
 
-<section class="banner-section" style="background-image: url('{{ banners[1] }}')">
-    <h2>{{ second_banner_text }}</h2>
+<section class="banner-section" style="background-image: url('{{ banners[1][banner_image] }}')">
+    <h2>{{ banners[1][banner_text] }}</h2>
 </section>
 
 {{ partial:call-to-action }}
