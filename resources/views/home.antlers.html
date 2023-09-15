@@ -109,13 +109,13 @@
         </div>
 
         <div class="gallery">
-            {{ gallery_images }}
+            {{ featured_works }}
             <a class="gallery-item" href="{{ link }}">
-                <figure class="background-cover" style="background-image: url('{{ cover_image }}')">
-                    <div class="gallery-heading">{{ caption }}</div>
+                <figure class="background-cover" style="background-image: url('{{ featured_image }}')">
+                    <div class="gallery-heading">{{ title }}</div>
                 </figure>
             </a>
-            {{ /gallery_images }}
+            {{ /featured_works }}
         </div>
 
         <a class="works-text md:absolute md:works-desktop dark:text-white works-cta" href="/galleries">
