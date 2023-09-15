@@ -8,6 +8,7 @@
     --nav-color: rgb(248, 248, 248);
     --teaser-color: rgb(69, 128, 177);
     --text-small: 0.9rem;
+    --text-medium: 1.5rem;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
 
     .mobile-diglet-card {
         position: absolute;
-        min-width: 40%;
+        width: 40%;
         bottom: 0;
         left: calc(30%);
 
@@ -92,6 +93,10 @@ a {
     .section-padding-top {
         padding-top: 15vh;
     }
+
+    .vh-80 {
+        height: 80vh;
+    }
 }
 
 #navigation-bar {
@@ -144,11 +149,16 @@ a {
 }
 
 .border-light:hover {
+    padding-left: 0.2rem;
     letter-spacing: 0.2rem;
 }
 
 .text-small {
     font-size: var(--text-small) !important;
+}
+
+.text-medium {
+    font-size: var(--text-medium) !important;
 }
 
 body {
@@ -288,6 +298,9 @@ canvas {
     margin: 10vh 0;
 
     background: black;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .w-50 {
@@ -315,6 +328,10 @@ canvas {
         font-size: 2.3rem;
         letter-spacing: -0.1rem;
     }
+}
+
+.quote {
+    font-size: 2vw;
 }
 
 .text-muted {
@@ -345,7 +362,7 @@ canvas {
 
 h2 {
     font-family: 'Caveat', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 2rem;
     font-weight: 400;
 }
@@ -436,6 +453,10 @@ h6 {
     color: var(--teaser-color);
 }
 
+.max-w-unset {
+    max-width: unset;
+}
+
 .vh-60 {
     height: 60vh;
 }
@@ -494,12 +515,38 @@ h6 {
     font-weight: 200;
     top: 40%;
     font-size: 4vw;
-    letter-spacing: 1.5rem;
     line-height: 5vw;
     text-transform: uppercase;
+
+    letter-spacing: 1.2rem;
+    padding-left: 1.2rem;
 }
 
 .foreground-subtext.mirrored {
+    width: 100%;
+    text-align: center;
+    font-weight: 200;
+    position: absolute;
+
+    top: 55%;
+    color: rgb(226, 226, 226);
+
+    z-index: 0;
+    transition: all 1s ease;
+}
+
+.foreground-text.muted {
+    font-weight: 200;
+    top: 40%;
+    font-size: 4rem;
+    line-height: 5vw;
+    text-transform: uppercase;
+
+    letter-spacing: 0.6rem;
+    padding-left: 0.6rem;
+}
+
+.foreground-subtext.muted {
     width: 100%;
     text-align: center;
     font-weight: 200;
@@ -841,8 +888,10 @@ h6 {
     h1 {
         font-size: 3rem;
         color: white;
-        letter-spacing: 0.8rem;
         font-weight: 200;
+
+        padding-left: 0.8rem;
+        letter-spacing: 0.8rem;
     }
 }
 
@@ -991,11 +1040,43 @@ h4 {
 
 @media only screen and (max-width: 768px) {
     .foreground-text.mirrored {
-        font-size: 3rem;
         line-height: 3rem;;
     }
 
     .foreground-subtext.mirrored h2 {
         font-size: 2rem !important;
+    }
+
+    #navigation-bar.scrolled .nav-item a {
+         padding: unset;
+    }
+
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 0.9rem; }
+
+    .gallery {
+        grid-gap: 0.5rem;
+    }
+
+    .foreground-text.muted {
+        top: 40%;
+        font-size: 10vw;
+        line-height: 5vw;
+
+        letter-spacing: 0.6rem;
+        padding-left: 0.6rem;
+    }
+
+    .foreground-subtext.muted {
+        top: 55%;
+    }
+
+    .quote {
+        font-size: 1.1rem;
+    }
+
+    .gallery-details h1 {
+        font-size: 2rem;
     }
 }
