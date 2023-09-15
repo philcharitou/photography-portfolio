@@ -12,5 +12,6 @@ photos:
   - background_2.png
 name: 'Phil Charitou'
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1694790716
+updated_at: 1694791600
+template: about
 ---
