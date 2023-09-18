@@ -148,7 +148,11 @@ a {
     transition: all 0.5s ease;
 }
 
-.border-light:hover {
+.border-light:hover > span {
+    transition: all 0.5s ease;
+}
+
+.border-light:hover > span {
     padding-left: 0.2rem;
     letter-spacing: 0.2rem;
 }
@@ -171,7 +175,6 @@ body {
 .hero {
     height: 100vh;
     width: 100%;
-
 
     background-position: center;
     background-repeat: no-repeat;

@@ -951,10 +951,6 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
 .-mr-2 {
   margin-right: -0.5rem;
 }
@@ -1757,7 +1753,8 @@ a {
 
     transition: all 0.5s ease;
 }
-.border-light:hover {
+.border-light:hover > span {
+    transition: all 0.5s ease;
     padding-left: 0.2rem;
     letter-spacing: 0.2rem;
 }
@@ -1776,7 +1773,6 @@ body {
 .hero {
     height: 100vh;
     width: 100%;
-
 
     background-position: center;
     background-repeat: no-repeat;
