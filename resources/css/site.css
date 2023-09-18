@@ -628,7 +628,6 @@ h6 {
     bottom: 0;
 
     width: 50%;
-    height: 60%;
     left: 25%;
 
     background: white;
@@ -1137,5 +1136,23 @@ h4 {
 
     .gallery-details h1 {
         font-size: 2rem;
+    }
+
+    .card-section {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .legal-card {
+        width: 85%;
+    }
+
+    .legal-card-head {
+        position: relative;
+        width: 95%;
+        left: 0;
+
+        margin-top: 25%;
     }
 }

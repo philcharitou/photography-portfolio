@@ -20,9 +20,9 @@
     <!-- Fullscreen Navigation -->
     <nav class="hidden md:flex flex-1 justify-end border-l gap-2 nav-item">
         <ul class="flex flex-row gap-2 ps-4">
-            {{ nav from="pages" include_home="false" }}
+            {{ nav:main_nav }}
             <li><a href="{{ url }}" class="py-2 px-4 hover:text-shadow block font-bold">{{ title }}</a></li>
-            {{ /nav  }}
+            {{ /nav:main_nav  }}
         </ul>
 
         <div @keydown.escape="showSearch = (searchQuery !== ''); searchQuery = ''">

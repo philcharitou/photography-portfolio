@@ -951,10 +951,6 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.my-24 {
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-}
 .-mr-2 {
   margin-right: -0.5rem;
 }
@@ -1107,9 +1103,6 @@ video {
 }
 .shrink-0 {
   flex-shrink: 0;
-}
-.table-auto {
-  table-layout: auto;
 }
 .origin-top {
   transform-origin: top;
@@ -2169,7 +2162,6 @@ h6 {
     bottom: 0;
 
     width: 50%;
-    height: 60%;
     left: 25%;
 
     background: white;
@@ -2605,6 +2597,24 @@ h4 {
 
     .gallery-details h1 {
         font-size: 2rem;
+    }
+
+    .card-section {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .legal-card {
+        width: 85%;
+    }
+
+    .legal-card-head {
+        position: relative;
+        width: 95%;
+        left: 0;
+
+        margin-top: 25%;
     }
 }
 .hover\:border-gray-300:hover {

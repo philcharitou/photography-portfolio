@@ -38,7 +38,7 @@
 <section class="galleries">
     <div class="w-full flex flex-col flex-wrap">
         {{ collection:gallery }}
-            <a href="{{ url }}" class="gallery-object py-6 px-6 md:px-12 parallax" style="background-image: url('{{ featured_image }}');">
+            <a href="{{ url }}" class="gallery-object py-6 px-6 md:px-12 parallax" style="background-image: url('{{ glide :src="featured_image" width="900" height="600" fit="crop_focal" }}');">
                 <div class="gallery-details">
                     <h1>{{ title }}</h1>
                 </div>

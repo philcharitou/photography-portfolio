@@ -6,10 +6,9 @@
             </a>
         </div>
         <div class="w-full hidden md:flex md:w-auto flex justify-center gap-4 p-0">
-            <a class="px-4 inline-block transition hover:dark:text-white" href="#">Home</a>
-            <a class="px-4 inline-block transition hover:dark:text-white" href="#">Link 2</a>
-            <a class="px-4 inline-block transition hover:dark:text-white" href="#">Link 3</a>
-            <a class="px-4 inline-block transition hover:dark:text-white" alt="My Favorite Website" href="#">Link 4</a>
+            {{ nav:footer }}
+            <a class="px-4 inline-block transition hover:dark:text-white" href="{{ url }}">{{ title }}</a>
+            {{ /nav:footer  }}
         </div>
         <div class="w-full md:w-auto flex justify-center gap-6 p-0">
             <a class="border-white hover:text-white transition" href="">{{ partial:instagram size="32" }}</a>
