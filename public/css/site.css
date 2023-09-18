@@ -1887,6 +1887,9 @@ canvas {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.w-90 {
+    width: 90%;
+}
 .w-50 {
     width: 50%;
 }
