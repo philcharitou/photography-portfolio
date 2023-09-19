@@ -13,6 +13,18 @@ tabs:
               validate:
                 - required
           -
+            handle: main_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Main Title'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
             handle: teaser
             field:
               input_type: text
