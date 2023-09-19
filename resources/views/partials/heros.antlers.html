@@ -1,65 +1,47 @@
 {{ heros }}
 <section class="hero {{ visible ? 'parallax-wrap' : 'hidden' }} relative" style="background-image: url('{{ glide :src="background" width="1920" height="1080" }}')">
     {{ if layout === "text_layer" }}
-    <div class="w-full relative overflow-hidden">
-        <img class="h-100 foreground" src="{{ glide :src="foreground" width="1920" height="1080" }}">
-        <h1 class="foreground-text text-shadow">{{ heading }}</h1>
-        <div class="foreground-subtext text-shadow flex justify-center items-center gap-2">
+        <div class="w-full relative overflow-hidden">
+            <img class="h-100 foreground" src="{{ glide :src="foreground" width="1920" height="1080" }}">
+            <h1 class="foreground-text text-shadow">{{ heading }}</h1>
+            <div class="foreground-subtext text-shadow flex justify-center items-center gap-2">
+                <hr width="24">
+                <h2 class="">{{ subheading }}</h2>
+                <hr width="24">
+            </div>
+        </div>
+
+        {{ partial:hero-article }}
+    {{ elseif layout === "mirrored" }}
+        <div class="w-full relative overflow-hidden relative">
+            <img class="h-100 foreground mirrored" src="{{ glide :src="foreground" width="1920" height="1080" }}">
+        </div>
+
+        <h1 class="foreground-text mirrored text-shadow">{{ heading }}</h1>
+        {{ if subheading }}
+        <div class="foreground-subtext mirrored text-shadow flex justify-center items-center gap-2">
             <hr width="24">
             <h2 class="">{{ subheading }}</h2>
             <hr width="24">
         </div>
-    </div>
-
-    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-unset prose">
-        <div class="p-8">
-            <h6>{{ teaser }}</h6>
-            <h2>{{ main_title }}</h2>
-            {{ subtitle }}
-        </div>
-    </article>
-    {{ elseif layout === "mirrored" }}
-    <div class="w-full relative overflow-hidden relative">
-        <img class="h-100 foreground mirrored" src="{{ glide :src="foreground" width="1920" height="1080" }}">
-    </div>
-
-    <h1 class="foreground-text mirrored text-shadow">{{ heading }}</h1>
-    {{ if subheading }}
-    <div class="foreground-subtext mirrored text-shadow flex justify-center items-center gap-2">
-        <hr width="24">
-        <h2 class="">{{ subheading }}</h2>
-        <hr width="24">
-    </div>
-    {{ /if }}
-
-    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-unset prose">
-        <div class="p-8">
-            <h6>{{ teaser }}</h6>
-            <h2>{{ main_title }}</h2>
-            {{ subtitle }}
-        </div>
-    </article>
-    {{ elseif layout === "aligned_left" }}
-    <div class="w-full flex justify-center items-center relative overflow-hidden">
-        {{ if foreground }}
-        <img class="h-100 foreground" src="{{ glide :src="foreground" width="1920" height="1080" }}">
         {{ /if }}
-    </div>
 
-    <div class="foreground-text aligned-left text-shadow md:spaced-left">
-        <h1>{{ heading }}</h1>
-        <h2 class="foreground-subtext aligned-left text-shadow md:spaced-left md:mw-500 items-center gap-2">
-            {{ subheading }}
-        </h2>
-    </div>
-
-    <article class="diglet-card md:mobile-diglet-card bg-white shadow-xl rounded-b-xl max-w-unset prose">
-        <div class="p-8">
-            <h6>{{ teaser }}</h6>
-            <h2>{{ main_title }}</h2>
-            {{ subtitle }}
+        {{ partial:hero-article }}
+    {{ elseif layout === "aligned_left" }}
+        <div class="w-full flex justify-center items-center relative overflow-hidden">
+            {{ if foreground }}
+            <img class="h-100 foreground" src="{{ glide :src="foreground" width="1920" height="1080" }}">
+            {{ /if }}
         </div>
-    </article>
+
+        <div class="foreground-text aligned-left text-shadow md:spaced-left">
+            <h1>{{ heading }}</h1>
+            <h2 class="foreground-subtext aligned-left text-shadow md:spaced-left md:mw-500 items-center gap-2">
+                {{ subheading }}
+            </h2>
+        </div>
+
+        {{ partial:hero-article }}
     {{ /if }}
 
     <div class="hidden unselectable md:flex bottom-left-action justify-between items-center gap-6 text-sideways">
