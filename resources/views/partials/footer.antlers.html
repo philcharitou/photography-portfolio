@@ -1,31 +1,51 @@
-<footer class="pt-12">
-    <div class="mt-12 p-4 md:p-8 lg:p-12 flex flex-wrap space-y-6 md:space-y-0 items-center md:justify-between justify-center text-center dark:text-white lg:text-left">
-        <div class="w-full md:w-auto">
-            <a class="text-3xl dark:text-white font-bold text-items" href="/">
-                <h5 class="uppercase text-medium">FIND ME ELSEWHERE</h5>
-            </a>
-        </div>
-        <div class="w-full hidden md:flex md:w-auto flex justify-center gap-4 p-0">
-            {{ nav:footer }}
-            <a class="px-4 inline-block transition hover:dark:text-white" href="{{ url }}">{{ title }}</a>
-            {{ /nav:footer  }}
-        </div>
-        <div class="w-full flex md:hidden md:w-auto flex justify-center gap-4 p-0">
-            {{ nav:legal }}
-            <a class="px-4 inline-block transition hover:dark:text-white" href="{{ url }}">{{ title }}</a>
-            {{ /nav:legal  }}
-        </div>
-        <div class="w-full md:w-auto flex justify-center gap-6 p-0">
-            <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Instagram" href="https://www.instagram.com/philcharitou">{{ partial:instagram size="32" }}</a>
-            <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Facebook" href="#">{{ partial:facebook size="32" }}</a>
-            <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Linkedin" href="https://ca.linkedin.com/in/philcharitou">{{ partial:linkedin size="32" }}</a>
-            <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Tiktok" href="#">{{ partial:tiktok size="32" }}</a>
-        </div>
-        <div class="w-full justify-between items-end flex md:pt-12 mb-0">
-            <div class="w-full text-left">
-                <p class="text-no-wrap">Phil Charitou &copy; 2023</p>
+<footer class="pt-12 max-w-6xl mx-auto">
+    <div class="mt-12 p-4 md:p-8 lg:p-12 flex flex-wrap space-y-6 md:space-y-0 items-start justify-center text-center dark:text-white lg:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-3 w-full">
+            <div class="col-span-1 md:text-left my-8">
+                <div class="w-full mb-4"><span class="uppercase fw-bold text-medium">NAVIGATE</span></div>
+                <ul class="w-full hidden md:block md:w-auto space-y-4 p-0">
+                    {{ nav:footer }}
+                    <li>
+                        <a class="inline-block transition hover:dark:text-white" href="{{ url }}">{{ title }}</a>
+                    </li>
+                    {{ /nav:footer  }}
+                </ul>
+                <ul class="w-full block md:hidden md:w-auto gap-4 p-0">
+                    {{ nav:legal }}
+                    <li>
+                        <a class="inline-block transition hover:dark:text-white" href="{{ url }}">{{ title }}</a>
+                    </li>
+                    {{ /nav:legal  }}
+                </ul>
             </div>
-            <span class="dark:text-white w-full text-right pacifico">Made with html</span>
+            <div class="col-span-1 my-8">
+                <div class="w-full text-center mb-4"><span class="uppercase fw-bold text-medium">FOLLOW</span></div>
+                <div class="w-full md:w-auto flex justify-center gap-6 p-0">
+                    <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Instagram" href="https://www.instagram.com/philcharitou">{{ partial:instagram size="32" }}</a>
+                    <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Facebook" href="#">{{ partial:facebook size="32" }}</a>
+                    <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Linkedin" href="https://ca.linkedin.com/in/philcharitou">{{ partial:linkedin size="32" }}</a>
+                    <a class="dark:text-white hover:text-white transition" aria-label="Social Media link to Tiktok" href="#">{{ partial:tiktok size="32" }}</a>
+                </div>
+            </div>
+            <div class="col-span-1 md:text-right my-8">
+                <div class="w-full mb-4"><span class="uppercase fw-bold text-medium">CONTACT</span></div>
+                <ul class="md:w-auto space-y-4 p-0">
+                    <li>
+                        <a class="inline-block transition hover:dark:text-white" href="tel:+12895002666">+1 (289) 500 - 2666</a>
+                    </li>
+                    <li>
+                        <a class="inline-block transition hover:dark:text-white" href="mailto:contact@philcharitou.com?subject=Photoshoot%2FUX%20Inquiry">contact@philcharitou.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full flex flex-wrap md:flex-no-wrap text-center justify-between items-end md:pt-12 mb-0">
+            <div class="mt-3 w-full md:w-auto flex-fill md:text-left">
+                <p class="text-no-wrap">&copy; 2023 Phil Charitou Photography. All rights reserved.</p>
+            </div>
+            <div class="mt-3 w-full md:w-auto dark:text-white md:text-right pacifico">
+                <p class="text-no-wrap">Made with html</p>
+            </div>
         </div>
     </div>
 </footer>

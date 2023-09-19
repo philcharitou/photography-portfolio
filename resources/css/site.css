@@ -1044,6 +1044,14 @@ a.anchor {
     animation-iteration-count: 1;
 }
 
+.section-break {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: -40px;
+    height: 120px;
+}
+
 canvas {
     z-index: 0;
     position: absolute;
@@ -1077,6 +1085,10 @@ h4 {
 
     #navigation-bar.scrolled .nav-item a {
          padding: unset;
+    }
+
+    #mobile-navigation a {
+        font-size: 1.1rem;
     }
 
     h2 { font-size: 2rem; }
