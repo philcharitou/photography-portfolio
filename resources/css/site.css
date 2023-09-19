@@ -61,7 +61,6 @@ a {
 
     .works-desktop {
         width: unset;
-        background-color: rgb(213, 226, 255);
     }
 
     .text-muted {
@@ -1026,48 +1025,6 @@ a.anchor {
 .pop-in {
     transform: scale(1) !important;
     opacity: 100% !important;
-}
-
-.parallax-wrap {
-    position: relative;
-}
-
-.parallax-wrap span {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(1) {
-    top: 70%;
-    left: 70%;
-    background: blue;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(2) {
-    top: 60%;
-    left: 80%;
-    background: yellow;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(3) {
-    top: 40%;
-    left: 60%;
-    background: green;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(4) {
-    top: 70%;
-    left: 40%;
-    background: red;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(5) {
-    top: 40%;
-    left: 30%;
-    background: purple;
-    z-index: 20;
 }
 
 .animate-spin {

@@ -1316,6 +1316,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
+.bg-slate-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
 .bg-transparent {
   background-color: transparent;
 }
@@ -2494,46 +2498,6 @@ a.anchor {
     transform: scale(1) !important;
     opacity: 100% !important;
 }
-.parallax-wrap {
-    position: relative;
-}
-.parallax-wrap span {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(1) {
-    top: 70%;
-    left: 70%;
-    background: blue;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(2) {
-    top: 60%;
-    left: 80%;
-    background: yellow;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(3) {
-    top: 40%;
-    left: 60%;
-    background: green;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(4) {
-    top: 70%;
-    left: 40%;
-    background: red;
-    z-index: 20;
-}
-.parallax-wrap span:nth-child(5) {
-    top: 40%;
-    left: 30%;
-    background: purple;
-    z-index: 20;
-}
 .animate-spin {
     animation: none;
 }
@@ -2791,6 +2755,16 @@ h4 {
     background-color: rgb(49 46 129 / 0.5);
   }
 
+  .dark\:bg-slate-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
+
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
     color: rgb(243 244 246 / var(--tw-text-opacity));
@@ -2839,6 +2813,16 @@ h4 {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-slate-300 {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-slate-400 {
+    --tw-text-opacity: 1;
+    color: rgb(148 163 184 / var(--tw-text-opacity));
   }
 
   .dark\:hover\:border-gray-600:hover {
@@ -3191,7 +3175,6 @@ h4 {
 
     .md\:works-desktop {
         width: unset;
-        background-color: rgb(213, 226, 255);
     }
 
     .md\:min-width-unset {
