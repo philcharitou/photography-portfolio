@@ -180,12 +180,22 @@ body {
 
     transition: all 1s ease;
 
-    h6, h5, h2 {
+    h6, h5, h2, h3 {
         margin: 0;
     }
 
     p {
         margin-top: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        text-transform: unset;
+        font-weight: 700;
     }
 }
 
@@ -274,18 +284,15 @@ canvas {
 
 .center-heading {
     position: relative;
-
     h1 {
         font-family: 'Caveat', cursive;
         font-size: 2.5rem;
         text-align: center;
     }
+}
 
-    h2 {
-        font-family: 'Karla', cursive;
-        font-size: 1.2rem;
-        text-align: center;
-    }
+.fancy-font {
+    font-family: 'Caveat', cursive;
 }
 
 .banner-section {
