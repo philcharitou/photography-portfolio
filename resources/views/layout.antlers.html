@@ -62,19 +62,6 @@
             });
         </script>
 
-        <script type="module">
-            document.addEventListener("mousemove", parallax);
-            function parallax(event) {
-                this.querySelectorAll(".parallax-wrap span").forEach((shift) => {
-                    const position = shift.getAttribute("value");
-                    const x = (window.innerWidth - event.pageX * position) / 90;
-                    const y = (window.innerHeight - event.pageY * position) / 90;
-
-                    shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-                });
-            }
-        </script>
-
         <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
         <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
@@ -161,7 +148,6 @@
 
         <div class="absolute z-40 w-full inset-0 opacity-75 pointer-events-none" style="background: url('https://phil-charitou-static-files.b-cdn.net/assets/film-overlay.png') top center; background-size: 1400px"></div>
 
-        <script src="/js/custom.js"></script>
         <script src="/js/site.js"></script>
 
         <script>
