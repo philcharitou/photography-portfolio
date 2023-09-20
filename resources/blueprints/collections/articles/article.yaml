@@ -1,0 +1,138 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              min_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: featured_image
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: article_title
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Article Title'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: article_subtitle
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Article Subtitle'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: time_to_read
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'Time to read'
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: content
+            field:
+              type: markdown
+              localizable: true
+          -
+            handle: related_gallery
+            field:
+              max_items: 1
+              mode: default
+              create: true
+              collections:
+                - gallery
+              type: entries
+              display: 'Related Gallery'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
+            handle: related_articles
+            field:
+              max_items: 3
+              mode: default
+              create: true
+              collections:
+                - articles
+              type: entries
+              display: 'Related Articles'
+              icon: entries
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - articles
+              max_items: 1
+              listable: false
+              localizable: true
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+title: Article

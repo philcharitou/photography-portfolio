@@ -295,6 +295,11 @@ canvas {
     font-family: 'Caveat', cursive;
 }
 
+.flip-horizontal {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 .banner-section {
     width: 100%;
     min-height: 300px;
@@ -344,7 +349,7 @@ canvas {
 }
 
 .quote {
-    font-size: 2vw;
+    font-size: 1.4rem;
 }
 
 .text-muted {
@@ -1123,7 +1128,7 @@ h4 {
     .card-section {
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
     }
 
     .legal-card {

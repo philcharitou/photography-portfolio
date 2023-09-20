@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'class',
   content: [
     './resources/**/*.antlers.html',
     './resources/**/*.antlers.php',
@@ -11,5 +12,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('flowbite/plugin'),
   ],
 }
