@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth')->group(function () {
-    Route::statamic('search', 'search');
+    Route::statamic('/search', 'search');
 });

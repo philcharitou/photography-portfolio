@@ -4,5 +4,6 @@ blueprint: page
 title: Articles
 author: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1695153068
+updated_at: 1695220298
+template: articles/index
 ---

@@ -1,0 +1,16 @@
+<section class="section-full bg-white dark:bg-slate-800">
+    <header class="my-12 md:my-16 lg:my-24 text-center">
+        <h1 class="text-6xl md:text-7xl lg:text-7xl dark:text-white font-bold">{{ title }}</h1>
+    </header>
+
+    <div class="max-w-4xl mx-auto flex pt-6 gap-6 dark:text-white">
+        {{ tags }}
+            {{ if no_results }}
+            <h1 class="text-center">no results</h1>
+            {{ /if }}
+            <div class="rounded-md bg-slate-200 px-4 py-2">
+                <a class="inline-block dark:text-white text-3xl font-bold hover:text-colored" href="{{ url }}">{{ title }}</a>
+            </div>
+        {{ /tags }}
+    </div>
+</section>

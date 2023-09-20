@@ -103,10 +103,11 @@ a {
     position: fixed;
 
     background: rgb(54, 54, 54);
-    background: linear-gradient(180deg, rgba(54, 54, 54,0.3) 0%, rgba(0,212,255,0) 100%);
+    background: linear-gradient(180deg, rgba(54, 54, 54,0.9) 0%, rgba(0,212,255,0) 100%);
     z-index: 15;
 
     transition: all 0.5s ease;
+
     * {
         color: var(--nav-color);
     }
@@ -379,14 +380,12 @@ canvas {
 }
 
 h2 {
-    font-family: 'Caveat', cursive;
     font-size: 2.5rem;
     line-height: 2rem;
     font-weight: 400;
 }
 
 h3 {
-    color: var(--teaser-color);
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -638,6 +637,15 @@ h6 {
     color: #0dcaf0;
 }
 
+.card-head {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 80%;
+    left: 10%;
+}
+
 .legal-card-head {
     position: absolute;
 
@@ -646,9 +654,6 @@ h6 {
 
     width: 50%;
     left: 25%;
-
-    background: white;
-    border-radius: 1rem 1rem 0 0;
 }
 
 a.anchor {
@@ -671,6 +676,29 @@ a.anchor {
     bottom: 0;
 
     z-index: 11;
+}
+
+#article {
+    h1 {
+        font-family: "Times New Roman";
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-family: "Times New Roman";
+        font-size: 2rem;
+
+        padding-top: 2rem;
+        @apply text-slate-600 dark:text-slate-300;
+    }
+
+    h3 {
+        font-family: "Times New Roman";
+        font-size: 1.5rem;
+
+        padding-top: 1rem;
+        @apply text-slate-600 dark:text-slate-300;
+    }
 }
 
 .bottom-right-action {
@@ -1089,7 +1117,8 @@ h4 {
     }
 
     #navigation-bar.scrolled .nav-item a {
-         padding: unset;
+
+        padding-right: unset;
     }
 
     #mobile-navigation a {
@@ -1141,5 +1170,10 @@ h4 {
         left: 0;
 
         margin-top: 25%;
+    }
+
+    .card-head {
+        width: 95%;
+        left: 2.5%;
     }
 }

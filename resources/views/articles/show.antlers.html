@@ -1,0 +1,50 @@
+<section class="card-section section-full flex no-padding items-center flex-wrap justify-between md:justify-center mh-100vh px-10 relative"
+         style="background-image: url('{{ glide :src="featured_image" width="600" height="400" fit="crop_focal" }}')">
+    <div class="card-head px-8 pb-16 pt-8 bg-white dark:bg-slate-800 dark:text-white rounded-t-xl flex flex-col justify-between">
+        <!-- Introduction -->
+        <div class="space-y-6">
+            <ul class="flex gap-4">
+                {{ tags }}
+                <li class="uppercase"><a href="{{ url }}">{{ title }}</a></li>
+                {{ /tags }}
+            </ul>
+            <h1 class="text-3xl md:text-6xl"><strong>{{ article_title }}</strong></h1>
+            <h2 class="text-small md:text-2xl max-w-3xl">{{ article_subtitle }}</h2>
+            <div class="flex flex-wrap justify-between pt-16 space-y-4 md:space-y-0">
+                <p class="w-full md:w-auto text-center md:text-left"><i>by</i> <strong>{{ author:name }}</strong></p>
+                <p class="w-full md:w-auto text-center md:text-right">{{ date }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relative pt-16">
+    <div class="flex flex-wrap w-10/12 md:w-9/12 mx-auto dark:text-white">
+        <div id="article" class="flex-1 md:pe-24 pb-24">
+            <p class="space-x-4 text-gray-500 dark:text-gray-300 text-small pb-6"><a href="/articles">Articles</a><span>/</span><a href="/parent">Parent Link</a></p>
+            <p class="mb-12"><i>Time to read: {{ time_to_read }}</i></p>
+            {{ content }}
+        </div>
+        <div class="hidden md:flex md:flex-col space-y-6">
+            <strong class="text-2xl">Related Articles</strong>
+            <div class="w-64">
+                {{ related_articles }}
+                    {{ partial:articles/small_card }}
+                {{ /related_articles }}
+            </div>
+        </div>
+    </div>
+
+    <div class="w-9/12 mx-auto dark:text-white">
+        <div class="w-full text-2xl text-center">
+            <strong>You may also enjoy</strong>
+        </div>
+        <div class="my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto gap-x-8 gap-y-8 px-4">
+            {{ related_articles }}
+            <div>
+                {{ partial:articles/inline_card }}
+            </div>
+            {{ /related_articles }}
+        </div>
+    </div>
+</section>

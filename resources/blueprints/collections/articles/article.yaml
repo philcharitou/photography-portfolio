@@ -23,7 +23,7 @@ tabs:
               show_filename: true
               show_set_alt: true
               type: assets
-              display: featured_image
+              display: 'Featured Image'
               icon: assets
               listable: hidden
               instructions_position: above

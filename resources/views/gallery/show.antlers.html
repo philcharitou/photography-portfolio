@@ -2,17 +2,20 @@
 </section>
 
 <section class="gallery-info p-12">
-    <div class="flex max-w-6xl mx-auto">
-        <div class="flex-1">
-            <h3 class="font-bold">Title</h2>
-            <h2 class="my-6">{{ title }}</h2>
-            <h3 class="font-bold">Role</h2>
-            <h2 class="my-6">{{ role }}</h2>
-            <h3 class="font-bold">Client</h2>
-            <h2 class="my-6">{{ client }}</h2>
-        </div>
-        <div class="flex-1">
-            {{ content }}
+    <div class="max-w-6xl mx-auto">
+        <p class="space-x-4 text-gray-500 dark:text-gray-300 text-small pb-6"><a href="/articles">Articles</a><span>/</span><a href="/parent">Parent Link</a></p>
+        <div class="flex mt-12">
+            <div class="flex-1">
+                <p class="text-2xl text-gray-500">Title</h2>
+                <p class="text-3xl mt-6 mb-12">{{ title }}</p>
+                <p class="text-2xl text-gray-500">Role</h2>
+                <p class="text-3xl mt-6 mb-12">{{ role }}</p>
+                <p class="text-2xl text-gray-500">Client</h2>
+                <p class="text-3xl mt-6 ">{{ client }}</p>
+            </div>
+            <div class="flex-1">
+                {{ content }}
+            </div>
         </div>
     </div>
 </section>

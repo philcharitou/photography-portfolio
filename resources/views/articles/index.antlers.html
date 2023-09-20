@@ -35,16 +35,8 @@
 </section>
 {{ /information_section }}
 
-<section class="articles">
-    <div class="w-full flex flex-col flex-wrap">
-        {{ collection:article }}
-        <a href="{{ url }}" class="article-object py-6 px-6 md:px-12 parallax" style="background-image: url('{{ glide :src="featured_image" width="900" height="600" fit="crop_focal" }}');">
-        <div class="article-details">
-            <h1>{{ title }}</h1>
-        </div>
-        </a>
-        {{ /collection:article }}
-    </div>
+<section class="my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto gap-x-8 gap-y-16 px-4">
+    {{ collection:articles }}
+        {{ partial:articles/inline_card show_related=true show_tags=true }}
+    {{ /collection:articles }}
 </section>
-
-{{ partial:section-break }}
