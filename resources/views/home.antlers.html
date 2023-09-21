@@ -7,14 +7,14 @@
 
 <!-- Text Section -->
 {{ information_section }}
-<section class="section section-padding-top md:py-0 vh-60 justify-center items-center md:flex p-6">
-    <div class="split flex flex-wrap max-w-4xl">
-        <div class="flex-1 min-width-full md:min-width-unset p-6 gap-y-4 dark:text-white">
+<section class="section md:py-0 mt-16 md:my-24 justify-center items-center md:flex p-6">
+    <div class="split flex flex-wrap max-w-4xl p-6 space-y-6">
+        <div class="flex-1 min-width-full md:min-width-unset gap-y-4 dark:text-white">
             <h4>{{ teaser }}</h4>
             <h5 class="mt-6 mb-9">{{ heading }}</h5>
             <a href="{{ link }}" class="underline-link">{{ link_text }}</a>
         </div>
-        <div class="flex-1 p-6 text-slate-500 dark:text-slate-300">
+        <div class="flex-1 text-slate-500 dark:text-slate-300">
             {{ content }}
         </div>
     </div>
@@ -26,10 +26,10 @@
 {{ /banners[0] }}
 
 <!-- Gallery -->
-<section class="section relative">
-    <div class="w-90 p-6 max-w-6xl flex flex-col justify-center items-center relative">
-        <div class="works-text bg-slate-100 md:absolute md:works-desktop dark:text-white dark:bg-slate-500 works-title">
-            <h2 class="my-8 p-2 md:p-3 md:m-0 text-medium">Featured Works</h2>
+<section class="section relative md:mb-16">
+    <div class="w-full md:w-90 p-6 max-w-6xl flex flex-col justify-center items-center relative">
+        <div class="works-text md:bg-slate-100 shadow-md mx-auto mb-6 md:m-0 md:absolute md:works-desktop dark:text-white dark:bg-slate-500 works-title">
+            <p class="p-2 md:p-3 md:m-0 text-medium fancy-font">Featured Works</p>
         </div>
 
         <div class="gallery">
@@ -42,12 +42,11 @@
             {{ /featured_works }}
         </div>
 
-        <a class="works-text bg-slate-100 md:absolute md:works-desktop dark:text-white dark:bg-slate-500 works-cta" href="/galleries">
-            <h2 class="my-8 p-2 md:p-3 md:m-0 text-medium flex items-center justify-center">
-                <span class="me-3">
-                    See Galleries
-                </span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5"/><path d="M13.8 12H3m9 10a10 10 0 1 0 0-20"/></svg></h2>
+        <a class="works-text md:bg-slate-100 shadow-md mx-auto mt-6 md:m-0 md:absolute md:works-desktop dark:text-white dark:bg-slate-500 works-cta" href="/galleries">
+            <p class="p-2 md:p-3 md:m-0 text-medium flex items-center justify-center">
+                <span class="me-3">See Galleries</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5"/><path d="M13.8 12H3m9 10a10 10 0 1 0 0-20"/></svg>
+            </p>
         </a>
     </div>
 </section>

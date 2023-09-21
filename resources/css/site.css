@@ -98,6 +98,10 @@ a {
     }
 }
 
+header {
+    z-index: 29;
+}
+
 #navigation-bar {
     width: 100%;
     position: fixed;
@@ -438,7 +442,6 @@ h6 {
 
 .works-text {
     width: 80%;
-    margin: auto;
 
     padding: 0.5rem;
     text-align: center;

@@ -36,7 +36,7 @@
 {{ /information_section }}
 
 <section class="my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto gap-x-8 gap-y-16 px-4">
-    {{ collection:articles }}
+    {{ collection:articles limit="5" }}
         {{ partial:articles/card show_related=true show_tags=true }}
     {{ /collection:articles }}
 </section>
