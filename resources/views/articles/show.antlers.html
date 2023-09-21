@@ -3,11 +3,13 @@
     <div class="card-head px-8 pb-16 pt-8 bg-white dark:bg-slate-800 dark:text-white rounded-t-xl flex flex-col justify-between">
         <!-- Introduction -->
         <div class="space-y-6">
+            {{ if tags }}
             <ul class="flex gap-4">
                 {{ tags }}
                 <li class="uppercase"><a href="{{ url }}">{{ title }}</a></li>
                 {{ /tags }}
             </ul>
+            {{ /if }}
             <h1 class="text-3xl md:text-6xl"><strong>{{ article_title }}</strong></h1>
             <p class="md:text-2xl max-w-2xl">{{ article_subtitle }}</p>
             <div class="flex flex-wrap justify-between pt-16 space-y-4 md:space-y-0">
