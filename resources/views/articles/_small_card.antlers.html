@@ -1,16 +1,16 @@
-<div class="overflow-hidden rounded-md h-[300px] block bg-slate-200 dark:bg-slate-600 group flex flex-col hover:scale-105 transition duration-[400ms] ease-in-out">
-    <a href="{{ url }}" class="relative overflow-hidden rounded-t-xl">
-        <img class="object-cover transition duration-[400ms] ease-in-out scale-110 group-hover:scale-100 w-full h-60" src="{{ glide :src="featured_image" width="600" height="400" fit="crop_focal" }}" alt="">
+<div class="rounded-md block bg-slate-200 dark:bg-slate-600 group flex flex-col hover:scale-105 transition duration-[400ms] ease-in-out">
+    <a href="{{ url }}" class="relative overflow-hidden rounded-t-xl h-24">
+        <img class="object-cover transition duration-[400ms] ease-in-out scale-110 group-hover:scale-100 w-full h-60" src="{{ glide :src="featured_image" width="400" height="400" fit="crop_focal" }}" alt="">
         <div class="absolute opacity-0 transition duration-[400ms] ease-in-out group-hover:opacity-75 z-20 inset-0 mix-blend-overlay object-cover w-full h-60 bg-gradient-to-br from-orange-dark to-aqua"></div>
     </a>
     <div class="px-6 py-8 flex flex-col justify-between flex-1 space-y-6">
-        <h3 class="font-bold text-2xl pt-0 text-gray-500 dark:text-gray-200">
+        <p class="font-bold text-1xl pt-0 text-gray-500 dark:text-gray-200">
             <a href="{{ url }}" class="transition hover:text-gray-700">{{ article_title }}</a>
-        </h3>
+        </p>
         <div class="flex items-end justify-between">
             <div>
                 <p>{{ date }}</p>
-                <p class="text-sm">By <a href="" class="text-gray-700 hover:text-white">{{ author:name }}</a></p>
+                <p class="text-sm">By <a href="" class="text-gray-700 hover:text-white">{{ author }}</a></p>
             </div>
         </div>
     </div>

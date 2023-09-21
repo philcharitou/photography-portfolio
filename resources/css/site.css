@@ -691,7 +691,7 @@ a.anchor {
         font-family: "Times New Roman";
         font-size: 2rem;
 
-        padding-top: 2rem;
+        padding: 2rem 0 2rem 0;
         @apply text-slate-600 dark:text-slate-300;
     }
 
@@ -699,8 +699,26 @@ a.anchor {
         font-family: "Times New Roman";
         font-size: 1.5rem;
 
-        padding-top: 1rem;
+        padding: 1rem 0 1rem 0;
         @apply text-slate-600 dark:text-slate-300;
+    }
+
+    ul {
+        list-style: circle;
+
+        li {
+            margin: 1rem 0 1rem 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    ol {
+        list-style: section;
+
+        li {
+            margin: 1rem 0 1rem 1rem;
+            padding-left: 1rem;
+        }
     }
 }
 

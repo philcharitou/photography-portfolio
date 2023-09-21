@@ -100,6 +100,19 @@ tabs:
               instructions_position: above
               visibility: visible
               hide_display: false
+          -
+            handle: author
+            field:
+              input_type: text
+              default: 'Phil Charitou'
+              antlers: false
+              type: text
+              display: Author
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
