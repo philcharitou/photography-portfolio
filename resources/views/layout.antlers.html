@@ -68,13 +68,13 @@
             });
         </script>
 
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
+        <script defer src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
         <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
-        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="https://unpkg.com/alpinejs"></script>
     </head>
-    <body class="relative dark:bg-slate-800" x-data="{ openMenu : false, showSearch: false, searchQuery: '', searchResults: false, showImage: false, imageUrl: '' }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible' ">
+    <body class="relative dark:bg-slate-800" x-data="{ openMenu : false, showSearch: false, searchQuery: '', searchResults: false, showImage: false, imageUrl: '' }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible' " x-on:keydown.escape="showImage = false">
         <header class="max-w-7xl">
             {{ partial:nav }}
         </header>
@@ -99,13 +99,13 @@
         </div>
 
         <!-- Lightbox Modal -->
-        <div class="fixed p-[12vh] inset-0 backdrop-blur-sm flex justify-center items-center overflow-auto bg-black bg-opacity-50" style="z-index: 3"
+        <div id="lightbox" class="fixed p-[12vh] inset-0 backdrop-blur-sm flex justify-center items-center overflow-auto bg-black bg-opacity-50" style="z-index: 99"
             x-cloak
             x-transition.opacity
             x-show="showImage"
             x-trap.noscroll="showImage"
         >
-                <img :src="imageUrl" alt="Lightbox Image">
+            <img :src="imageUrl" alt="Lightbox Image" class="lightbox">
         </div>
 
         <!-- Mobile Navigation -->

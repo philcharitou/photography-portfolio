@@ -1,13 +1,13 @@
 ---
 id: home
 blueprint: landing
-title: 'Phil Charitou Photography'
+title: 'Phil Charitou Photography | Toronto Photographer Portfolio'
 template: home
 teaser: 'Still Photography'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1695404765
+updated_at: 1695931116
 featured_image: hero.jpg
 gallery_images:
   -

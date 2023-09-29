@@ -38,7 +38,7 @@ function randomNumber(min, max) {
 }
 
 $(function() {
-    $('.gallery-item, .gallery-content').waypoint(function() {
+    $('.gallery-item, .creative-gallery-content').waypoint(function() {
         $(this.element).addClass('pop-in');
     }, {
         offset: '100%'

@@ -24,6 +24,26 @@ tabs:
               visibility: visible
               hide_display: false
           -
+            handle: format
+            field:
+              options:
+                creative: Creative
+                column: Column
+                grid: Grid
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: Format
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              hide_display: false
+          -
             handle: featured_image
             field:
               max_files: 1

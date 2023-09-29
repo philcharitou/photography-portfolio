@@ -6,14 +6,14 @@
         <p class="space-x-4 text-gray-500 dark:text-gray-300 text-small pb-6"><a href="/articles">Articles</a><span>/</span><a href="/parent">Parent Link</a></p>
         <div class="flex mt-12">
             <div class="flex-1">
-                <p class="text-2xl text-gray-500">Title</h2>
-                <p class="text-3xl mt-6 mb-12">{{ title }}</p>
-                <p class="text-2xl text-gray-500">Role</h2>
-                <p class="text-3xl mt-6 mb-12">{{ role }}</p>
-                <p class="text-2xl text-gray-500">Client</h2>
-                <p class="text-3xl mt-6 ">{{ client }}</p>
+                <p class="text-2xl text-gray-500 dark:text-gray-200">Title</h2>
+                <p class="text-3xl dark:text-gray-400 mt-6 mb-12">{{ name }}</p>
+                <p class="text-2xl text-gray-500 dark:text-gray-200">Role</h2>
+                <p class="text-3xl dark:text-gray-400 mt-6 mb-12">{{ role }}</p>
+                <p class="text-2xl text-gray-500 dark:text-gray-200">Client</h2>
+                <p class="text-3xl dark:text-gray-400 mt-6 ">{{ client }}</p>
             </div>
-            <div class="flex-1">
+            <div class="flex-1 dark:text-gray-400">
                 {{ content }}
             </div>
         </div>
@@ -21,15 +21,66 @@
 </section>
 
 <section class="p-12">
-    <div id="gallery-contents" class="flex flex-col max-w-6xl mx-auto relative pb-9">
-        {{ contents }}
-        <div class="gallery-content">
-            <img class="gallery-image" src="{{ glide :src="image" width="1200" height="1200" fit="crop_focal" }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = this.src; $focus.next()">
-            <div class="flex-1">
-                <h3 class="font-bold">{{ caption }}</h2>
-                <h6 class="font-bold">{{ metadata }}</h6>
+    {{ if format == "creative" }}
+        <div id="creative-gallery-contents" class="flex flex-col max-w-6xl mx-auto relative pb-9">
+            {{ contents }}
+            <div class="creative-gallery-content">
+                <img class="gallery-image" src="{{ glide :src="image" width="1200" height="1200" fit="crop_focal" }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src"">
+                <div class="flex-1">
+                    <h3 class="font-bold">{{ caption }}</h3>
+                    <h6 class="font-bold">{{ metadata }}</h6>
+                </div>
+            </div>
+            {{ /contents }}
+        </div>
+    {{ elseif format == "column" }}
+        <div id="column-gallery-contents" class="flex flex-col max-w-6xl mx-auto relative pb-9">
+            <div class="row">
+                <div id="col1" class="column">
+                    {{ contents }}
+                    <img class="gallery-image" src="{{ glide :src="image" fit="crop_focal" }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src">
+                    {{ /contents }}
+                </div>
+                <div id="col2" class="column"></div>
+                <div id="col3" class="column"></div>
             </div>
         </div>
-        {{ /contents }}
-    </div>
+    {{ else }}
+        <div id="grid-gallery-contents" class="flex flex-col max-w-6xl mx-auto relative pb-9">
+            <div class="row">
+                <div id="col1" class="column">
+                    {{ contents }}
+                        <img class="gallery-image" src="{{ glide :src="image" width="1200" height="1200" fit="crop_focal" }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src"">
+                    {{ /contents }}
+                </div>
+                <div id="col2" class="column"></div>
+                <div id="col3" class="column"></div>
+            </div>
+        </div>
+    {{ /if }}
 </section>
+
+<script>
+    $( document ).ready(function() {
+        var start = 3;
+        var col1 = document.getElementById("col1");
+        var col2 = document.getElementById("col2");
+        var col3 = document.getElementById("col3");
+
+        if(col1) {
+            $("img").each(function() {
+                if(!$(this).hasClass("lightbox")) {
+                    if(start === 0) { start = 3; }
+
+                    if(start === 3) { col2.appendChild($(this)[0]); }
+                    if(start === 2) { col3.appendChild($(this)[0]); }
+                    if(start === 1) { col1.appendChild($(this)[0]); }
+
+                    start--;
+                }
+            });
+        }
+    });
+
+
+</script>
