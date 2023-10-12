@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
     Route::statamic('/search', 'search');
 });
+
+Route::get('/instagram-account', [\App\Http\Controllers\InstagramController::class, 'get_posts']);
