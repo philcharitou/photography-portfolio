@@ -1,15 +1,95 @@
-<!-- About Section -->
-<section class="section-full flex no-padding items-center flex-wrap justify-between md:justify-center mh-100vh px-10 relative" style="background-image: url('{{ glide :src="hero" width="1920" height="1080" fit="crop_focal" }}')">
-    <div class="max-w-6xl md:flex section-padding-top md:py-0 px-6">
-        <div class="flex md:w-50">
-            <h1 class="absolute pricing-header fancy-font">{{ main_title }}</h1>
-        </div>
+<!-- Pricing Section -->
+<section class="hero relative" style="background-image: url('assets/background_3.jpg')">
+    <h1 class="foreground-text muted text-shadow">{{ heading ?? "PRICING" }}</h1>
+    <div class="foreground-subtext muted text-shadow flex justify-center items-center gap-2">
+        <ul class="expanding-links">
+            <li class="hover:tracking-wider"><a href="#portraits">Portraits</a></li>
+            <li class="hover:tracking-wider"><a href="#family">Family</a></li>
+            <li class="hover:tracking-wider"><a href="#engagement">Engagement</a></li>
+            <li class="hover:tracking-wider"><a href="#pets">Pets</a></li>
+            <li class="hover:tracking-wider"><a href="#event">Event</a></li>
+            <li class="hover:tracking-wider"><a href="#other">Other</a></li>
+        </ul>
+    </div>
 
-        <div class="py-12 mb-12 md:ps-12 md:py-0 md:w-50 text-white flex flex-col justify-between">
 
-            {{ about }}
-        </div>
+    <div class="hidden unselectable md:flex bottom-left-action justify-between items-center gap-6 text-sideways">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="bevel" stroke-linejoin="bevel"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>        <hr width="24">
+        <h5 class="font-bold">Share</h5>
     </div>
 </section>
 
-{{ partial:section-break }}
+{{ partial:section-break text="Request a Custom Quote" }}
+
+<section class="section md:py-0 mt-16 md:my-24 justify-center items-center flex-col p-4 space-y-32 dark:text-white">
+    <div class="max-w-4xl space-y-6">
+        <div class="w-full flex flex-no-wrap items-center justify-between">
+            <span></span>
+            <h2 class="pricing-header mx-5 whitespace-nowrap">Pricing</h2>
+            <span></span>
+        </div>
+        <div class="w-full space-y-4 md:px-16">
+            {{ intro }}
+        </div>
+    </div>
+
+    {{ pricing_tables }}
+    <div class="max-w-4xl space-y-6">
+        <a class="anchor-small" id="{{ table_id }}"></a>
+        <div class="w-full flex flex-no-wrap items-center justify-between">
+            <hr width="40%">
+            <h2 class="pricing-header fancy-font whitespace-nowrap mx-5">{{ table_title }}</h2>
+            <hr width="40%">
+        </div>
+        <div class="w-full blue-links md:px-16">
+            {{ table_description }}
+        </div>
+        <div class="flex flex-col justify-between">
+            <table class="pricing-table w-full table-fixed text-sm font-light">
+                {{ table }}
+                {{ if first }}
+                <thead>
+                <tr>
+                    {{ cells }}
+                    <th class="px-3 py-4 md:px-6 md:py-4 text-center">{{ value|markdown }}</th>
+                    {{ /cells }}
+                </tr>
+                </thead>
+                <tbody>
+                {{ /if }}
+                {{ if !first }}
+                {{ if first }}
+                <tbody>
+                {{ /if }}
+                <tr class="border-b dark:bg-slate-700 hover:bg-slate-600 dark:border-neutral-500">
+                    {{ cells }}
+                    <td class="px-3 py-4 md:px-6 md:py-4">{{ value|markdown }}</td>
+                    {{ /cells }}
+                </tr>
+                {{ fine_print }}
+                <tr>
+                    <td colspan="{{ cells | count }}" class="pt-3"><em>{{ value }}</em></td>
+                </tr>
+                {{ /fine_print }}
+                {{ if last }}
+                </tbody>
+                {{ /if }}
+                {{ /if }}
+                {{ /table }}
+            </table>
+        </div>
+    </div>
+    {{ /pricing_tables }}
+
+    <div class="max-w-4xl space-y-6">
+        <a class="anchor-small" id="other"></a>
+        <div class="w-full flex flex-no-wrap items-center justify-between">
+            <hr width="40%">
+            <h2 class="pricing-header fancy-font mx-5 whitespace-nowrap">Everything Else</h2>
+            <hr width="40%">
+        </div>
+        <div class="w-full space-y-4 md:px-16">
+            {{ other }}
+        </div>
+    </div>
+</section>

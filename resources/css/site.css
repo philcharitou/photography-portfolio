@@ -204,6 +204,18 @@ body {
     }
 }
 
+.blue-links {
+    a {
+        @apply blue
+    }
+}
+
+.expanding-links {
+    li {
+        transition: all 0.2s ease;
+    }
+}
+
 #cover {
     width: 100%;
     height: 100%;
@@ -294,6 +306,10 @@ canvas {
         font-size: 2.5rem;
         text-align: center;
     }
+}
+
+.blue {
+    color: #0dcaf0;
 }
 
 .fancy-font {
@@ -663,6 +679,13 @@ a.anchor {
     display: block;
     position: relative;
     top: -250px;
+    visibility: hidden;
+}
+
+a.anchor-small {
+    display: block;
+    position: relative;
+    top: -50px;
     visibility: hidden;
 }
 
@@ -1155,6 +1178,34 @@ a.anchor {
     left: 10%;
     top: -40px;
     height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-break span {
+    z-index: 1;
+}
+
+.animated-highlight {
+    position: absolute;
+}
+
+.section-break .animated-highlight {
+    animation: collapse-crt 0.7s;
+}
+
+.section-break:hover .animated-highlight {
+    animation: expand-crt 0.7s forwards;
+}
+
+.social-icon:hover {
+    animation: shake 0.4s;
+}
+
+.pricing-table td {
+    vertical-align: top;
 }
 
 canvas {
@@ -1173,6 +1224,29 @@ h4 {
     to { transform: rotate(360deg); }
 }
 
+@keyframes shake {
+    0% {transform: translateX(0px) rotate(0deg);}
+    20% {transform: translateX(-4px) rotate(-4deg);}
+    40% {transform: translateX(-2px) rotate(-2deg);}
+    60% {transform: translateX(4px) rotate(4deg);}
+    80% {transform: translateX(2px) rotate(2deg);}
+    100% {transform: translateX(0px) rotate(0deg);}
+}
+
+@keyframes expand-crt {
+    0%   {width:0; height:0; left:50%; top:50%;}
+    1%   {width:0; height:3%; left:50%; top:50%;}
+    50%  {width:90%; height:3%; left:5%; top:50%;}
+    100% {width:90%; height:70%; left:5%; top:15%;}
+}
+
+@keyframes collapse-crt {
+    0% {width:90%; height:70%; left:5%; top:15%;}
+    50%  {width:90%; height:3%; left:5%; top:50%;}
+    99%   {width:0; height:3%; left:50%; top:50%;}
+    100%   {width:0; height:0; left:50%; top:50%;}
+}
+
 @media only screen and (max-device-width: 1366px) {
     .parallax {
         background-attachment: scroll;
@@ -1182,6 +1256,10 @@ h4 {
 @media only screen and (max-width: 768px) {
     .foreground-text.mirrored {
         line-height: 3rem;;
+    }
+
+    .section-break {
+        height: 60px;
     }
 
     .foreground-subtext.mirrored h2 {
