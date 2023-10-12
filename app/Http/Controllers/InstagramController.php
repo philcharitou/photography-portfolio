@@ -17,12 +17,12 @@ class InstagramController extends Controller
         $array = [];
 
         for($i = 0; $i < 1; $i++) {
-            $path = public_path("instagram_" . $i . ".webp");
-            $redis_path = "instagram[".$i."]";
+            $path = "instagram_" . $i . ".webp";
+            $redis_path = "instagram_[".$i."]";
             $src = Redis::get($redis_path);
 
             if($src) {
-                if (file_put_contents($path, file_get_contents($src)))
+                if (file_put_contents(public_path($path), file_get_contents($src)))
                 {
                     $array[] = $path;
                 }
@@ -47,7 +47,7 @@ class InstagramController extends Controller
 
                     $src = $node->node->display_resources[0]->src;
 
-                    if (file_put_contents($path, file_get_contents($src)))
+                    if (file_put_contents(public_path($path), file_get_contents($src)))
                     {
                         Redis::set($redis_path, $path, 'EX', now()->diffInSeconds(now()->addDay()));
 
