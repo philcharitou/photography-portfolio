@@ -17,8 +17,9 @@ class InstagramController extends Controller
         $array = [];
 
         for($i = 0; $i < 1; $i++) {
-            $src = Redis::get("instagram_post[".$i."]");
             $path = public_path("instagram_" . $i . ".webp");
+            $redis_path = "instagram[".$i."]";
+            $src = Redis::get($redis_path);
 
             if($src) {
                 if (file_put_contents($path, file_get_contents($src)))
@@ -48,7 +49,7 @@ class InstagramController extends Controller
 
                     if (file_put_contents($path, file_get_contents($src)))
                     {
-                        Redis::set("instagram_post[".$i."]", $path, 'EX', now()->diffInSeconds(now()->addDay()));
+                        Redis::set($redis_path, $path, 'EX', now()->diffInSeconds(now()->addDay()));
 
                         $array[] = $path;
                     }
