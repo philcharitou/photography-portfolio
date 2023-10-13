@@ -1360,6 +1360,16 @@ h4 {
         left: 2.5%;
     }
 
+    .foreground-text.mirrored {
+        font-size: 7vw;
+
+        letter-spacing: 0.7rem;
+    }
+
+    .foreground-subtext.mirrored {
+        top: 50%;
+    }
+
     .instagram-field > img:nth-child(1) { display: none; }
     .instagram-field > img:nth-child(2) { display: none; }
     .instagram-field > img:nth-child(3) { display: none; }
