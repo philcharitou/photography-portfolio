@@ -1141,13 +1141,13 @@ a.anchor-small {
         padding: 0 4px;
     }
 
-    .column {
+    .web-column {
         flex: 33%;
         max-width: 33%;
         padding: 0 4px;
     }
 
-    .column img {
+    .web-column img {
         margin-top: 8px;
         vertical-align: middle;
         width: 100%;
@@ -1162,12 +1162,20 @@ a.anchor-small {
     }
 
     .column {
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+    }
+
+    .web-column {
         flex: 33%;
         max-width: 33%;
         padding: 0 4px;
     }
 
-    .column img {
+    .web-column img {
         margin-top: 8px;
         vertical-align: middle;
         width: 100%;
@@ -1175,7 +1183,7 @@ a.anchor-small {
 }
 
 #lightbox img {
-    height: 100%;
+    max-height: 100%;
 }
 
 .text-no-wrap {
@@ -1368,6 +1376,16 @@ h4 {
 
     .foreground-subtext.mirrored {
         top: 50%;
+    }
+
+    #column-gallery-contents .web-column {
+        flex: unset;
+        max-width: unset;
+    }
+
+    #grid-gallery-contents .web-column {
+        flex: unset;
+        max-width: unset;
     }
 
     .instagram-field > img:nth-child(1) { display: none; }

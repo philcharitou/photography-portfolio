@@ -1829,9 +1829,6 @@ input[type="range"]::-ms-fill-lower {
 .p-1 {
   padding: 0.25rem;
 }
-.p-12 {
-  padding: 3rem;
-}
 .p-2 {
   padding: 0.5rem;
 }
@@ -1840,6 +1837,9 @@ input[type="range"]::-ms-fill-lower {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-5 {
+  padding: 1.25rem;
 }
 .p-6 {
   padding: 1.5rem;
@@ -3136,12 +3136,12 @@ a.anchor-small {
         flex-wrap: wrap;
         padding: 0 4px;
     }
-#grid-gallery-contents .column {
+#grid-gallery-contents .web-column {
         flex: 33%;
         max-width: 33%;
         padding: 0 4px;
     }
-#grid-gallery-contents .column img {
+#grid-gallery-contents .web-column img {
         margin-top: 8px;
         vertical-align: middle;
         width: 100%;
@@ -3152,17 +3152,23 @@ a.anchor-small {
         padding: 0 4px;
     }
 #column-gallery-contents .column {
+        padding: 0 4px;
+    }
+#column-gallery-contents .column img {
+        margin-top: 8px;
+    }
+#column-gallery-contents .web-column {
         flex: 33%;
         max-width: 33%;
         padding: 0 4px;
     }
-#column-gallery-contents .column img {
+#column-gallery-contents .web-column img {
         margin-top: 8px;
         vertical-align: middle;
         width: 100%;
     }
 #lightbox img {
-    height: 100%;
+    max-height: 100%;
 }
 .text-no-wrap {
     white-space: no-wrap;
@@ -3335,6 +3341,16 @@ h4 {
 
     .foreground-subtext.mirrored {
         top: 50%;
+    }
+
+    #column-gallery-contents .web-column {
+        flex: unset;
+        max-width: unset;
+    }
+
+    #grid-gallery-contents .web-column {
+        flex: unset;
+        max-width: unset;
     }
 
     .instagram-field > img:nth-child(1) { display: none; }
@@ -3880,6 +3896,10 @@ h4 {
     width: auto;
   }
 
+  .md\:flex-1 {
+    flex: 1 1 0%;
+  }
+
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3903,6 +3923,10 @@ h4 {
     background-color: rgb(241 245 249 / var(--tw-bg-opacity));
   }
 
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
   .md\:p-3 {
     padding: 0.75rem;
   }
@@ -3913,6 +3937,10 @@ h4 {
 
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-\[12vh\] {
+    padding: 12vh;
   }
 
   .md\:px-12 {
