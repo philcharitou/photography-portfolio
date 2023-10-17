@@ -7,7 +7,7 @@ teaser: 'Still Photography'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1695931116
+updated_at: 1697512618
 featured_image: hero.jpg
 gallery_images:
   -
@@ -64,11 +64,11 @@ replicator_field:
 heros:
   -
     id: llzi2uui
-    heading: SCOTLAND
-    subheading: 'More specifically, the Isle of Skye'
+    heading: YELLOWSTONE
+    subheading: 'National Park, USA'
     layout: text_layer
-    background: background_1.png
-    foreground: foreground_1.png
+    background: background_hero_1.webp
+    foreground: foreground_hero_1.webp
     visible: false
     type: new_set
     enabled: true

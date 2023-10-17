@@ -5,7 +5,7 @@ title: 'Phil Charitou Photography Pricing | Toronto Photographer Cost'
 main_title: Pricing
 template_field: pricing
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1697132187
+updated_at: 1697230307
 template: pricing
 pricing_tables:
   -
