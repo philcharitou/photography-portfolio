@@ -1388,6 +1388,14 @@ h4 {
         max-width: unset;
     }
 
+    .foreground-text.aligned-left {
+        font-size: 4rem;
+    }
+
+    .foreground-subtext.aligned-left {
+        top: 5rem;
+    }
+
     .instagram-field > img:nth-child(1) { display: none; }
     .instagram-field > img:nth-child(2) { display: none; }
     .instagram-field > img:nth-child(3) { display: none; }
