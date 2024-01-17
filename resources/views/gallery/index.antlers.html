@@ -45,10 +45,10 @@
 <!-- Text Section -->
 <section class="w-full flex flex-wrap md:flex-no-wrap center-heading md:center-heading-reorder md:vh-80 justify-center items-center mx-auto my-10 py-6">
     <div class="w-50 mb-12 md:mb-0 md:w-25 h-full flex items-end">
-        <img class="w-full" src="assets/background_3.jpg">
+        <img class="w-full object-cover" src="{{ glide :src="primary_image" width="900" height="600" fit="crop_focal" }}">
     </div>
     <div class="w-50 mb-12 md:mb-0 md:w-25 h-full flex items-start">
-        <img class="w-full" src="assets/background_3.jpg">
+        <img class="w-full object-cover" src="{{ glide :src="secondary_image" width="900" height="600" fit="crop_focal" }}">
     </div>
     <div class="max-50 mx-auto z-10">
         <div class="px-12 gap-y-12 flex flex-col">
