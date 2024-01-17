@@ -7,7 +7,7 @@ teaser: 'Still Photography, sometimes in motion'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1705354265
+updated_at: 1705522753
 featured_image: hero.jpg
 gallery_images:
   -
@@ -78,7 +78,7 @@ heros:
     heading: 'Creative Works'
     subheading: 'Self expression captured'
     layout: mirrored
-    background: featured-images/img_20231026_132819.jpg
+    background: featured-images/winery-(5-of-6)-(medium).jpg
     visible: false
     type: new_set
     enabled: true
@@ -98,28 +98,27 @@ information_section:
 banners:
   -
     id: lmkshl0w
-    banner_image: featured-images/img-20240114-wa0002(1).jpg
     banner_text: 'I hired Phil for my wedding photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.'
     type: new_set
     enabled: true
     content: |-
-      “I hired Phil for my wedding photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.”
-
+      "Phil delivered high-quality photos that exceeded my expectations. He I won't be surprised next time when I'm blown away..<br><br>
 
       ### Ilia
+    banner_image: featured-images/img-20240114-wa0002(1)-(medium).jpg
   -
     id: lmkshqfd
-    banner_image: featured-images/img_20231026_132819.jpg
+    banner_image: featured-images/winery-(5-of-6)-(medium).jpg
     banner_text: 'He delivered high-quality photos that exceeded my expectations. He is truly a gem in the photography industry.'
     type: new_set
     enabled: true
     content: |-
-      "Phil delivered high-quality photos that exceeded my expectations. He is truly a gem in the photography industry."
+      “I hired Phil for my engagement photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.”<br><br>
 
-      ### Shayan
+      ### Jessica
 featured_works:
   - 02b1d555-3049-46f0-abc1-497d344e2734
-  - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
   - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
+  - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
 main_title: 'Phil Charitou | Toronto based Photographer'
 ---

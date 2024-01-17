@@ -4,9 +4,11 @@ id: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
 password_hash: $2y$10$994ER0kjkcDcpbenG17ttO1hQR.D8XgKu4Y0qtahEX9oB3j4lh25W
 preferences:
   collections:
+    articles:
+      after_save: continue_editing
     pages:
       after_save: continue_editing
-    articles:
+    gallery:
       after_save: continue_editing
   assets:
     assets:
