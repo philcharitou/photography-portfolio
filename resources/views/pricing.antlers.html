@@ -22,21 +22,16 @@
 {{ partial:section-break text="Request a Custom Quote" }}
 
 <section class="section md:py-0 mt-16 md:my-24 justify-center items-center flex-col p-4 space-y-32 dark:text-white">
-    <div class="max-w-4xl space-y-6">
-        <div class="w-full flex flex-no-wrap items-center justify-between">
-            <span></span>
-            <h2 class="pricing-header mx-5 whitespace-nowrap">Pricing</h2>
-            <span></span>
-        </div>
-        <div class="w-full space-y-4 md:px-16">
+    <div class="max-w-4xl">
+        <div class="w-full space-y-4 px-6 md:px-16 md:mt-16">
             {{ intro }}
         </div>
     </div>
 
     {{ pricing_tables }}
-    <div class="max-w-4xl space-y-6">
-        <a class="anchor-small" id="{{ table_id }}"></a>
-        <div class="w-full flex flex-no-wrap items-center justify-between">
+    <div class="max-w-4xl space-y-6 px-6">
+        <a class="anchor" id="{{ table_id }}"></a>
+        <div class="w-full flex flex-no-wrap items-center justify-between pb-6">
             <hr width="40%">
             <h2 class="pricing-header fancy-font whitespace-nowrap mx-5">{{ table_title }}</h2>
             <hr width="40%">
@@ -82,8 +77,8 @@
     {{ /pricing_tables }}
 
     <div class="max-w-4xl space-y-6">
-        <a class="anchor-small" id="other"></a>
-        <div class="w-full flex flex-no-wrap items-center justify-between">
+        <a class="anchor" id="other"></a>
+        <div class="w-full flex flex-no-wrap items-center justify-between pb-6">
             <hr width="40%">
             <h2 class="pricing-header fancy-font mx-5 whitespace-nowrap">Everything Else</h2>
             <hr width="40%">

@@ -1,3 +1,5 @@
-<section class="banner-section md:mt-0" style="background-image: url('{{ glide :src="banner_image" width="1800" height="1200" fit="crop_focal" }}')">
-    <h2 class="fancy-font">{{ banner_text }}</h2>
+<section class="banner-section md:mt-0 px-12" style="background-image: url('{{ glide :src="banner_image" width="1800" height="1200" fit="crop_focal" }}')">
+    <div class="text-white max-w-4xl text-sm md:text-2xl">
+        {{ content }}
+    </div>
 </section>
