@@ -7,11 +7,7 @@ teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-<<<<<<< HEAD
-updated_at: 1705522753
-=======
 updated_at: 1705523917
->>>>>>> ac0b2da0c1a17f2bb8df28b935a4316dc90673be
 featured_image: hero.jpg
 gallery_images:
   -
@@ -77,18 +73,6 @@ heros:
     enabled: true
     cta_text: 'See the Gallery'
     cta_link: 'entry::02b1d555-3049-46f0-abc1-497d344e2734'
-<<<<<<< HEAD
-  -
-    id: lrhye8gw
-    heading: 'Creative Works'
-    subheading: 'Self expression captured'
-    layout: mirrored
-    background: featured-images/winery-(5-of-6)-(medium).jpg
-    visible: false
-    type: new_set
-    enabled: true
-=======
->>>>>>> ac0b2da0c1a17f2bb8df28b935a4316dc90673be
 information_section:
   -
     id: lmkshfdx
@@ -105,10 +89,7 @@ information_section:
 banners:
   -
     id: lmkshl0w
-<<<<<<< HEAD
-=======
     banner_image: 3.webp
->>>>>>> ac0b2da0c1a17f2bb8df28b935a4316dc90673be
     banner_text: 'I hired Phil for my wedding photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.'
     type: new_set
     enabled: true
@@ -119,11 +100,7 @@ banners:
     banner_image: featured-images/img-20240114-wa0002(1)-(medium).jpg
   -
     id: lmkshqfd
-<<<<<<< HEAD
-    banner_image: featured-images/winery-(5-of-6)-(medium).jpg
-=======
     banner_image: img-20240114-wa0012.jpg
->>>>>>> ac0b2da0c1a17f2bb8df28b935a4316dc90673be
     banner_text: 'He delivered high-quality photos that exceeded my expectations. He is truly a gem in the photography industry.'
     type: new_set
     enabled: true
@@ -134,10 +111,5 @@ banners:
 featured_works:
   - 02b1d555-3049-46f0-abc1-497d344e2734
   - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
-<<<<<<< HEAD
-  - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
-main_title: 'Phil Charitou | Toronto based Photographer'
-=======
 main_title: 'Phil Charitou'
->>>>>>> ac0b2da0c1a17f2bb8df28b935a4316dc90673be
 ---
