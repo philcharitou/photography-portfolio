@@ -1,5 +1,5 @@
 {{ heros }}
-<section class="hero {{ visible ? 'parallax-wrap' : 'hidden' }} relative" style="background-image: url('{{ glide :src="background" width="1920" height="1080" }}')">
+<section class="hero object-cover {{ visible ? 'parallax-wrap' : 'hidden' }} relative" style="background-image: url('{{ glide :src="background" width="1920" height="1080" }}')">
     {{ if layout === "text_layer" }}
         <div class="w-full relative overflow-hidden">
             {{ if foreground }}
