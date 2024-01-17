@@ -1,11 +1,12 @@
 ---
 id: 180c2efb-d018-419a-b5bb-eabffe9e32c4
+published: false
 blueprint: pricing
 title: 'Phil Charitou Photography Pricing | Toronto Photographer Cost'
 main_title: Pricing
 template_field: pricing
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1697659019
+updated_at: 1698239236
 template: pricing
 pricing_tables:
   -
@@ -15,9 +16,9 @@ pricing_tables:
     table:
       -
         cells:
-          - '<div>                                 <p class="text-no-wrap mb-3"><strong class="uppercase">Headshots</strong></p>                                 <p class="price">$300</p>                             </div>'
-          - '<div>                                 <p class="text-no-wrap mb-3"><strong class="uppercase">Standard</strong></p>                                 <p class="price">$500</p>                             </div>'
-          - '<div>                                 <p class="text-no-wrap mb-3"><strong class="uppercase">More Time</strong></p>                                 <p class="price">$100</p>                             </div>'
+          - '<div>                                 <p class="text-no-wrap mb-3"><strong class="uppercase">Headshots</strong></p>                                 <p class="price">$150</p>                             </div>'
+          - '<div>                                 <p class="text-no-wrap mb-3"><strong class="uppercase">Standard</strong></p>                                 <p class="price">$250</p>                             </div>'
+          - '<div>                                 <p class="text-no-wrap mb-3"><strong class="uppercase">More Time</strong></p>                                 <p class="price">$50</p>                             </div>'
       -
         cells:
           - '<p class="font-bold text-center">                                 30 Minutes<br><br>                                 5 selections                             </p>'

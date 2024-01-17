@@ -8,3 +8,6 @@ preferences:
       after_save: continue_editing
     articles:
       after_save: continue_editing
+  assets:
+    assets:
+      per_page: 100

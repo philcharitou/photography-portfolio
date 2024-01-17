@@ -3,11 +3,11 @@ id: home
 blueprint: landing
 title: 'Phil Charitou Photography | Toronto Photographer Portfolio'
 template: home
-teaser: 'Still Photography'
+teaser: 'Still Photography, sometimes in motion'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1697512618
+updated_at: 1705354265
 featured_image: hero.jpg
 gallery_images:
   -
@@ -64,32 +64,32 @@ replicator_field:
 heros:
   -
     id: llzi2uui
-    heading: YELLOWSTONE
-    subheading: 'National Park, USA'
+    heading: Branding
+    subheading: 'How to tell your story and connect with your audience.'
     layout: text_layer
-    background: background_hero_1.webp
-    foreground: foreground_hero_1.webp
+    background: img-20240114-wa0008.jpg
     visible: false
     type: new_set
     enabled: true
   -
     id: llzi74wa
-    heading: Landscapes
-    subheading: 'And fun compositions'
-    layout: mirrored
-    background: background_2.png
-    foreground: foreground_2.png
+    heading: Potraits
+    subheading: 'The art of personal expression'
+    layout: aligned_left
+    background: 8-(1-of-1)-(large).jpg
     visible: true
     type: new_set
     enabled: true
+    cta_text: 'Studio Portraits'
+    cta_link: 'entry::14973aad-9377-4d14-ac85-45d6d6bdcb2c'
   -
     id: llzi71fa
-    heading: Portraits
+    heading: Weddings
     subheading: 'Of all kinds, to suit your identity and how you feel within a snippet of time'
     layout: aligned_left
     cta_text: 'See more'
     cta_link: 'entry::be45ad08-e6ab-4d38-9420-9df822630f3a'
-    background: hero.jpg
+    background: 'emily-&-elliot-(133-of-267).webp'
     visible: false
     type: new_set
     enabled: true
@@ -109,14 +109,14 @@ information_section:
 banners:
   -
     id: lmkshl0w
-    banner_image: hero.jpg
-    banner_text: 'Quote 1'
+    banner_image: img-20240114-wa0001(1).png
+    banner_text: 'The photos turned out amazing, and I received a ton of compliments on them. I would highly recommend Phil to anyone looking for a photographer with a good eye.'
     type: new_set
     enabled: true
   -
     id: lmkshqfd
-    banner_image: image_3.jpg
-    banner_text: 'Quote 2'
+    banner_image: 4.webp
+    banner_text: 'Phil was professional and fun to work with! The pictures turned out exactly as we had hoped they would.'
     type: new_set
     enabled: true
 featured_works:
