@@ -3328,7 +3328,7 @@ h4 {
     }
 
     .foreground-subtext.mirrored h2 {
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
     }
 
     #navigation-bar.scrolled .nav-item a {
@@ -3393,13 +3393,14 @@ h4 {
     }
 
     .foreground-text.mirrored {
+        top: 35%;
         font-size: 7vw;
 
         letter-spacing: 0.7rem;
     }
 
     .foreground-subtext.mirrored {
-        top: 50%;
+        top: 45%;
     }
 
     #column-gallery-contents .web-column {
@@ -4251,5 +4252,14 @@ h4 {
     font-size: 4.5rem;
     line-height: 1;
   }
+
+    .lg\:mobile-diglet-card {
+        position: absolute;
+        width: 40%;
+        bottom: 0;
+        left: calc(30%);
+
+        z-index: 11;
+    }
 }
 
