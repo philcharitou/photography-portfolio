@@ -74,7 +74,7 @@
 
         <script defer src="https://unpkg.com/alpinejs"></script>
     </head>
-    <body class="relative dark:bg-slate-800" x-data="{ openMenu : false, showSearch: false, searchQuery: '', searchResults: false, showImage: false, imageUrl: '' }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible' " x-on:keydown.escape="showImage = false">
+    <body class="relative bg-gray-50 dark:bg-slate-800" x-data="{ openMenu : false, showSearch: false, searchQuery: '', searchResults: false, showImage: false, imageUrl: '' }" :class="openMenu ? 'overflow-hidden' : 'overflow-visible' " x-on:keydown.escape="showImage = false">
         <header class="max-w-7xl">
             {{ partial:nav }}
         </header>
