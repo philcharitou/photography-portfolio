@@ -97,7 +97,6 @@ banners:
       "Phil delivered high-quality photos that exceeded my expectations. He I won't be surprised next time when I'm blown away..<br><br>
 
       ### Ilia
-    banner_image: featured-images/img-20240114-wa0002(1)-(medium).jpg
   -
     id: lmkshqfd
     banner_image: img-20240114-wa0012.jpg
