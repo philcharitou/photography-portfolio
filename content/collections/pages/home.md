@@ -3,11 +3,11 @@ id: home
 blueprint: landing
 title: 'Phil Charitou Photography | Toronto Photographer Portfolio'
 template: home
-teaser: 'Still Photography, sometimes in motion'
+teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1705354265
+updated_at: 1705523917
 featured_image: hero.jpg
 gallery_images:
   -
@@ -73,15 +73,6 @@ heros:
     enabled: true
     cta_text: 'See the Gallery'
     cta_link: 'entry::02b1d555-3049-46f0-abc1-497d344e2734'
-  -
-    id: lrhye8gw
-    heading: 'Creative Works'
-    subheading: 'Self expression captured'
-    layout: mirrored
-    background: featured-images/img_20231026_132819.jpg
-    visible: false
-    type: new_set
-    enabled: true
 information_section:
   -
     id: lmkshfdx
@@ -98,7 +89,7 @@ information_section:
 banners:
   -
     id: lmkshl0w
-    banner_image: featured-images/img-20240114-wa0002(1).jpg
+    banner_image: 3.webp
     banner_text: 'I hired Phil for my wedding photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.'
     type: new_set
     enabled: true
@@ -109,7 +100,7 @@ banners:
       ### Ilia
   -
     id: lmkshqfd
-    banner_image: featured-images/img_20231026_132819.jpg
+    banner_image: img-20240114-wa0012.jpg
     banner_text: 'He delivered high-quality photos that exceeded my expectations. He is truly a gem in the photography industry.'
     type: new_set
     enabled: true
@@ -121,5 +112,5 @@ featured_works:
   - 02b1d555-3049-46f0-abc1-497d344e2734
   - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
   - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
-main_title: 'Phil Charitou | Toronto based Photographer'
+main_title: 'Phil Charitou'
 ---
