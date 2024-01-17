@@ -106,20 +106,14 @@ header {
     width: 100%;
     position: fixed;
 
-    background: rgb(54, 54, 54);
-    background: linear-gradient(180deg, rgba(54, 54, 54,0.9) 0%, rgba(0,212,255,0) 100%);
+    background: linear-gradient(180deg, rgba(49, 49, 49, 0.7) 0%, rgba(128, 128, 128, 0) 100%);
     z-index: 15;
 
     transition: all 0.5s ease;
-
-    * {
-        color: var(--nav-color);
-    }
 }
 
 #navigation-bar.scrolled {
-    background: rgb(43, 43, 43);
-
+    background: inherit;
     @apply justify-between items-center px-3 py-1 text-gray-800;
 
     .nav-item, .nav-item * {
@@ -467,7 +461,7 @@ h6 {
 
 .works-title {
     left: -2rem;
-    top: -3%;
+    top: -2%;
 
     border-radius: 0.5rem 0 0 2rem;
 }
@@ -1309,7 +1303,6 @@ h4 {
     }
 
     #navigation-bar.scrolled .nav-item a {
-
         padding-right: unset;
     }
 
