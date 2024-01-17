@@ -1,6 +1,7 @@
 title: Page
 tabs:
   main:
+    display: Main
     sections:
       -
         fields:
@@ -9,6 +10,8 @@ tabs:
             field:
               type: text
               required: true
+              validate:
+                - required
           -
             handle: content
             field:
@@ -24,12 +27,37 @@ tabs:
               localizable: true
               max_items: 1
           -
+            handle: primary_text
+            field:
+              antlers: false
+              type: textarea
+              display: 'Primary Text'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: secondary_text
+            field:
+              antlers: false
+              type: textarea
+              display: 'Secondary Text'
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
             handle: template
             field:
               type: template
               display: Template
               localizable: true
   sidebar:
+    display: Sidebar
     sections:
       -
         fields:

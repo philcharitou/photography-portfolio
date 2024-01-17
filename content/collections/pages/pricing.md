@@ -5,8 +5,13 @@ blueprint: pricing
 title: 'Phil Charitou Photography Pricing | Toronto Photographer Cost'
 main_title: Pricing
 template_field: pricing
+<<<<<<< HEAD
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
 updated_at: 1698239236
+=======
+updated_by: 326af6a7-c90d-4277-b5dc-6f72a1578dd9
+updated_at: 1705507690
+>>>>>>> b64f7b5098b59d4ba205e783dd9852f730e641a0
 template: pricing
 pricing_tables:
   -
@@ -91,7 +96,7 @@ pricing_tables:
     table_title: Event
     table_id: event
     table_description: |-
-      **What defines an "Event"?** It's hard to say!
+      **What defines an "Event"?** It's hard to say! <br><br>
 
 
       Birthdays, Corporate/Company Outings, Live Music, Parties, etc. all fall under this category. As such, the rates will vary on a case-by-case basis but I have some rough outlines listed below. Depending on the scope and expectations for your particular situation these fees may be lower or higher.<br><br>
@@ -115,7 +120,7 @@ pricing_tables:
 intro: |-
   Lets talk pricing.
 
-  Below are several standard rates for services I offer. If these don't meet your needs or you were expecting something different I would be happy to talk to you can figure out a solution. These prices exist in an effort to be _honest and transparent_! Please take a look and if you still have questions you can reach me through my [Contact Page](https://philcharitou.com/contact).
+  Below are several standard rates for services I offer. If these don't meet your needs or you were expecting something different I would be happy to talk to you and figure out a solution. These prices exist in an effort to be _honest and transparent_! Please take a look and if you still have questions you can reach me through my [Contact Page](https://philcharitou.com/contact).
 other: |-
   Photographs can be complex, and elicit complex feelings! I understand that to you, these photos can represent anything from a personal branding measure to capturing timeless moments for your friend and family. As such, there is no "one price fits all". I offer standard rates to be transparent and so none of your valuable time is wasted shopping around for quotes. That being said, sometimes these rates can't capture every type of shoot.
 

@@ -2,27 +2,28 @@
 <section class="hero {{ visible ? 'parallax-wrap' : 'hidden' }} relative" style="background-image: url('{{ glide :src="background" width="1920" height="1080" }}')">
     {{ if layout === "text_layer" }}
         <div class="w-full relative overflow-hidden">
+            {{ if foreground }}
             <img class="h-100 foreground" alt="Foreground image within the parallax hero section" src="{{ glide :src="foreground" width="1920" height="1080" }}">
+            {{ /if }}
+
             <h1 class="foreground-text text-shadow">{{ heading }}</h1>
             <div class="foreground-subtext text-shadow flex justify-center items-center gap-2">
-                <hr width="24">
                 <h2 class="fancy-font">{{ subheading }}</h2>
-                <hr width="24">
             </div>
         </div>
 
         {{ partial:hero-article }}
     {{ elseif layout === "mirrored" }}
+        {{ if foreground }}
         <div class="w-full relative overflow-hidden relative">
             <img class="h-100 foreground mirrored" alt="Foreground image within the parallax hero section" src="{{ glide :src="foreground" width="1920" height="1080" }}">
         </div>
+        {{ /if }}
 
         <h1 class="foreground-text mirrored text-shadow">{{ heading }}</h1>
         {{ if subheading }}
         <div class="foreground-subtext mirrored text-shadow flex justify-center items-center gap-2">
-            <hr width="24">
             <h2 class="fancy-font">{{ subheading }}</h2>
-            <hr width="24">
         </div>
         {{ /if }}
 
