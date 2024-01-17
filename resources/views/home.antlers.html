@@ -35,7 +35,7 @@
         <div class="gallery">
             {{ featured_works }}
             <a class="gallery-item" aria-label="Gallery link to {{ name }}" href="{{ url }}">
-                <figure class="background-cover" style="background-image: url('{{ glide :src="featured_image" width="600" height="400" fit="crop_focal" }}')">
+                <figure class="background-cover" style="background-image: url('{{ glide :src="featured_image" square="600" fit="crop_focal" }}')">
                     <div class="gallery-heading">{{ name }}</div>
                 </figure>
             </a>

@@ -930,7 +930,8 @@ a.anchor-small {
     .gallery-item .gallery-heading {
         opacity: 0;
         color: white;
-        font-size: 1vw;
+        font-size: calc(1vw + 5px);
+        text-transform: uppercase;
         font-weight: 500;
 
         transition: all 0.2s ease;

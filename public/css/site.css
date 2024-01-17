@@ -3014,7 +3014,8 @@ a.anchor-small {
 .gallery .gallery-item .gallery-heading {
         opacity: 0;
         color: white;
-        font-size: 1vw;
+        font-size: calc(1vw + 5px);
+        text-transform: uppercase;
         font-weight: 500;
 
         transition: all 0.2s ease;
@@ -4145,15 +4146,6 @@ h4 {
   .md\:opacity-0 {
     opacity: 0;
   }
-
-    .md\:mobile-diglet-card {
-        position: absolute;
-        width: 40%;
-        bottom: 0;
-        left: calc(30%);
-
-        z-index: 11;
-    }
 
     .md\:flex-no-wrap {
         flex-wrap: nowrap;
