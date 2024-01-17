@@ -5,13 +5,8 @@ blueprint: pricing
 title: 'Phil Charitou Photography Pricing | Toronto Photographer Cost'
 main_title: Pricing
 template_field: pricing
-<<<<<<< HEAD
-updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1698239236
-=======
 updated_by: 326af6a7-c90d-4277-b5dc-6f72a1578dd9
 updated_at: 1705507690
->>>>>>> b64f7b5098b59d4ba205e783dd9852f730e641a0
 template: pricing
 pricing_tables:
   -
