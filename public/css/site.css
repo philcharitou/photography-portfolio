@@ -2611,13 +2611,13 @@ h6 {
 }
 .works-title {
     left: -2rem;
-    top: 5%;
+    top: -3%;
 
     border-radius: 0.5rem 0 0 2rem;
 }
 .works-cta {
     right: -2rem;
-    bottom: 5%;
+    bottom: 3%;
 
     border-radius: 0 0.5rem 2rem 0;
 }
