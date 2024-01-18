@@ -1758,6 +1758,9 @@ input[type="range"]::-ms-fill-lower {
 .border-t {
   border-top-width: 1px;
 }
+.border-l-2 {
+  border-left-width: 2px;
+}
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -4024,6 +4027,14 @@ h4 {
     margin-top: 4rem;
   }
 
+  .md\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
+  .md\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -4287,6 +4298,11 @@ h4 {
   .lg\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
     .lg\:mobile-diglet-card {
