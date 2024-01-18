@@ -1805,6 +1805,10 @@ input[type="range"]::-ms-fill-lower {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
@@ -1843,18 +1847,6 @@ input[type="range"]::-ms-fill-lower {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-amber-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 251 235 / var(--tw-bg-opacity));
-}
-.bg-lime-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 254 231 / var(--tw-bg-opacity));
-}
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
@@ -2149,9 +2141,8 @@ input[type="range"]::-ms-fill-lower {
   --tw-text-opacity: 1;
   color: rgb(81 69 205 / var(--tw-text-opacity));
 }
-.text-neutral-700 {
-  --tw-text-opacity: 1;
-  color: rgb(64 64 64 / var(--tw-text-opacity));
+.text-inherit {
+  color: inherit;
 }
 .text-red-600 {
   --tw-text-opacity: 1;
@@ -2164,9 +2155,6 @@ input[type="range"]::-ms-fill-lower {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-inherit {
-  color: inherit;
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -2345,8 +2333,6 @@ header {
     padding-right: 0.75rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
-    --tw-text-opacity: 1;
-    color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 #navigation-bar.scrolled .nav-item, #navigation-bar.scrolled .nav-item * {
         font-size: 1rem !important;
@@ -3351,6 +3337,7 @@ h4 {
     }
 
     #navigation-bar.scrolled .nav-item a {
+        padding-left: unset;
         padding-right: unset;
     }
 
@@ -4141,6 +4128,10 @@ h4 {
 
   .md\:ps-12 {
     padding-inline-start: 3rem;
+  }
+
+  .md\:ps-4 {
+    padding-inline-start: 1rem;
   }
 
   .md\:pt-12 {

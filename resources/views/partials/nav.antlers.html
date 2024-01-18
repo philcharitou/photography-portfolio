@@ -9,14 +9,16 @@
 
         <div class="flex-1 nav-item flex items-center text-inherit">
             <div class="dark:text-white nav-item hidden items-center md:flex">
-                <button class="flex align-middle items-center nav-item pe-8" @click="openMenu = !openMenu"
+                <button class="flex align-middle items-center nav-item pe-8 text-inherit" @click="openMenu = !openMenu"
                         :aria-expanded="openMenu" aria-controls="mobile-navigation" aria-label="Navigation Menu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
-            <a href="/" class="md:text-2xl md:font-medium antialiased ps-4">Phil Charitou Photography</a>
+            <a href="/" class="md:text-2xl md:font-medium antialiased md:ps-4 flex">
+                Phil Charitou <span class="hidden md:block">&nbsp;Photography</span>
+            </a>
         </div>
 
         <button class="flex md:hidden flex-col flex-1 items-end align-middle nav-item" @click="openMenu = !openMenu"
