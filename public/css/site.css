@@ -1408,6 +1408,9 @@ input[type="range"]::-ms-fill-lower {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-16 {
+  margin-bottom: 4rem;
+}
 .block {
   display: block;
 }
@@ -4120,6 +4123,11 @@ h4 {
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:pe-24 {
