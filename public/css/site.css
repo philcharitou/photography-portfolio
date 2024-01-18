@@ -1408,9 +1408,6 @@ input[type="range"]::-ms-fill-lower {
 .mt-8 {
   margin-top: 2rem;
 }
-.mb-16 {
-  margin-bottom: 4rem;
-}
 .block {
   display: block;
 }
@@ -1752,14 +1749,14 @@ input[type="range"]::-ms-fill-lower {
 .border-l {
   border-left-width: 1px;
 }
+.border-l-2 {
+  border-left-width: 2px;
+}
 .border-l-4 {
   border-left-width: 4px;
 }
 .border-t {
   border-top-width: 1px;
-}
-.border-l-2 {
-  border-left-width: 2px;
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -2307,6 +2304,12 @@ input[type="range"]::-ms-fill-lower {
     }
 .section-padding-top {
         padding-top: 15vh;
+    }
+.dark-scrolled.scrolled {
+        color: white;
+    }
+.light-scrolled.scrolled {
+        color: inherit;
     }
 /* This is all you. */
 :root {
@@ -3761,6 +3764,9 @@ h4 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+:is(.dark .dark\:dark-scrolled).scrolled {
+        color: white;
+    }
 :is(.dark .dark\:hover\:border-gray-600:hover) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -4011,6 +4017,10 @@ h4 {
     margin-bottom: 0px;
   }
 
+  .md\:mb-12 {
+    margin-bottom: 3rem;
+  }
+
   .md\:mb-16 {
     margin-bottom: 4rem;
   }
@@ -4025,10 +4035,6 @@ h4 {
 
   .md\:mt-16 {
     margin-top: 4rem;
-  }
-
-  .md\:mb-12 {
-    margin-bottom: 3rem;
   }
 
   .md\:mt-6 {
@@ -4106,6 +4112,11 @@ h4 {
     padding: 12vh;
   }
 
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -4134,11 +4145,6 @@ h4 {
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .md\:pe-24 {
@@ -4295,14 +4301,14 @@ h4 {
     text-align: left;
   }
 
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 
     .lg\:mobile-diglet-card {
