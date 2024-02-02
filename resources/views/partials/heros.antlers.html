@@ -12,7 +12,9 @@
             </div>
         </div>
 
-        {{ partial:hero-article }}
+        {{ if article_enabled }}
+            {{ partial:hero-article }}
+        {{ /if }}
     {{ elseif layout === "mirrored" }}
         {{ if foreground }}
         <div class="w-full relative overflow-hidden relative">
@@ -27,7 +29,9 @@
         </div>
         {{ /if }}
 
-        {{ partial:hero-article }}
+        {{ if article_enabled }}
+            {{ partial:hero-article }}
+        {{ /if }}
     {{ elseif layout === "aligned_left" }}
         <div class="w-full flex justify-center items-center relative overflow-hidden">
             {{ if foreground }}
@@ -42,7 +46,9 @@
             </h2>
         </div>
 
-        {{ partial:hero-article }}
+        {{ if article_enabled }}
+            {{ partial:hero-article }}
+        {{ /if }}
     {{ /if }}
 
     <div class="hidden unselectable md:flex bottom-left-action justify-between items-center gap-6 text-sideways">

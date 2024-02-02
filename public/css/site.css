@@ -1408,6 +1408,12 @@ input[type="range"]::-ms-fill-lower {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-28 {
+  margin-bottom: 7rem;
+}
 .block {
   display: block;
 }
@@ -2020,6 +2026,15 @@ input[type="range"]::-ms-fill-lower {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pb-16 {
+  padding-bottom: 4rem;
+}
+.pb-12 {
+  padding-bottom: 3rem;
+}
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 .text-left {
   text-align: left;
