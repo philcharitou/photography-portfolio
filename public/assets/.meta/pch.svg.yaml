@@ -1,6 +1,10 @@
 data: {  }
 size: 8529
+<<<<<<< HEAD
 last_modified: 1706131769
+=======
+last_modified: 1706131971
+>>>>>>> dc3c27d9df659d49c6dad97e31ceb883f2e65279
 width: '406.111'
 height: '215.956'
 mime_type: image/svg+xml

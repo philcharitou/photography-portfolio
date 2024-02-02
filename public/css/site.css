@@ -1792,6 +1792,10 @@ input[type="range"]::-ms-fill-lower {
 .border-transparent {
   border-color: transparent;
 }
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -2332,7 +2336,7 @@ header {
     background: linear-gradient(180deg, rgba(49, 49, 49, 0.7) 0%, rgba(128, 128, 128, 0) 100%);
     z-index: 15;
 
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 #navigation-bar.scrolled {
     background: inherit;
@@ -2343,9 +2347,6 @@ header {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
 }
-#navigation-bar.scrolled .nav-item, #navigation-bar.scrolled .nav-item * {
-        font-size: 1rem !important;
-    }
 #navigation-bar.scrolled .nav-item a {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2357,9 +2358,17 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#mobile-navigation a {
-    font-size: 1.5rem;
+.svg-white {
+    fill: white;
+    stroke: white;
 }
+.svg-black {
+    fill: black;
+    stroke: black;
+}
+#logo svg {
+        height: 30px;
+    }
 .nav-item * {
     transition: all 0.5s ease;;
 }
@@ -2828,7 +2837,7 @@ a.anchor-small {
     left: 5vw;
     bottom: 0;
 
-    z-index: 11;
+    z-index: 12;
 }
 #article h1 {
         font-family: "Times New Roman";
@@ -3522,9 +3531,6 @@ h4 {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-.hover\:text-shadow:hover {
-        text-shadow: 1px 1px 2px black;
-    }
 .focus\:border-0:focus {
   border-width: 0px;
 }
@@ -3638,12 +3644,11 @@ h4 {
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.group:hover .group-hover\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .group:hover .group-hover\:opacity-75 {
   opacity: 0.75;
+}
+:is(.dark .dark\:flex) {
+  display: flex;
 }
 :is(.dark .dark\:border-gray-500) {
   --tw-border-opacity: 1;
