@@ -13,15 +13,8 @@ callout: |-
 subheader: 'SOCIAL MEDIA'
 social_media_icons: true
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-<<<<<<< HEAD
 updated_at: 1706894799
 template: contact
 background:
   - 5-(1-of-1)-(large).jpg
-=======
-updated_at: 1706894943
-template: contact
-background:
-  - 6-(1-of-1)-(large).jpg
->>>>>>> 760b0609cc46a35a07aa4bda82b2302d69b8dc4b
 ---
