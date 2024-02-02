@@ -117,16 +117,12 @@ header {
     background: linear-gradient(180deg, rgba(49, 49, 49, 0.7) 0%, rgba(128, 128, 128, 0) 100%);
     z-index: 15;
 
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
 #navigation-bar.scrolled {
     background: inherit;
     @apply justify-between items-center px-3 py-1;
-
-    .nav-item, .nav-item * {
-        font-size: 1rem !important;
-    }
 
     .nav-item a {
         @apply py-2 px-4;
@@ -139,8 +135,20 @@ header {
     background-size: cover;
 }
 
-#mobile-navigation a {
-    font-size: 1.5rem;
+.svg-white {
+    fill: white;
+    stroke: white;
+}
+
+.svg-black {
+    fill: black;
+    stroke: black;
+}
+
+#logo {
+    svg {
+        height: 30px;
+    }
 }
 
 .nav-item * {
@@ -703,7 +711,7 @@ a.anchor-small {
     left: 5vw;
     bottom: 0;
 
-    z-index: 11;
+    z-index: 12;
 }
 
 #article {
