@@ -920,11 +920,11 @@ a.anchor-small {
 
         transform: scale(0.0.5);
         opacity: 0;
-        transition: all 0.5s ease;
+        transition: all 0.25s ease;
     }
 
     .gallery-item:hover figure {
-        filter: saturate(0%) brightness(50%);
+        filter: saturate(0%);
     }
 
     figure {
