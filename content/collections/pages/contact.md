@@ -12,8 +12,6 @@ callout: |-
   <br><br>
 subheader: 'SOCIAL MEDIA'
 social_media_icons: true
-background:
-  - background_3.jpg
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
 updated_at: 1695931076
 template: contact
