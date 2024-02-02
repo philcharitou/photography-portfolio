@@ -369,7 +369,7 @@ canvas {
         font-weight: 600;
         font-size: 1.3rem;
         text-transform: uppercase;
-        color: var(--teaser-color);
+        /*color: var(--teaser-color);*/
     }
 
     h5 {

@@ -2534,7 +2534,7 @@ canvas {
         font-weight: 600;
         font-size: 1.3rem;
         text-transform: uppercase;
-        color: var(--teaser-color);
+        /*color: var(--teaser-color);*/
     }
 .split h5 {
         font-weight: 700;
@@ -4096,6 +4096,11 @@ h4 {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .md\:px-6 {
