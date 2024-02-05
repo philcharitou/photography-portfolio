@@ -6,10 +6,7 @@
         <hr width="24">
     </div>
 
-    <div class="hidden unselectable md:flex bottom-left-action justify-between items-center gap-6 text-sideways">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="bevel" stroke-linejoin="bevel"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>        <hr width="24">
-        <h5 class="font-bold">Share</h5>
-    </div>
+    {{ partial:hero-share }}
 
     {{ partial:scroll-down }}
 </section>
@@ -43,7 +40,7 @@
 </section>
 
 <!-- Text Section -->
-<section class="w-full flex flex-wrap md:flex-no-wrap center-heading md:center-heading-reorder md:vh-80 justify-center items-center mx-auto my-10 py-6">
+<section class="w-full flex flex-wrap md:flex-no-wrap center-heading md:center-heading-reorder md:vh-80 justify-center items-center mx-auto mt-10 pt-6">
     <div class="w-50 mb-12 md:mb-0 md:w-25 h-full flex items-end">
         <img class="w-full object-cover" src="{{ glide :src="primary_image" width="900" height="600" fit="crop_focal" }}">
     </div>
@@ -70,3 +67,5 @@
         </div>
     </div>
 </section>
+
+{{ partial:call-to-action }}
