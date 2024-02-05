@@ -5742,21 +5742,21 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v4.23.0",
+            "version": "v4.47.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "7cfad2eafa25993f9eb059027c44e76234f8658d"
+                "reference": "35200d1c8f6ebdd74bf5d3db5b648ddc20a298f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/7cfad2eafa25993f9eb059027c44e76234f8658d",
-                "reference": "7cfad2eafa25993f9eb059027c44e76234f8658d",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/35200d1c8f6ebdd74bf5d3db5b648ddc20a298f9",
+                "reference": "35200d1c8f6ebdd74bf5d3db5b648ddc20a298f9",
                 "shasum": ""
             },
             "require": {
                 "ajthinking/archetype": "^1.0.3",
-                "composer/composer": "^1.10.22 || ^2.2.12",
+                "composer/composer": "^1.10.22 || ^2.2.22",
                 "ext-json": "*",
                 "facade/ignition-contracts": "^1.0",
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
@@ -5783,8 +5783,10 @@
                 "wilderborn/partyline": "^1.0"
             },
             "require-dev": {
+                "doctrine/dbal": "^3.6",
                 "fakerphp/faker": "~1.10",
                 "google/cloud-translate": "^1.6",
+                "laravel/pint": "^1.0",
                 "mockery/mockery": "^1.3.3",
                 "orchestra/testbench": "^7.0 || ^8.0",
                 "phpunit/phpunit": "^9.0"
@@ -5832,7 +5834,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v4.23.0"
+                "source": "https://github.com/statamic/cms/tree/v4.47.0"
             },
             "funding": [
                 {
@@ -5840,7 +5842,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-20T19:04:37+00:00"
+            "time": "2024-01-31T19:55:55+00:00"
         },
         {
             "name": "statamic/stringy",

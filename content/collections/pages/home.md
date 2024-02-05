@@ -6,8 +6,13 @@ template: home
 teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
+<<<<<<< HEAD
+updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
+updated_at: 1706909653
+=======
 updated_by: 1
 updated_at: 1707159883
+>>>>>>> a243057037518cc801fe2a2c082e5fbad719eb47
 featured_image: hero.jpg
 gallery_images:
   -
@@ -64,15 +69,30 @@ replicator_field:
 heros:
   -
     id: llzi74wa
-    heading: Portraits
-    subheading: 'Highlighting the best of you'
+    heading: 'Phil Charitou'
+    subheading: Photography
     layout: mirrored
+<<<<<<< HEAD
+=======
     background: singles-1.jpg
+>>>>>>> a243057037518cc801fe2a2c082e5fbad719eb47
     visible: true
     type: new_set
     enabled: true
     cta_text: 'See the Gallery'
     cta_link: 'entry::02b1d555-3049-46f0-abc1-497d344e2734'
+    background: singles-5-(1).webp
+  -
+    id: ls4zsnno
+    heading: 'Phil Charitou'
+    subheading: Photography
+    layout: mirrored
+    cta_text: 'See more work'
+    cta_link: 'entry::be45ad08-e6ab-4d38-9420-9df822630f3a'
+    background: featured-images/studio-session-251.jpg
+    visible: false
+    type: new_set
+    enabled: true
 information_section:
   -
     id: lmkshfdx
@@ -81,7 +101,7 @@ information_section:
     link_text: 'About me'
     link: 'entry::b34377cb-2afe-4ed3-92c6-9b765b0d17fa'
     content: |-
-      Welcome to my collection of work, where I try to make still moments come to life and etch stories in every frame. Through the expression via composition, the beauty of individuals, their willingness to share their life, and the beautiful technology that allows us to capture it all. 
+      Welcome to my collection of work, where I try to make still moments come to life and present the beauty of individuals through, dynamic lighting, clever composition, and the beautiful technology that allows us to capture it all.
       <br>
       Curious why I do it or interested in the results? Keep on reading.
     type: new_set
@@ -92,7 +112,7 @@ banners:
     banner_image: featured-images/img-20240114-wa0002(1)-(medium).jpg
     banner_text: 'I hired Phil for my wedding photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.'
     type: new_set
-    enabled: true
+    enabled: false
     content: |-
       "Phil delivered high-quality photos that exceeded my expectations. He I won't be surprised next time when I'm blown away..<br><br>
 
@@ -102,7 +122,7 @@ banners:
     banner_image: featured-images/winery-(5-of-6)-(medium).jpg
     banner_text: 'He delivered high-quality photos that exceeded my expectations. He is truly a gem in the photography industry.'
     type: new_set
-    enabled: true
+    enabled: false
     content: |-
       “I hired Phil for my engagement photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.”<br><br>
 
@@ -111,5 +131,7 @@ featured_works:
   - 02b1d555-3049-46f0-abc1-497d344e2734
   - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
   - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
+  - 91792d54-ef91-4abf-9a80-bf748086f7cd
+  - 99a35c59-3f15-4b31-9078-216b891bc544
 main_title: 'Phil Charitou'
 ---

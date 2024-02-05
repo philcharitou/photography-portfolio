@@ -91,85 +91,21 @@ tabs:
               visibility: visible
               hide_display: false
           -
-            handle: contents
+            handle: photos
             field:
-              collapse: false
-              previews: true
-              fullscreen: true
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  instructions: null
-                  icon: null
-                  sets:
-                    new_set:
-                      display: 'New Set'
-                      instructions: null
-                      icon: null
-                      fields:
-                        -
-                          handle: image
-                          field:
-                            max_files: 1
-                            min_files: 1
-                            mode: list
-                            container: assets
-                            restrict: false
-                            allow_uploads: true
-                            show_filename: true
-                            show_set_alt: true
-                            type: assets
-                            display: Image
-                            icon: assets
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: caption
-                          field:
-                            input_type: text
-                            antlers: false
-                            type: text
-                            display: Caption
-                            icon: text
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-                        -
-                          handle: metadata
-                          field:
-                            restrict: false
-                            buttons:
-                              - bold
-                              - italic
-                              - unorderedlist
-                              - orderedlist
-                              - quote
-                              - link
-                              - image
-                              - table
-                            automatic_line_breaks: true
-                            automatic_links: false
-                            escape_markup: false
-                            heading_anchors: false
-                            smartypants: false
-                            table_of_contents: false
-                            antlers: false
-                            type: markdown
-                            display: Metadata
-                            icon: markdown
-                            listable: hidden
-                            instructions_position: above
-                            visibility: visible
-                            hide_display: false
-              type: replicator
-              display: Contents
-              icon: replicator
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: Photos
+              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
+              replicator_preview: true
               hide_display: false
   sidebar:
     display: Sidebar
