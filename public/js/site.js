@@ -1,3 +1,5 @@
+var iteration = 0;
+
 function randomizeHero()
 {
     $("#cover").addClass("blacked-out");
@@ -15,7 +17,7 @@ function randomizeHero()
             $(this).addClass("hidden");
         });
 
-        random = recursiveRandom(active, randomNumber(0, max), max);
+        let random = recursiveRandom(active, randomNumber(0, max), max);
 
         sections.get(random).classList.remove("hidden");
 
@@ -27,8 +29,12 @@ function randomizeHero()
 
 function recursiveRandom(active, random, max) {
     if (active !== random) {
+        iteration = 0;
         return random;
     } else {
+        if(iteration++ >= 5)
+            return 0;
+
         return recursiveRandom(active, randomNumber(0, max), max);
     }
 }
@@ -38,7 +44,7 @@ function randomNumber(min, max) {
 }
 
 $(function() {
-    $('.gallery-item, .creative-gallery-content').waypoint(function() {
+    $('.gallery-item, .gallery-content').waypoint(function() {
         $(this.element).addClass('pop-in');
     }, {
         offset: '100%'

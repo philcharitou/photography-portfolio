@@ -1,4 +1,5 @@
-// This is all you.
+var iteration = 0;
+
 function randomizeHero()
 {
     $("#cover").addClass("blacked-out");
@@ -16,7 +17,7 @@ function randomizeHero()
             $(this).addClass("hidden");
         });
 
-        random = recursiveRandom(active, randomNumber(0, max), max);
+        let random = recursiveRandom(active, randomNumber(0, max), max);
 
         sections.get(random).classList.remove("hidden");
 
@@ -27,9 +28,15 @@ function randomizeHero()
 }
 
 function recursiveRandom(active, random, max) {
+    console.log("TEST");
     if (active !== random) {
+        iteration = 0;
         return random;
     } else {
+        if(iteration++ >= 5) {
+            return 0;
+        }
+
         return recursiveRandom(active, randomNumber(0, max), max);
     }
 }

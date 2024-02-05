@@ -6,8 +6,13 @@ template: home
 teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
+<<<<<<< HEAD
 updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
 updated_at: 1706909653
+=======
+updated_by: 1
+updated_at: 1707159883
+>>>>>>> a243057037518cc801fe2a2c082e5fbad719eb47
 featured_image: hero.jpg
 gallery_images:
   -
@@ -67,6 +72,10 @@ heros:
     heading: 'Phil Charitou'
     subheading: Photography
     layout: mirrored
+<<<<<<< HEAD
+=======
+    background: singles-1.jpg
+>>>>>>> a243057037518cc801fe2a2c082e5fbad719eb47
     visible: true
     type: new_set
     enabled: true

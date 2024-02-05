@@ -1,40 +1,24 @@
-<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+## About This Website
 
-## About Statamic
+This is my personal portfolio. Built using the Statamic CMS package built on-top of Laravel with a custom backend.
 
-Statamic is the flat-first, Laravel + Git powered CMS designed for building beautiful, easy to manage websites.
+While this application is not plug and plan, it may serve as a useful base for those wishing to quickly spin up a simple front-end with document-based authentication and some pre-built YAML files, tailored for photography. It is simple enough to strip this website down and customize it to your needs however.
 
-> **Note:** This repository contains the code for the Statamic application. To contribute to the core package, visit the [Statamic core package repository][cms-repo].
+## Some Notes
 
+This application uses some custom logic within the 'report' method of the global exception handler class.
 
-## Learning Statamic
+Some packages I personally like to implement when starting a project like this:
 
-Statamic has extensive [documentation][docs]. We dedicate a significant amount of time and energy every day to improving them, so if something is unclear, feel free to open issues for anything you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+    Laravel Auditing
+        composer require owen-it/laravel-auditing
+    Laravel Permissions (by Spatie)
+        composer require spatie/laravel-permission
 
-## Support
+## Liability
 
-We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available on the [forum](https://statamic.com/forum) and in [Discord][discord].
+This project is published for demonstrative and educational purposes only. I cannot be held liable for any security vulnerabilities therein or from problems arising from the use of this application.
 
+## License
 
-## Contributing
-
-Thank you for considering contributing to Statamic! We simply ask that you review the [contribution guide][contribution] before you open issues or send pull requests.
-
-
-## Code of Conduct
-
-In order to ensure that the Statamic community is welcoming to all and generally a rad place to belong, please review and abide by the [Code of Conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
-
-
-## Important Links
-
-- [Statamic Main Site](https://statamic.com)
-- [Statamic Documentation][docs]
-- [Statamic Core Package Repo][cms-repo]
-- [Statamic Migrator](https://github.com/statamic/migrator)
-- [Statamic Discord][discord]
-
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
+This project and the underlying Laravel Framework is open-sourced software licensed under the MIT license.

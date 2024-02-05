@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'statamic' => [
+            'driver' => 'session',
+            'provider' => 'statamic',
+        ]
     ],
 
     /*
@@ -61,18 +66,13 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'statamic',
+            'driver' => 'eloquent',
+            'model' => \App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Models\User::class,
-        // ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'statamic' => [
+            'driver' => 'statamic',
+        ],
     ],
 
     /*

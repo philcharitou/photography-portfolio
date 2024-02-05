@@ -339,8 +339,6 @@ canvas {
     justify-content: center;
     align-items: center;
 
-    margin: 10vh 0;
-
     background: black;
     background-attachment: fixed;
     background-position: center;
@@ -1041,11 +1039,11 @@ a.anchor-small {
     position: relative;
 }
 
-.instagram-field > img:nth-child(1) { left: -15%; top: -20%; right: unset; bottom: unset; transform: scale(90%); }
-.instagram-field > img:nth-child(2) { left: 50%; top: -25%; right: unset; bottom: unset; transform: scale(80%); }
-.instagram-field > img:nth-child(3) { left: unset; top: unset; right: -10%; bottom: -5%; transform: scale(90%); }
-.instagram-field > img:nth-child(4) { left: unset; top: unset; right: 50%; bottom: -19%; transform: scale(90%); }
-.instagram-field > img:nth-child(5) { left: -5%; top: unset; right: unset; bottom: -8%; transform: scale(100%); }
+.instagram-field > img:nth-child(1) { left: 5%; top: -15%; right: unset; bottom: unset; transform: scale(100%); }
+.instagram-field > img:nth-child(2) { left: calc(50% - 115px/2 - 15%); top: -15%; right: unset; bottom: unset; transform: scale(100%); }
+.instagram-field > img:nth-child(3) { left: calc(50% - 115px/2); top: -15%; right: unset; bottom: unset; transform: scale(100%); }
+.instagram-field > img:nth-child(4) { left: calc(50% - 115px/2 + 15%); top: -15%; right: unset; bottom: unset; transform: scale(100%); }
+.instagram-field > img:nth-child(5) { left: unset; top: -15%; right: 5%; bottom: unset; transform: scale(100%); }
 
 .background-instagram-square {
     width: 115px;

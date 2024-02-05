@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'repository' => 'file',
+    'repository' => 'eloquent',
 
     'repositories' => [
 
@@ -119,7 +119,10 @@ return [
     'tables' => [
         'users' => 'users',
         'role_user' => 'role_user',
+        'roles' => false,
         'group_user' => 'group_user',
+        'groups' => false,
+
     ],
 
     /*
@@ -137,5 +140,4 @@ return [
         'cp' => 'web',
         'web' => 'web',
     ],
-
 ];
