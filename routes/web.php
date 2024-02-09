@@ -38,7 +38,6 @@ Route::group([
     });
 
     // Auth
-    Route::statamic('/login', 'authentication.login')->name('login');
     Route::post('/login', [LoginController::class, 'login']);
 
     Route::post('/contact-us', [PublicController::class, 'contactForm']);
