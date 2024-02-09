@@ -1,6 +1,6 @@
 <div class="flex flex-col dark:text-white md:mb-32">
     <div class="block md:flex flex-1 flex-wrap">
-        <div class="flex-1 bg-neutral-300 dark:bg-slate-700 border-1 p-8 h-screen" style="background-image: url('{{ glide :src="left_background" width="1920" height="1080" }}')">
+        <div class="flex-1 bg-neutral-300 dark:bg-slate-700 border-1 p-8 h-screen" style="background-image: url('{{ glide :src="left_background" width="1920" height="1080" fit="crop_focal" }}')">
             <div class="w-full lg:w-3/4 mx-auto">
                 <div class="text-left h-32"></div>
                 <div class="text-left lg:mt-16 h-20">
@@ -47,7 +47,7 @@
                 </form>
             </div>
         </div>
-        <div class="flex-1 p-8 border-gray-100 h-screen" style="background-image: url('{{ glide :src="right_background" width="1920" height="1080" }}')">
+        <div class="flex-1 p-8 border-gray-100 h-screen" style="background-image: url('{{ glide :src="right_background" width="1920" height="1080" fit="crop_focal" }}')">
             <div class="w-full lg:w-3/4 mx-auto">
                 <div class="text-left h-16"></div>
                 <div class="text-left lg:mt-16 h-20"></div>
