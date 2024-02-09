@@ -33,7 +33,7 @@ class LoginController extends Controller
     /**
      * Where to redirect users after login.
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/home';
 
     // Custom properties for throttle
     protected $maxAttempts = 5; // Default is 5
@@ -62,7 +62,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials, $remember_me)) {
             // Authentication passed...
-            return redirect()->intended('dashboard');
+            return redirect()->intended('home');
         }
     }
 
@@ -77,7 +77,7 @@ class LoginController extends Controller
             Auth::logoutOtherDevices($request->password);
         }
 
-        App::setLocale(auth()->user()->setting('language_preference'));
+        // App::setLocale(auth()->user()->setting('language_preference'));
     }
 
     public function logout(Request $request)

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BugReportController;
 use App\Http\Controllers\InstagramController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\UserAccountController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Statamic\Http\Controllers\CP\Auth\LoginController;
@@ -27,6 +29,10 @@ Route::group([
         'localeSessionRedirect', //redirect if there's a locale in session
         'localeViewPath']
 ], function () {
+    Route::get('/home', function() {
+        return redirect('/');
+    });
+
     Route::middleware('auth')->group(function () {
         Route::statamic('/search', 'search');
     });
@@ -47,7 +53,13 @@ Route::group([
         'localeViewPath',
         'auth',]
 ], function () {
+    Route::get('/home', [UserAccountController::class, 'index'])->name('home');
+    Route::post('/search-system', [UserAccountController::class, 'search'])->name('search_bar');
+
     Route::resource('/users', UserController::class);
+    Route::resource('/bug-reports', BugReportController::class);
+
+    Route::post('/clear-bug-reports', [BugReportController::class, 'delete_all'])->name('clear_bug_reports');
 });
 
 

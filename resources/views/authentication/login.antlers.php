@@ -35,6 +35,12 @@
                     <div class="mb-4">
                         <a href="#" class="text-sm hover:text-gray-600 dark:hover:text-neutral-300 hover:underline">Forgot your password?</a>
                     </div>
+
+                    <label for="remember_me" class="inline-flex items-center">
+                        <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Remember me</span>
+                    </label>
+
                     <div class="flex justify-end">
                         <button type="submit" class="w-1/3 px-2 py-3 text-white bg-black rounded-full hover:bg-gray-900 focus:outline-none text-sm focus:ring focus:ring-gray-200 focus:ring-opacity-50">Sign in</button>
                     </div>
