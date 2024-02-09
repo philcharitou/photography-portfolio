@@ -8,9 +8,6 @@ $.ajax({
     type: "GET",
     url: "/instagram-account",
     success: function (result) {
-        console.log(result);
-
-        console.log(result.length);
         for(let i = 0; i < result.length; i++) {
             let square = document.getElementById("instagram_" + i);
 

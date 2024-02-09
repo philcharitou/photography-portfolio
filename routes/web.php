@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\InstagramController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
