@@ -2,11 +2,11 @@
 id: 180c2efb-d018-419a-b5bb-eabffe9e32c4
 published: false
 blueprint: pricing
-title: 'Phil Charitou Photography Pricing | Toronto Photographer Cost'
+title: 'Pricing - Phil Charitou | Toronto Branding & Portrait Photography'
 main_title: Pricing
 template_field: pricing
-updated_by: 326af6a7-c90d-4277-b5dc-6f72a1578dd9
-updated_at: 1705507690
+updated_by: 1
+updated_at: 1707486687
 template: pricing
 pricing_tables:
   -

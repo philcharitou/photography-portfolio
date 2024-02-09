@@ -1,7 +1,7 @@
 ---
 id: 7c4682a1-4c05-4610-900f-d22c8f8df013
 blueprint: page_form
-title: 'Phil Charitou Photography Contact | Toronto Photographer Getting in Touch'
+title: 'Contact - Phil Charitou | Toronto Branding & Portrait Photography'
 header: 'GET IN TOUCH'
 callout: |-
   For more info on availability and pricing guides send us a note. Or simply say hello! We can’t wait to hear from you!<br>
@@ -12,8 +12,8 @@ callout: |-
   <br><br>
 subheader: 'SOCIAL MEDIA'
 social_media_icons: true
-updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1706896122
+updated_by: 1
+updated_at: 1707486670
 template: contact
 background:
   - 5-(1-of-1)-(large).jpg

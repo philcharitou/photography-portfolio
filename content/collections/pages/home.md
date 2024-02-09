@@ -1,13 +1,13 @@
 ---
 id: home
 blueprint: landing
-title: 'Phil Charitou Photography | Toronto Photographer Portfolio'
+title: 'Phil Charitou | Toronto Branding & Portrait Photography'
 template: home
 teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
-updated_by: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
-updated_at: 1706909653
+updated_by: 1
+updated_at: 1707493436
 featured_image: hero.jpg
 gallery_images:
   -
@@ -62,6 +62,16 @@ replicator_field:
     type: new_set
     enabled: true
 heros:
+  -
+    id: ls9hi8h9
+    heading: 'Phil Charitou'
+    subheading: Photography
+    layout: mirrored
+    cta_text: 'See more work'
+    background: 'hero-images/b&w_darker.webp'
+    visible: true
+    type: new_set
+    enabled: true
   -
     id: ls4zsnno
     heading: 'Phil Charitou'
