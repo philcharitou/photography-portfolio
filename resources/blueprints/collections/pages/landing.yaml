@@ -19,7 +19,6 @@ tabs:
               antlers: false
               type: text
               display: 'Main Title'
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -31,7 +30,6 @@ tabs:
               antlers: false
               type: text
               display: Teaser
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -58,7 +56,6 @@ tabs:
               antlers: false
               type: markdown
               display: Subtitle
-              icon: markdown
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -197,7 +194,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: Heros
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -294,7 +290,6 @@ tabs:
                             hide_display: false
               type: replicator
               display: 'Information Section'
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -309,7 +304,6 @@ tabs:
                 - gallery
               type: entries
               display: 'Featured Works'
-              icon: entries
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -379,12 +373,23 @@ tabs:
                             hide_display: false
               type: replicator
               display: Banners
-              icon: replicator
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
               replicator_preview: true
+          -
+            handle: template
+            field:
+              hide_partials: true
+              blueprint: false
+              type: template
+              display: Template
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -395,6 +400,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:
