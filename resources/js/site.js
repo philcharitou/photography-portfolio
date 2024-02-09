@@ -15,7 +15,7 @@ $.ajax({
             let square = document.getElementById("instagram_" + i);
 
             if(square) {
-                square.setAttribute("src", result[i]);
+                square.setAttribute("src", "/" . result[i]);
             }
         }
     },
