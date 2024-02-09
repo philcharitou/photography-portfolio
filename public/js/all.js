@@ -141,6 +141,13 @@ $(".contact-form-submit").on("click", function() {
         error: function (data) {
             // Log in the console
             console.log(data);
+            $('.circle-loader').toggleClass("hidden");
+            let thanks = $('.thanks-text')
+                thanks.toggleClass('hidden');
+                thanks.text('Something went wrong! Please email us directly at contact@philcharitou.com');
+
+            let button = $('.contact-form-submit');
+            button.addClass('pointer-events-none border-red');
         },
     });
 })
