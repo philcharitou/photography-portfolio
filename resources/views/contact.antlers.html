@@ -1,5 +1,5 @@
 <!-- About Section -->
-<section class="section-full flex no-padding items-center flex-wrap justify-between md:justify-center mh-100vh px-10 relative" style="background-image: url('{{ glide :src="background[0]" width="1920" height="1080" fit="crop_focal" }}')">
+<section class="section-full flex no-padding items-center flex-wrap justify-between md:justify-center mh-100vh px-10 relative mb-16" style="background-image: url('{{ glide :src="background[0]" width="1920" height="1080" fit="crop_focal" }}')">
     <div class="w-full section-padding-top py-6 md:w-50 flex-center px-4">
         <div id="contact-callout" class="max-w-xl text-white text-center px-6 md:px-0">
             <h2 class="fancy-font mb-12">{{ header }}</h2>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="w-full md:section-padding-top pt-12 md:w-50 px-4">
-        <form class="max-w-xl mx-auto">
+        <div id="contact-form" class="max-w-xl mx-auto">
             <div class="mb-4">
                 <label class="block text-white text-sm font-bold mb-2" for="first_name">
                   First Name *
@@ -39,7 +39,7 @@
                 <label class="block text-white text-sm font-bold mb-2" for="type">
                   Work Type *
                 </label>
-                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="type" required>
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="type" required onchange="showAdditionalContactFields()">
                     <option disabled selected hidden value>Please select . . .</option>
                     <option value="Portrait">Portrait</option>
                     <option value="Product">Product</option>
@@ -51,15 +51,15 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
-            <div class="mb-4 hidden">
+            <div id="date_field" class="mb-4 hidden">
                 <label class="block text-white text-sm font-bold mb-2" for="date">
-                  Event Date *
+                  Event Date
                 </label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="date">
             </div>
-            <div class="mb-4 hidden">
+            <div id="location_field" class="mb-4 hidden">
                 <label class="block text-white text-sm font-bold mb-2" for="location">
-                  Event Location *
+                  Event Location
                 </label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="location" type="text" placeholder="Location">
             </div>
@@ -69,9 +69,17 @@
                 </label>
                 <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline min-h-150" id="message" type="text" placeholder="Enter your message here"></textarea>
             </div>
-            <div class="mb-12 block w-full text-small border-light text-center text-white p-4 mt-8">
-                <button class="">Submit</button>
+            <div id="fill-fields" class="bg-red-200 text-red-500 p-2 flex items-center hidden">
+                {{ partial:warning size="16" }}
+                <span class="ps-2"></span>
             </div>
-        </form>
+            <button class="mb-12 block w-full flex justify-center items-center text-small border-light text-center text-white hover:bg-half-black contact-form-submit p-4 mt-8">
+                <div class="circle-loader hidden">
+                    <div class="checkmark draw"></div>
+                </div>
+                <span class="ms-3 submit-text">Submit</span>
+                <span class="ms-3 thanks-text hidden">Thank you for reaching out!</span>
+            </button>
+        </div>
     </div>
 </section>

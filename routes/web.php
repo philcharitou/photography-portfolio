@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\InstagramController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Statamic\Http\Controllers\CP\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +18,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth')->group(function () {
-    Route::statamic('/search', 'search');
+Route::get('/instagram-account', [InstagramController::class, 'get_posts']);
+
+/* Public Routes */
+Route::group([
+//    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [
+        'localize',
+        'localeSessionRedirect', //redirect if there's a locale in session
+        'localeViewPath']
+], function () {
+    Route::middleware('auth')->group(function () {
+        Route::statamic('/search', 'search');
+    });
+
+    // Auth
+    Route::statamic('/login', 'authentication.login')->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
+
+    Route::post('/contact-us', [PublicController::class, 'contactForm']);
 });
 
-Route::get('/instagram-account', [\App\Http\Controllers\InstagramController::class, 'get_posts']);
+/* Authenticated Routes */
+Route::group([
+//    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [
+        'localize',
+        'localeSessionRedirect', //redirect if there's a locale in session
+        'localeViewPath',
+        'auth',]
+], function () {
+    Route::resource('/users', UserController::class);
+});
+
+

@@ -104,6 +104,10 @@ a {
     .light-scrolled.scrolled {
         color: inherit;
     }
+
+    .bg-half-black {
+        background: rgba(0,0,0, 0.5);
+    }
 }
 
 header {
@@ -712,6 +716,10 @@ a.anchor-small {
     z-index: 12;
 }
 
+.transition-default {
+    transition: all 0.5s ease;
+}
+
 #article {
     h1 {
         font-family: "Times New Roman";
@@ -1268,6 +1276,83 @@ h4 {
     text-transform: uppercase;
     font-weight: 700;
 }
+
+/* From https://codepen.io/scottloway/pen/zqoLyQ */
+.circle-loader {
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #5cb85c;
+    animation: loader-spin 1.2s infinite linear;
+    position: relative;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
+
+.load-complete {
+    -webkit-animation: none;
+    animation: none;
+    border-color: #5cb85c;
+    transition: border 500ms ease-out;
+}
+
+.checkmark {
+    display: none;
+}
+
+.checkmark.draw:after {
+     animation-duration: 800ms;
+     animation-timing-function: ease;
+     animation-name: checkmark;
+     transform: scaleX(-1) rotate(135deg);
+}
+
+.checkmark:after {
+     opacity: 1;
+     height: calc(6em/2/2);
+     width: calc(6em/2/2/2);
+     transform-origin: left top;
+     border-right: 3px solid #5cb85c;
+     border-top: 3px solid #5cb85c;
+     content: '';
+     left: calc(1em/6 + 3em/12);
+     top: calc(5.5em/2/2);
+     position: absolute;
+}
+/* End of From https://codepen.io/scottloway/pen/zqoLyQ */
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+    20% {
+        height: 0;
+        width: calc(6em/2/2/2);
+        opacity: 1;
+    }
+    40% {
+        height: calc(6em/2/2);
+        width: calc(6em/2/2/2);
+        opacity: 1;
+    }
+    100% {
+        height: calc(6em/2/2);
+        width: calc(6em/2/2/2);
+        opacity: 1;
+    }
+}
+/* End of From https://codepen.io/scottloway/pen/zqoLyQ */
 
 @keyframes spin {
     from { transform: rotate(0); }
