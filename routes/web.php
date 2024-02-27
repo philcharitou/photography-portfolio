@@ -59,6 +59,10 @@ Route::group([
     Route::resource('/bug-reports', BugReportController::class);
 
     Route::post('/clear-bug-reports', [BugReportController::class, 'delete_all'])->name('clear_bug_reports');
+
+    Route::get('/php-info', function() {
+        return phpinfo();
+    });
 });
 
 
