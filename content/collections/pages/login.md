@@ -4,10 +4,10 @@ blueprint: login
 title: Login
 left_background: singles-16-lighter.webp
 account_benefits:
-  - 'Save your billing and delivery information to order fasterdsf'
-  - 'Access your session & order historysdfsdf'
-  - 'Receive the latest news and updates on our promotional or educational materialsadgfg'
+  - 'Save your billing and delivery information to order faster'
+  - 'Access your session & order history'
+  - 'Receive the latest news and updates on our promotional or educational materials'
 template: authentication/login
 updated_by: 1
-updated_at: 1707514819
+updated_at: 1707515274
 ---
