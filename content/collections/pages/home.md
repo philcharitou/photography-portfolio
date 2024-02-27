@@ -7,7 +7,7 @@ teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: 1
-updated_at: 1709010002
+updated_at: 1709070112
 featured_image: hero.jpg
 gallery_images:
   -
@@ -103,5 +103,7 @@ featured_works:
   - 6472b6a2-e1cd-4ae3-9799-0cf6af5b1cda
   - 2d03052a-8968-4147-bde3-1ae6b11527a2
   - 1fb713d5-c090-47f9-9ab9-4613fcdc4824
+  - 77eafd23-23ef-4792-aaf6-2af11372d6b2
+  - a73c4ef5-3077-46c1-baaf-2e6c2050537f
 main_title: 'Phil Charitou'
 ---
