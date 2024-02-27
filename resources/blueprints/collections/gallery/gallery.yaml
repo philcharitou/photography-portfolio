@@ -18,7 +18,6 @@ tabs:
               antlers: false
               type: text
               display: Name
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -38,7 +37,6 @@ tabs:
               cast_booleans: false
               type: select
               display: Format
-              icon: select
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -56,7 +54,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Featured Image'
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -73,7 +70,6 @@ tabs:
               antlers: false
               type: text
               display: Role
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -85,13 +81,12 @@ tabs:
               antlers: false
               type: text
               display: Client
-              icon: text
               listable: hidden
               instructions_position: above
               visibility: visible
               hide_display: false
           -
-            handle: photos
+            handle: images
             field:
               mode: list
               container: assets
@@ -100,13 +95,14 @@ tabs:
               show_filename: true
               show_set_alt: true
               type: assets
-              display: Photos
-              icon: assets
+              display: Images
               listable: hidden
               instructions_position: above
               visibility: visible
               replicator_preview: true
               hide_display: false
+              max_files: 1
+              min_files: 1
   sidebar:
     display: Sidebar
     sections:
@@ -117,6 +113,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: date
             field:

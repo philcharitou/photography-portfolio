@@ -19,7 +19,7 @@ class InstagramController extends Controller
         for($i = 0; $i < 1; $i++) {
             $path = "/instagram_" . $i . ".webp";
             $redis_path = "instagram_[".$i."]";
-            $src = Redis::get($redis_path);
+            $src = null;//Redis::get($redis_path);
 
             if($src) {
                 if (file_put_contents(public_path($path), file_get_contents($src)))

@@ -51,9 +51,9 @@
         <div id="grid-gallery-contents" class="flex flex-col max-w-6xl mx-auto relative pb-9">
             <div class="row">
                 <div id="col1" class="column web-column">
-                    {{ photos }}
-                        <img class="gallery-image" src="{{ glide :src="url" width="1200" height="1200" fit="crop_focal" }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src"">
-                    {{ /photos }}
+                    {{ images }}
+                        <img class="gallery-image" src="{{ url }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src">
+                    {{ /images }}
                 </div>
                 <div id="col2" class="column web-column"></div>
                 <div id="col3" class="column web-column"></div>
