@@ -52,7 +52,7 @@
             <div class="row">
                 <div id="col1" class="column web-column">
                     {{ images }}
-                        <img class="gallery-image" src="{{ url }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src">
+                        <img class="gallery-image" src="{{ permalink }}" alt="{{ image:alt }}" @click="showImage = true; imageUrl = event.target.src">
                     {{ /images }}
                 </div>
                 <div id="col2" class="column web-column"></div>
