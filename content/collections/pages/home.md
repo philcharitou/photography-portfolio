@@ -7,7 +7,7 @@ teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: 1
-updated_at: 1707508698
+updated_at: 1709010002
 featured_image: hero.jpg
 gallery_images:
   -
@@ -69,7 +69,7 @@ heros:
     layout: mirrored
     cta_text: 'See more work'
     cta_link: 'entry::be45ad08-e6ab-4d38-9420-9df822630f3a'
-    background: 'hero-images/b&w_darker.webp'
+    background: featured/primary_hero.webp
     visible: true
     type: new_set
     enabled: true
@@ -89,21 +89,19 @@ information_section:
 banners:
   -
     id: lmkshl0w
-    banner_image: 4-(1-of-1)-(large).jpg
+    banner_image: 'galleries/emily-and-elliot-wedding/emily-&-elliot-(115-of-267).webp'
     banner_text: 'I hired Phil for my wedding photography and I was blown away by the results. He captured every moment beautifully and creatively. He was professional, friendly, and easy to work with. I highly recommend him to anyone looking for a talented photographer.'
     type: new_set
     enabled: true
   -
     id: lmkshqfd
-    banner_image: featured-images/winery-(5-of-6)-(medium).jpg
+    banner_image: featured/primary_hero.webp
     banner_text: 'He delivered high-quality photos that exceeded my expectations. He is truly a gem in the photography industry.'
     type: new_set
     enabled: true
 featured_works:
-  - 02b1d555-3049-46f0-abc1-497d344e2734
-  - 2ba0eaf2-bdd8-472d-8d0e-a52d1cb4f51b
-  - 14973aad-9377-4d14-ac85-45d6d6bdcb2c
-  - 91792d54-ef91-4abf-9a80-bf748086f7cd
-  - 99a35c59-3f15-4b31-9078-216b891bc544
+  - 6472b6a2-e1cd-4ae3-9799-0cf6af5b1cda
+  - 2d03052a-8968-4147-bde3-1ae6b11527a2
+  - 1fb713d5-c090-47f9-9ab9-4613fcdc4824
 main_title: 'Phil Charitou'
 ---
