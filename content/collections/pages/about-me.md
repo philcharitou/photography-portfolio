@@ -8,11 +8,11 @@ about: |-
   <br><br>In combination with a great passion for the outdoors, I thrive working in a challenging environment. Exploring the technicality and expression of photography has been a joy and wonderful marriage of creativity and practiced expertise. I believe telling stories through photography and capturing important moments are tantamount to reliving and preserving both seemingly innocuous and pivotal moments in our lives
 name: "Who's this guy?"
 updated_by: 1
-updated_at: 1709065222
+updated_at: 1709130267
 template: about
 hero: about-me/about-me-bg.webp
 photos:
   - about-me/about-me-(1).webp
-  - about-me/about-me-(2).webp
+  - galleries/peru/peru-cow.webp
   - about-me/about-me-(3).webp
 ---
