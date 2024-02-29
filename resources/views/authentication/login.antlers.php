@@ -1,6 +1,6 @@
 <div class="flex flex-col dark:text-white md:mb-32">
     <div class="block md:flex flex-1 flex-wrap">
-        <div class="flex-1 bg-neutral-300 dark:bg-slate-700 border-1 p-8 h-screen" style="background-position: center; background-image: url('{{ glide :src="left_background" width="1920" height="1080" fit="crop_focal" }}')">
+        <div class="flex-1 bg-neutral-300 dark:bg-neutral-700 border-1 p-8 h-screen" style="background-position: center; background-image: url('{{ glide :src="left_background" width="1920" height="1080" fit="crop_focal" }}')">
             <div class="w-full lg:w-3/4 mx-auto">
                 <div class="text-left h-32"></div>
                 <div class="text-left lg:mt-16 h-20">
@@ -10,7 +10,7 @@
                 <div class="mb-6">
                     I already have an account
                 </div>
-                <form method="POST" action="/login" class="bg-white dark:bg-slate-500 shadow-md p-8 text-gray-700 dark:text-white">
+                <form method="POST" action="/login" class="bg-white dark:bg-neutral-500 shadow-md p-8 text-gray-700 dark:text-white">
                     <?php
                     if(isset($errors) && $errors->any()) {
                         echo '<div class="rounded-sm bg-red-100 p-2 mb-4 text-red-400 text-sm"><ul>';
@@ -37,12 +37,12 @@
                     </div>
 
                     <label for="remember_me" class="inline-flex items-center">
-                        <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
+                        <input id="remember_me" type="checkbox" class="rounded dark:bg-neutral-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
                         <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Remember me</span>
                     </label>
 
                     <div class="flex justify-end">
-                        <button type="submit" class="w-1/3 px-2 py-3 text-white bg-black rounded-full hover:bg-gray-900 focus:outline-none text-sm focus:ring focus:ring-gray-200 focus:ring-opacity-50">Sign in</button>
+                        <button type="submit" class="w-1/3 px-2 py-3 text-white bg-black rounded-full hover:bg-neutral-900 focus:outline-none text-sm focus:ring focus:ring-gray-200 focus:ring-opacity-50">Sign in</button>
                     </div>
                 </form>
             </div>
@@ -58,7 +58,7 @@
                 <div class="text-sm mb-4">
                     Get the most out of your experience and enjoy more perks with a personal account.
                 </div>
-                <div class="bg-gray-100 dark:bg-slate-600 shadow-md p-6 md:p-8 mb-8">
+                <div class="bg-neutral-100 dark:bg-neutral-600 shadow-md p-6 md:p-8 mb-8">
                     <div class="md:px-6">
                         <div class="text-left mb-4">
                             <p class="text-gray-700 dark:text-white text-sm">What you'll find in your account.</p>

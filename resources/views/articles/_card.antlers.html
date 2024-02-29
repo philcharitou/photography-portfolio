@@ -1,4 +1,4 @@
-<div class="overflow-hidden {{ if related_gallery && show_related }} rounded-t-xl {{ else }} rounded-xl {{ /if }} h-[500px] dark:text-white block bg-slate-200 dark:bg-slate-600 group flex flex-col hover:scale-105 transition duration-[400ms] ease-in-out">
+<div class="overflow-hidden {{ if related_gallery && show_related }} rounded-t-xl {{ else }} rounded-xl {{ /if }} h-[500px] dark:text-white block bg-neutral-200 dark:bg-neutral-600 group flex flex-col hover:scale-105 transition duration-[400ms] ease-in-out">
     <a href="{{ url }}" class="relative overflow-hidden rounded-t-xl">
         <img class="object-cover transition duration-[400ms] ease-in-out scale-110 group-hover:scale-100 w-full h-60" src="{{ glide :src="featured_image" width="600" height="400" fit="crop_focal" }}" alt="">
         <div class="absolute opacity-0 transition duration-[400ms] ease-in-out group-hover:opacity-75 z-20 inset-0 mix-blend-overlay object-cover w-full h-60 bg-gradient-to-br from-orange-dark to-aqua"></div>
@@ -10,7 +10,7 @@
         <div class="flex flex-wrap gap-4">
             {{ if tags && ! show_tags }}
                 {{ tags limit="3" }}
-                <a href="{{ url }}" class="px-3 py-1 text-gray-100 font-bold bg-slate-600 transition rounded-full text-sm">{{ title }}</a>
+                <a href="{{ url }}" class="px-3 py-1 text-gray-100 font-bold bg-neutral-600 transition rounded-full text-sm">{{ title }}</a>
                 {{ /tags }}
             {{ /if }}
         </div>
