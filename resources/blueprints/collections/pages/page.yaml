@@ -25,7 +25,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Hero Image'
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -51,7 +50,6 @@ tabs:
               antlers: false
               type: textarea
               display: 'Primary Text'
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -63,7 +61,6 @@ tabs:
               antlers: false
               type: textarea
               display: 'Secondary Text'
-              icon: textarea
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -73,7 +70,6 @@ tabs:
             handle: primary_image
             field:
               max_files: 1
-              min_files: 1
               mode: list
               container: assets
               restrict: false
@@ -82,7 +78,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Primary Image'
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -92,7 +87,6 @@ tabs:
             handle: secondary_image
             field:
               max_files: 1
-              min_files: 1
               mode: list
               container: assets
               restrict: false
@@ -101,7 +95,6 @@ tabs:
               show_set_alt: true
               type: assets
               display: 'Secondary Image'
-              icon: assets
               listable: hidden
               instructions_position: above
               visibility: visible
@@ -123,6 +116,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:

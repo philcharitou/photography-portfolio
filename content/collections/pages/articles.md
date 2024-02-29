@@ -4,9 +4,7 @@ blueprint: page
 title: 'Articles - Phil Charitou | Toronto Branding & Portrait Photography'
 author: dcb9bbfc-28b8-4be1-a14c-daf6123afaf1
 updated_by: 1
-updated_at: 1707486678
+updated_at: 1709175325
 template: articles/index
-hero_image: 7-(1-of-1)-(large).jpg
-primary_image: 1-(1-of-1)-(large).jpg
-secondary_image: 3.webp
+hero_image: featured/new-york-grey-(4).webp
 ---

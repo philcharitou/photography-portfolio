@@ -13,8 +13,8 @@ callout: |-
 subheader: 'SOCIAL MEDIA'
 social_media_icons: true
 updated_by: 1
-updated_at: 1707486670
+updated_at: 1709175365
 template: contact
 background:
-  - 5-(1-of-1)-(large).jpg
+  - featured/new-york-grey-(3).webp
 ---
