@@ -1,1 +1,150 @@
-var iteration=0,themeToggleDarkIcon=document.getElementById("theme-toggle-dark-icon"),themeToggleLightIcon=document.getElementById("theme-toggle-light-icon");function randomizeHero(){$("#cover").addClass("blacked-out");let e=$(".hero"),t=e.length,n=!0;setTimeout((function(){e.each((function(e,t){$(this).hasClass("hidden")||(n=e),$(this).addClass("hidden")}));let a=recursiveRandom(n,randomNumber(0,t),t);e.get(a).classList.remove("hidden"),setTimeout((function(){$("#cover").removeClass("blacked-out")}),300)}),300)}function recursiveRandom(e,t,n){return console.log("TEST"),e!==t?(iteration=0,t):iteration++>=5?0:recursiveRandom(e,randomNumber(0,n),n)}function randomNumber(e,t){return Math.floor(Math.random()*(t-e)+e)}function showAdditionalContactFields(){document.getElementById("date_field").classList.remove("hidden"),document.getElementById("location_field").classList.remove("hidden")}setTheme(),$.ajax({type:"GET",url:"/instagram-account",success:function(e){for(let t=0;t<e.length;t++){let n=document.getElementById("instagram_"+t);n&&n.setAttribute("src",e[t])}},error:function(e){console.log(e)}}),$((function(){$(".gallery-item, .gallery-content").waypoint((function(){$(this.element).addClass("pop-in")}),{offset:"100%"})})),$(".contact-form-submit").on("click",(function(){let e=document.getElementById("first_name"),t=document.getElementById("last_name"),n=document.getElementById("email"),a=document.getElementById("type"),l=document.getElementById("date"),o=document.getElementById("location"),d=document.getElementById("message"),s=$("#fill-fields");return e.value&&t.value&&n.value&&a.value&&d.value?n.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)?($(".circle-loader").toggleClass("hidden"),$(".submit-text").toggleClass("hidden"),s.addClass("hidden"),$.ajaxSetup({headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr("content")}}),void $.ajax({type:"POST",url:"/contact-us",data:{first_name:e.value,last_name:t.value,email:n.value,type:a.value,date:l.value,location:o.value,message:d.value},dataType:"html",success:function(e){$(".circle-loader").toggleClass("load-complete"),$(".checkmark").toggle(),$(".thanks-text").toggleClass("hidden"),$(".contact-form-submit").toggleClass("pointer-events-none")},error:function(e){console.log(e),$(".circle-loader").toggleClass("hidden");let t=$(".thanks-text");t.toggleClass("hidden"),t.text("Something went wrong! Please email us directly at contact@philcharitou.com"),$(".contact-form-submit").addClass("pointer-events-none border-red")}})):(s.removeClass("hidden"),s.children("span").text("Please enter a valid email"),null):(s.removeClass("hidden"),s.children("span").text("Please fill all fields marked with *"),null)}));
+var iteration = 0;
+var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+setTheme();
+
+$.ajax({
+    type: "GET",
+    url: "/instagram-account",
+    success: function (result) {
+        for(let i = 0; i < result.length; i++) {
+            let square = document.getElementById("instagram_" + i);
+
+            if(square) {
+                square.setAttribute("src", result[i]);
+            }
+        }
+    },
+    error: function (data) {
+        // Log in the console
+        console.log(data);
+    },
+});
+
+function randomizeHero()
+{
+    $("#cover").addClass("blacked-out");
+
+    let sections = $('.hero')
+
+    let max = sections.length;
+    let active = true;
+
+    setTimeout(function() {
+        sections.each(function(index, element) {
+            if(!$(this).hasClass("hidden")) {
+                active = index;
+            }
+            $(this).addClass("hidden");
+        });
+
+        let random = recursiveRandom(active, randomNumber(0, max), max);
+
+        sections.get(random).classList.remove("hidden");
+
+        setTimeout(function() {
+            $("#cover").removeClass("blacked-out");
+        }, 300);
+    }, 300);
+}
+
+function recursiveRandom(active, random, max) {
+    console.log("TEST");
+    if (active !== random) {
+        iteration = 0;
+        return random;
+    } else {
+        if(iteration++ >= 5) {
+            return 0;
+        }
+
+        return recursiveRandom(active, randomNumber(0, max), max);
+    }
+}
+
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+$(function() {
+    $('.gallery-item, .gallery-content').waypoint(function() {
+        $(this.element).addClass('pop-in');
+    }, {
+        offset: '100%'
+    });
+});
+
+function showAdditionalContactFields()
+{
+    document.getElementById("date_field").classList.remove("hidden");
+    document.getElementById("location_field").classList.remove("hidden");
+}
+
+$(".contact-form-submit").on("click", function() {
+
+    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let first_name_field = document.getElementById("first_name");
+    let last_name_field = document.getElementById("last_name");
+    let email_field = document.getElementById("email");
+    let type_field = document.getElementById("type");
+    let date_field = document.getElementById("date");
+    let location_field = document.getElementById("location");
+    let message_field = document.getElementById("message");
+    let fill_fields = $('#fill-fields');
+
+    if(!first_name_field.value || !last_name_field.value || !email_field.value || !type_field.value || !message_field.value) {
+        fill_fields.removeClass("hidden");
+        fill_fields.children("span").text("Please fill all fields marked with *");
+        return null;
+    }
+
+    if(!email_field.value.match(validRegex)) {
+        fill_fields.removeClass("hidden");
+        fill_fields.children("span").text("Please enter a valid email");
+        return null;
+    }
+
+    $('.circle-loader').toggleClass('hidden');
+    $('.submit-text').toggleClass('hidden');
+    fill_fields.addClass("hidden");
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        type: "POST",
+        url: "/contact-us",
+        data: {
+            first_name: first_name_field.value,
+            last_name: last_name_field.value,
+            email: email_field.value,
+            type: type_field.value,
+            date: date_field.value,
+            location: location_field.value,
+            message: message_field.value,
+        },
+        dataType: 'html',
+        success: function (result) {
+            $('.circle-loader').toggleClass('load-complete');
+            $('.checkmark').toggle();
+            $('.thanks-text').toggleClass('hidden');
+
+            $('.contact-form-submit').toggleClass('pointer-events-none');
+        },
+        error: function (data) {
+            // Log in the console
+            console.log(data);
+            $('.circle-loader').toggleClass("hidden");
+            let thanks = $('.thanks-text')
+                thanks.toggleClass('hidden');
+                thanks.text('Something went wrong! Please email us directly at contact@philcharitou.com');
+
+            let button = $('.contact-form-submit');
+            button.addClass('pointer-events-none border-red');
+        },
+    });
+})
