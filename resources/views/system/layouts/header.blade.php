@@ -163,7 +163,7 @@
 
                 <li id="show-users" class="nav-item dropdown no-arrow">
                     <div class="user-img-small" onclick="showUsers()" >
-                        <img class="h-8 rounded-full no-lightbox" src="{{ Auth::user()->image ? Storage::disk('s3')->temporaryUrl(Auth::user()->image, now()->addMinute()) : asset('/img/no_image.png') }}" alt="User Profile Image">
+                        <img class="h-8 rounded-full no-lightbox" src="{{ Auth::user()->image ? Storage::disk('s3')->temporaryUrl(Auth::user()->image, now()->addMinute()) : asset('/img/no-image.png') }}" alt="User Profile Image">
                     </div>
 {{--                    <button onclick="showUsers()" class="btn btn-neutral-square px-3">--}}
 {{--                        <i class="fa-solid fa-users"></i> ({{ $users->where('last_access', '>', \Carbon\Carbon::now()->subMinutes(5))->count() - 1 }})--}}
