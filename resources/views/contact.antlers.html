@@ -1,3 +1,11 @@
+<script>
+    pintrk('track', 'lead', {
+    event_id: 'Contact'
+        ,
+        lead_type: 'Contact Page'
+    });
+</script>
+
 <!-- About Section -->
 <section class="section-full flex no-padding items-center flex-wrap justify-between bg-neutral-700 md:justify-center mh-100vh px-10 relative mb-16" style="background-image: url('{{ glide :src="background[0]" width="1920" height="1080" fit="crop_focal" }}')">
     <div class="w-full section-padding-top py-6 md:w-50 flex-center px-4">
@@ -39,8 +47,9 @@
                 <label class="block text-white text-sm font-bold mb-2" for="type">
                   Work Type *
                 </label>
-                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="type" required onchange="showAdditionalContactFields()">
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="type" required onchange="showAdditionalContactFields(this)">
                     <option disabled selected hidden value>Please select . . .</option>
+                    <option value="None">None</option>
                     <option value="Portrait">Portrait</option>
                     <option value="Product">Product</option>
                     <option value="Family Photoshoot">Family / Group</option>
