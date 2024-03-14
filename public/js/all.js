@@ -75,10 +75,15 @@ $(function() {
     });
 });
 
-function showAdditionalContactFields()
+function showAdditionalContactFields(select)
 {
-    document.getElementById("date_field").classList.remove("hidden");
-    document.getElementById("location_field").classList.remove("hidden");
+    if(select.value !== "None") {
+        document.getElementById("date_field").classList.remove("hidden");
+        document.getElementById("location_field").classList.remove("hidden");
+    } else {
+        document.getElementById("date_field").classList.add("hidden");
+        document.getElementById("location_field").classList.add("hidden");
+    }
 }
 
 $(".contact-form-submit").on("click", function() {

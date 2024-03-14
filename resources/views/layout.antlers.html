@@ -4,10 +4,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? "Phil Charitou Photography" }}</title>
+        <title>{{ title ?? "Phil Charitou | Toronto based Photographer" }}</title>
+        <meta name="description" content="We capture timeless and purposeful photographs. Specializing in portraits,
+        event photography, personal branding, and headshots. Book your session today!">
+
+        <!-- OG Meta -->
         <meta property="og:title" content="Phil Charitou | Toronto based Photographer">
         <meta property="og:site_name" content="Phil Charitou Photography">
-        <meta name="description" content="Phil is a Toronto based photographer who captures authentic, timeless and intentional personal branding, headshots, portraits and family and event photography sessions. Your go-to destination for heartwarming and thought provoking captures from behind the lens. Book your session today!">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://www.philcharitou.com//assets/favicons/apple-touch-icon.png">
 
         <meta name="csrf-token" content="{{ csrf_token }}">
 
@@ -15,6 +20,19 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Person",
+                "name": "Phil Charitou",
+                "sameAs": [
+                    "https://www.instagram.com/philcharitou",
+                    "https://ca.linkedin.com/in/philcharitou",
+                ]
+            }
+        </script>
 
         <!-- Pinterest Tag -->
         <script>
