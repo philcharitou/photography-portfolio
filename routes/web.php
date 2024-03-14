@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AccountDeletionController;
 use App\Http\Controllers\BugReportController;
 use App\Http\Controllers\InstagramController;
 use App\Http\Controllers\PublicController;
@@ -39,6 +40,8 @@ Route::group([
 
     // Auth
     Route::post('/login', [LoginController::class, 'login']);
+    Route::statamic('/request-account-deletion', 'authentication.forgot-password')->name('authentication.request_password');
+    Route::get('/request-account-deletion', [AccountDeletionController::class, 'view']);
 
     Route::post('/contact-us', [PublicController::class, 'contactForm']);
 });

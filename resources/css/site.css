@@ -1058,6 +1058,108 @@ a.anchor-small {
 .instagram-field > img:nth-child(4) { left: calc(50% - 115px/2 + 15%); top: -15%; right: unset; bottom: unset; transform: scale(100%); }
 .instagram-field > img:nth-child(5) { left: unset; top: -15%; right: 5%; bottom: unset; transform: scale(100%); }
 
+.gallery-card-wrapper {
+    position: relative;
+}
+
+.gallery-card {
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.gallery-bg-card {
+    transition: all 0.5s ease;
+}
+
+.gallery-card-wrapper > .gallery-card-title {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    bottom: -7%;
+
+    overflow: hidden;
+    z-index: 5;
+
+    transition: all 0.3s ease;
+}
+
+.gallery-card-wrapper > .gallery-card:nth-child(1) {
+    position: absolute;
+    background-size: 250%;
+
+    z-index: 4;
+}
+
+.gallery-card-wrapper > .gallery-card:nth-child(2) {
+    position: absolute;
+    left: 30px;
+    transform: rotate(8deg);
+
+    z-index: 3;
+}
+
+.gallery-card-wrapper > .gallery-card:nth-child(3) {
+    position: absolute;
+    left: -30px;
+    transform: rotate(-8deg);
+
+    z-index: 2;
+}
+
+.gallery-card-wrapper > .gallery-bg-card {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-bottom: -25%;
+
+    z-index: 1;
+}
+
+.gallery-card-wrapper:hover > .gallery-card-title {
+    padding: 0;
+    width: 0;
+    left: 50%;
+}
+
+.gallery-card-wrapper:hover > .gallery-card:nth-child(1) {
+    transform: rotate(2deg);
+
+    background-size: 280%;
+    box-shadow: 0 5px 12px 2px rgba(0,0,0, 0.4);
+}
+
+.gallery-card-wrapper:hover > .gallery-card:nth-child(2) {
+    left: 65px;
+    bottom: -5px;
+    transform: rotate(16deg);
+}
+
+.gallery-card-wrapper:hover > .gallery-card:nth-child(3) {
+    left: -65px;
+    bottom: -5px;
+    transform: rotate(-16deg);
+}
+
+.gallery-card-wrapper:hover > .gallery-bg-card:nth-child(4) {
+    left: -9%;
+    bottom: 12%;
+    transform: rotate(-380deg);
+}
+
+.gallery-card-wrapper:hover > .gallery-bg-card:nth-child(5) {
+    left: -11%;
+    bottom: 98%;
+    transform: rotate(-10deg);
+}
+
+.gallery-card-wrapper:hover > .gallery-bg-card:nth-child(6) {
+    left: 110%;
+    bottom: -3%;
+    transform: rotate(10deg);
+}
+
 .background-instagram-square {
     width: 115px;
     height: 115px;

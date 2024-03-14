@@ -1468,8 +1468,14 @@ input[type="range"]::-ms-fill-lower {
 .h-9 {
   height: 2.25rem;
 }
+.h-\[100px\] {
+  height: 100px;
+}
 .h-\[200px\] {
   height: 200px;
+}
+.h-\[300px\] {
+  height: 300px;
 }
 .h-\[500px\] {
   height: 500px;
@@ -1500,6 +1506,12 @@ input[type="range"]::-ms-fill-lower {
 }
 .w-64 {
   width: 16rem;
+}
+.w-\[200px\] {
+  width: 200px;
+}
+.w-\[50px\] {
+  width: 50px;
 }
 .w-full {
   width: 100%;
@@ -1618,8 +1630,14 @@ input[type="range"]::-ms-fill-lower {
 .justify-between {
   justify-content: space-between;
 }
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .gap-2 {
   gap: 0.5rem;
+}
+.gap-24 {
+  gap: 6rem;
 }
 .gap-4 {
   gap: 1rem;
@@ -1632,6 +1650,12 @@ input[type="range"]::-ms-fill-lower {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-12 {
+  gap: 3rem;
+}
+.gap-32 {
+  gap: 8rem;
 }
 .gap-x-8 {
   -moz-column-gap: 2rem;
@@ -1866,6 +1890,12 @@ input[type="range"]::-ms-fill-lower {
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
+.bg-cover {
+  background-size: cover;
+}
+.bg-center {
+  background-position: center;
+}
 .stroke-neutral-500 {
   stroke: #737373;
 }
@@ -1975,6 +2005,22 @@ input[type="range"]::-ms-fill-lower {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
+}
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+.py-52 {
+  padding-top: 13rem;
+  padding-bottom: 13rem;
+}
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -3152,6 +3198,93 @@ a.anchor-small {
 .instagram-field > img:nth-child(3) { left: calc(50% - 115px/2); top: -15%; right: unset; bottom: unset; transform: scale(100%); }
 .instagram-field > img:nth-child(4) { left: calc(50% - 115px/2 + 15%); top: -15%; right: unset; bottom: unset; transform: scale(100%); }
 .instagram-field > img:nth-child(5) { left: unset; top: -15%; right: 5%; bottom: unset; transform: scale(100%); }
+.gallery-card-wrapper {
+    position: relative;
+}
+.gallery-card {
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+.gallery-bg-card {
+    transition: all 0.5s ease;
+}
+.gallery-card-wrapper > .gallery-card-title {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    bottom: -7%;
+
+    overflow: hidden;
+    z-index: 5;
+
+    transition: all 0.3s ease;
+}
+.gallery-card-wrapper > .gallery-card:nth-child(1) {
+    position: absolute;
+    background-size: 250%;
+
+    z-index: 4;
+}
+.gallery-card-wrapper > .gallery-card:nth-child(2) {
+    position: absolute;
+    left: 30px;
+    transform: rotate(8deg);
+
+    z-index: 3;
+}
+.gallery-card-wrapper > .gallery-card:nth-child(3) {
+    position: absolute;
+    left: -30px;
+    transform: rotate(-8deg);
+
+    z-index: 2;
+}
+.gallery-card-wrapper > .gallery-bg-card {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    bottom: 50%;
+    margin-bottom: -25%;
+
+    z-index: 1;
+}
+.gallery-card-wrapper:hover > .gallery-card-title {
+    padding: 0;
+    width: 0;
+    left: 50%;
+}
+.gallery-card-wrapper:hover > .gallery-card:nth-child(1) {
+    transform: rotate(2deg);
+
+    background-size: 280%;
+    box-shadow: 0 5px 12px 2px rgba(0,0,0, 0.4);
+}
+.gallery-card-wrapper:hover > .gallery-card:nth-child(2) {
+    left: 65px;
+    bottom: -5px;
+    transform: rotate(16deg);
+}
+.gallery-card-wrapper:hover > .gallery-card:nth-child(3) {
+    left: -65px;
+    bottom: -5px;
+    transform: rotate(-16deg);
+}
+.gallery-card-wrapper:hover > .gallery-bg-card:nth-child(4) {
+    left: -9%;
+    bottom: 12%;
+    transform: rotate(-380deg);
+}
+.gallery-card-wrapper:hover > .gallery-bg-card:nth-child(5) {
+    left: -11%;
+    bottom: 98%;
+    transform: rotate(-10deg);
+}
+.gallery-card-wrapper:hover > .gallery-bg-card:nth-child(6) {
+    left: 110%;
+    bottom: -3%;
+    transform: rotate(10deg);
+}
 .background-instagram-square {
     width: 115px;
     height: 115px;
@@ -3630,6 +3763,10 @@ h4 {
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+.hover\:bg-gray-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 .hover\:bg-neutral-100:hover {
   --tw-bg-opacity: 1;

@@ -27,6 +27,25 @@
 </section>
 {{ /information_section }}
 
+<section class="w-full h-full">
+    <div class="mx-auto py-32 px-24 flex max-w-6xl flex-wrap justify-evenly gap-32">
+        {{ collection:gallery }}
+        <a href="{{ url }}" class="relative gallery-card-wrapper w-[200px] h-[300px]">
+            <div class="gallery-card pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="featured_image" fit="crop_focal" }}');"></div>
+            <div class="gallery-card pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[0]" fit="crop_focal" }}');"></div>
+            <div class="gallery-card pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[1]" fit="crop_focal" }}');"></div>
+            <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[2]" fit="crop_focal" }}');"></div>
+            <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[3]" fit="crop_focal" }}');"></div>
+            <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[4]" fit="crop_focal" }}');"></div>
+            <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[5]" fit="crop_focal" }}');"></div>
+            <div class="gallery-card-title pointer-events-none shadow-md bg-neutral-200 rounded-md text-sm whitespace-nowrap uppercase p-2 text-center">
+                {{ name }}
+            </div>
+        </a>
+        {{ /collection:gallery }}
+    </div>
+</section>
+
 <section class="galleries">
     <div class="w-full flex flex-col flex-wrap">
         {{ collection:gallery }}
