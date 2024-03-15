@@ -7,7 +7,7 @@ teaser: 'Toronto based Photographer'
 subtitle: "A multidisciplinary creative at the intersection of art, design and technology. I'm on a mission to explore, create meaning and provoke emotions through design and storytelling."
 show_graphic: false
 updated_by: 1
-updated_at: 1710432861
+updated_at: 1710433716
 featured_image: hero.jpg
 gallery_images:
   -
