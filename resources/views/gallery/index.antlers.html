@@ -2,7 +2,7 @@
     <h1 class="foreground-text muted text-shadow">{{ heading ?? "GALLERIES" }}</h1>
     <div class="foreground-subtext muted text-shadow flex justify-center items-center gap-2">
         <hr width="24">
-        <span class="px-4 md:px-8 md:text-3xl">{{ subheading ?? "Sorted by Subject" }}</span>
+        <h2 class="px-4 md:px-8 md:text-3xl">{{ subheading ?? "Sorted by Subject" }}</h2>
         <hr width="24">
     </div>
 
@@ -27,13 +27,14 @@
 </section>
 {{ /information_section }}
 
-<section class="w-full h-full">
+<section class="w-full h-full" style="background-size: 80%; background-image: url('/img/albedo-light.png'); box-shadow: inset 0px -25px 20px -20px rgba(0,0,0,0.45),
+inset 0px 25px 20px -20px rgba(0,0,0,0.45);">
     <div class="mx-auto py-32 px-24 flex max-w-6xl flex-wrap justify-evenly gap-32">
         {{ collection:gallery }}
         <a href="{{ url }}" class="relative gallery-card-wrapper w-[200px] h-[300px]">
-            <div class="gallery-card pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="featured_image" fit="crop_focal" }}');"></div>
-            <div class="gallery-card pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[0]" fit="crop_focal" }}');"></div>
-            <div class="gallery-card pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[1]" fit="crop_focal" }}');"></div>
+            <div class="gallery-card bg-white pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="featured_image" fit="crop_focal" }}');"></div>
+            <div class="gallery-card bg-white pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[0]" fit="crop_focal" }}');"></div>
+            <div class="gallery-card bg-white pointer-events-none rounded-md w-[200px] h-[300px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[1]" fit="crop_focal" }}');"></div>
             <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[2]" fit="crop_focal" }}');"></div>
             <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[3]" fit="crop_focal" }}');"></div>
             <div class="gallery-bg-card pointer-events-none rounded-md w-[50px] h-[100px] bg-cover shadow-md z-4 bg-center" style="background-image: url('{{ glide :src="images[4]" fit="crop_focal" }}');"></div>
@@ -42,18 +43,6 @@
                 {{ name }}
             </div>
         </a>
-        {{ /collection:gallery }}
-    </div>
-</section>
-
-<section class="galleries">
-    <div class="w-full flex flex-col flex-wrap">
-        {{ collection:gallery }}
-            <a href="{{ url }}" class="gallery-object py-6 px-6 md:px-12 parallax" style="background-image: url('{{ glide :src="featured_image" width="900" height="600" fit="crop_focal" }}');">
-                <div class="gallery-details">
-                    <h1 class="text-shadow">{{ name }}</h1>
-                </div>
-            </a>
         {{ /collection:gallery }}
     </div>
 </section>
@@ -80,7 +69,7 @@
             <div class="dark:text-white text-center">
                 <p class="fancy-font uppercase">{{ secondary_text }}</p>
                 <a class="block w-50 mx-auto my-8 text-small border-light text-center p-4" href="/contact">
-                    <span>Get in Touch</span>
+                    <span class="expand-text">Get in Touch</span>
                 </a>
             </div>
         </div>
